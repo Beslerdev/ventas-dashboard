@@ -1,0 +1,102 @@
+[
+  {
+    "Variedad": "NEO 50T23",
+    "Variedad_Calidad": "50T23",
+    "OFERTA": {
+      "Sin_Curar": 1225,
+      "Curado": 0,
+      "Total": 1225
+    },
+    "VENTAS": {
+      "Sin_Curar": 740,
+      "Curado": 0,
+      "Total": 740
+    },
+    "DISPONIBLE": {
+      "Sin_Curar": -140,
+      "Curado": 0,
+      "Total": 0
+    },
+    "Comentarios": "AGOTADA"
+  },
+  {
+    "Variedad": "DM Araucaria",
+    "Variedad_Calidad": "Araucaria",
+    "OFERTA": {
+      "Sin_Curar": 6155,
+      "Curado": 30005,
+      "Total": 36160
+    },
+    "VENTAS": {
+      "Sin_Curar": 5345,
+      "Curado": 1596,
+      "Total": 6941
+    },
+    "DISPONIBLE": {
+      "Sin_Curar": 857,
+      "Curado": -1361,
+      "Total": 0
+    },
+    "Comentarios": "AGOTADA"
+  },
+  {
+    "Variedad": "BIO Laurel",
+    "Variedad_Calidad": "Laurel",
+    "OFERTA": {
+      "Sin_Curar": 0,
+      "Curado": 5851,
+      "Total": 5851
+    },
+    "VENTAS": {
+      "Sin_Curar": 1952,
+      "Curado": 2740,
+      "Total": 4692
+    },
+    "DISPONIBLE": {
+      "Sin_Curar": 0,
+      "Curado": 1159,
+      "Total": 1159
+    },
+    "Comentarios": ""
+  },
+  {
+    "Variedad": "DM Pehuén",
+    "Variedad_Calidad": "Pehuén",
+    "OFERTA": {
+      "Sin_Curar": 0,
+      "Curado": 5477,
+      "Total": 5477
+    },
+    "VENTAS": {
+      "Sin_Curar": 4880,
+      "Curado": 750,
+      "Total": 5630
+    },
+    "DISPONIBLE": {
+      "Sin_Curar": 0,
+      "Curado": -750,
+      "Total": 0
+    },
+    "Comentarios": "AGOTADA"
+  },
+  {
+    "Variedad": "NS Baguette 61",
+    "Variedad_Calidad": "Baguette 61",
+    "OFERTA": {
+      "Sin_Curar": 4500,
+      "Curado": 4500,
+      "Total": 9000
+    },
+    "VENTAS": {
+      "Sin_Curar": 3700,
+      "Curado": 3800,
+      "Total": 7500
+    },
+    "DISPONIBLE": {
+      "Sin_Curar": 800,
+      "Curado": 700,
+      "Total": 1500
+    },
+    "Comentarios": ""
+  }
+]
