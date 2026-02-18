@@ -1,40 +1,25 @@
 const express = require('express');
-const fs = require('fs');
-const { parse } = require('csv-parse');
 const basicAuth = require('express-basic-auth');
+const path = require('path');
 
 const app = express();
-const ventas = [];
+const PORT = process.env.PORT || 10000;
 
+// 🔒 Autenticación básica aplicada a todo el sitio
 app.use(basicAuth({
-  users: { 'dshnos': 'febrero' },
+  users: { 'dario': '1234','dshnos': '1234' }, // Cambiá 'admin' y '1234' por tu usuario/contraseña
   challenge: true
 }));
 
-app.use(express.static('public'));
+// Servir frontend (public) protegido
+app.use(express.static(path.join(__dirname, 'public')));
 
-fs.createReadStream('data/ventas.csv')
-  .pipe(parse({ delimiter: ';', from_line: 3, relax_column_count: true }))
-  .on('data', (cols) => {
-    const row = {
-      Variedad: cols[0] || '',
-      Variedad_Calidad: cols[1] || '',
-      TOTAL_OFERTA: cols[4] || '',
-      TOTAL_VENTAS: cols[7] || '',
-      TOTAL_DISPONIBLE: cols[10] || '',
-      Comentarios: cols[11] || ''
-    };
-    ventas.push(row);
-  })
-  .on('end', () => {
-    console.log('Datos de ventas cargados correctamente');
-  });
-
+// API protegida
 app.get('/api/ventas', (req, res) => {
+  const ventas = require('./data/ventas.json');
   res.json(ventas);
 });
 
-const PORT = process.env.PORT || 4000;
 app.listen(PORT, () => {
   console.log(`Servidor corriendo en http://localhost:${PORT}`);
 });
