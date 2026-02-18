@@ -5,13 +5,13 @@ const path = require('path');
 const app = express();
 const PORT = process.env.PORT || 10000;
 
-// 🔒 Autenticación básica aplicada a todo el sitio
+// 🔒 Autenticación aplicada a todo el sitio
 app.use(basicAuth({
-  users: { 'dario': '1234','dshnos': '1234' }, // Cambiá 'admin' y '1234' por tu usuario/contraseña
+  users: { 'admin': '1234' }, // Cambiá usuario/contraseña
   challenge: true
 }));
 
-// Servir frontend (public) protegido
+// Servir frontend protegido
 app.use(express.static(path.join(__dirname, 'public')));
 
 // API protegida
