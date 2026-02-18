@@ -7,11 +7,11 @@ const PORT = process.env.PORT || 10000;
 
 // 🔒 Autenticación aplicada a todo el sitio
 app.use(basicAuth({
-  users: { 'admin': '1234' }, // Cambiá usuario/contraseña
+  users: { 'admin': '1234' }, // Cambiá 'admin' y '1234' por tu usuario/contraseña
   challenge: true
 }));
 
-// Servir frontend protegido
+// Servir frontend (public) protegido
 app.use(express.static(path.join(__dirname, 'public')));
 
 // API protegida
