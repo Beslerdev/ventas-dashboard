@@ -1,16 +1,16 @@
 <!DOCTYPE html>
-<html lang="es">
+<html>
 <head>
-  <meta charset="UTF-8">
   <title>Informe de Ventas</title>
-  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap/dist/css/bootstrap.min.css">
   <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
 </head>
 <body class="container mt-4">
   <h1>Informe de Ventas</h1>
 
-  <table class="table table-bordered table-striped">
-    <thead class="table-dark">
+  <!-- Tabla -->
+  <table class="table table-striped">
+    <thead>
       <tr>
         <th>Variedad</th>
         <th>Variedad_Calidad</th>
@@ -20,77 +20,82 @@
         <th>Comentarios</th>
       </tr>
     </thead>
-    <tbody id="tabla-ventas"></tbody>
+    <tbody id="tablaVentas"></tbody>
   </table>
 
-  <h2 class="mt-4">Ventas por Variedad</h2>
-  <canvas id="graficoVariedad"></canvas>
+  <!-- Gráficos -->
+  <h2>Ventas por Variedad</h2>
+  <canvas id="graficoVentas"></canvas>
 
-  <h2 class="mt-4">Oferta vs Ventas</h2>
-  <canvas id="graficoOfertaVentas"></canvas>
+  <h2>Oferta vs Ventas</h2>
+  <canvas id="graficoComparativo"></canvas>
 
   <script>
-    fetch('/api/ventas')
-      .then(res => res.json())
-      .then(data => {
-        const tbody = document.getElementById('tabla-ventas');
-        const variedades = [];
-        const ventas = [];
-        const ofertas = [];
+    async function cargarVentas() {
+      const res = await fetch('/api/ventas');
+      const datos = await res.json();
+      mostrarTabla(datos);
+    }
 
-        data.forEach(item => {
-          // llenar tabla
-          const row = document.createElement('tr');
-          row.innerHTML = `
-            <td>${item.Variedad}</td>
-            <td>${item.Variedad_Calidad}</td>
-            <td>${item.TOTAL_OFERTA}</td>
-            <td>${item.TOTAL_VENTAS}</td>
-            <td>${item.TOTAL_DISPONIBLE}</td>
-            <td>${item.Comentarios || ''}</td>
-          `;
-          tbody.appendChild(row);
+    function mostrarTabla(datos) {
+      const tbody = document.getElementById('tablaVentas');
+      tbody.innerHTML = '';
+      datos.forEach(v => {
+        tbody.innerHTML += `
+          <tr>
+            <td>${v.Variedad}</td>
+            <td>${v.Variedad_Calidad}</td>
+            <td>${v['TOTAL OFERTA']}</td>
+            <td>${v['TOTAL VENTAS']}</td>
+            <td>${v['TOTAL DISPONIBLE']}</td>
+            <td>${v.COMENTARIOS || ''}</td>
+          </tr>`;
+      });
 
-          // preparar datos para gráficos
-          variedades.push(item.Variedad);
-          ventas.push(item.TOTAL_VENTAS);
-          ofertas.push(item.TOTAL_OFERTA);
-        });
+      mostrarGraficoVentas(datos);
+      mostrarGraficoComparativo(datos);
+    }
 
-        // gráfico Ventas por Variedad
-        new Chart(document.getElementById('graficoVariedad'), {
-          type: 'bar',
-          data: {
-            labels: variedades,
-            datasets: [{
-              label: 'Ventas',
-              data: ventas,
-              backgroundColor: 'rgba(54, 162, 235, 0.7)'
-            }]
-          }
-        });
+    function mostrarGraficoVentas(datos) {
+      const ctx = document.getElementById('graficoVentas').getContext('2d');
+      new Chart(ctx, {
+        type: 'bar',
+        data: {
+          labels: datos.map(v => v.Variedad),
+          datasets: [{
+            label: 'Total Ventas',
+            data: datos.map(v => parseFloat(v['TOTAL VENTAS']) || 0),
+            backgroundColor: 'rgba(54, 162, 235, 0.6)'
+          }]
+        }
+      });
+    }
 
-        // gráfico Oferta vs Ventas
-        new Chart(document.getElementById('graficoOfertaVentas'), {
-          type: 'bar',
-          data: {
-            labels: variedades,
-            datasets: [
-              {
-                label: 'Oferta',
-                data: ofertas,
-                backgroundColor: 'rgba(255, 159, 64, 0.7)'
-              },
-              {
-                label: 'Ventas',
-                data: ventas,
-                backgroundColor: 'rgba(75, 192, 192, 0.7)'
-              }
-            ]
-          }
-        });
-      })
-      .catch(err => console.error('Error cargando datos:', err));
+    function mostrarGraficoComparativo(datos) {
+      const ctx = document.getElementById('graficoComparativo').getContext('2d');
+      new Chart(ctx, {
+        type: 'line',
+        data: {
+          labels: datos.map(v => v.Variedad),
+          datasets: [
+            {
+              label: 'Total Oferta',
+              data: datos.map(v => parseFloat(v['TOTAL OFERTA']) || 0),
+              borderColor: 'rgba(75, 192, 192, 1)',
+              fill: false
+            },
+            {
+              label: 'Total Ventas',
+              data: datos.map(v => parseFloat(v['TOTAL VENTAS']) || 0),
+              borderColor: 'rgba(255, 99, 132, 1)',
+              fill: false
+            }
+          ]
+        }
+      });
+    }
+
+    cargarVentas();
   </script>
 </body>
 </html>
