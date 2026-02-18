@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Informe de Ventas</title>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap/dist/css/bootstrap.min.css">
+  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+</head>
+<body class="container mt-4">
+  <h1>Informe de Ventas</h1>
+
+  <!-- Tabla -->
+  <table class="table table-striped">
+    <thead>
+      <tr>
+        <th>Variedad</th>
+        <th>Variedad_Calidad</th>
+        <th>TOTAL OFERTA</th>
+        <th>TOTAL VENTAS</th>
+        <th>TOTAL DISPONIBLE</th>
+        <th>Comentarios</th>
+      </tr>
+    </thead>
+    <tbody id="tablaVentas"></tbody>
+  </table>
+
+  <!-- Gráficos -->
+  <h2>Ventas por Variedad</h2>
+  <canvas id="graficoVentas"></canvas>
+
+  <h2>Oferta vs Ventas</h2>
+  <canvas id="graficoComparativo"></canvas>
+
+  <script>
+    async function cargarVentas() {
+      const res = await fetch('/api/ventas');
+      const datos = await res.json();
+      mostrarTabla(datos);
+    }
+
+    function mostrarTabla(datos) {
+      const tbody = document.getElementById('tablaVentas');
+      tbody.innerHTML = '';
+      datos.forEach(v => {
+        tbody.innerHTML += `
+          <tr>
+            <td>${v.Variedad}</td>
+            <td>${v.Variedad_Calidad}</td>
+            <td>${v['TOTAL OFERTA']}</td>
+            <td>${v['TOTAL VENTAS']}</td>
+            <td>${v['TOTAL DISPONIBLE']}</td>
+            <td>${v.COMENTARIOS || ''}</td>
+          </tr>`;
+      });
+
+      mostrarGraficoVentas(datos);
+      mostrarGraficoComparativo(datos);
+    }
+
+    function mostrarGraficoVentas(datos) {
+      const ctx = document.getElementById('graficoVentas').getContext('2d');
+      new Chart(ctx, {
+        type: 'bar',
+        data: {
+          labels: datos.map(v => v.Variedad),
+          datasets: [{
+            label: 'Total Ventas',
+            data: datos.map(v => parseFloat(v['TOTAL VENTAS']) || 0),
+            backgroundColor: 'rgba(54, 162, 235, 0.6)'
+          }]
+        }
+      });
+    }
+
+    function mostrarGraficoComparativo(datos) {
+      const ctx = document.getElementById('graficoComparativo').getContext('2d');
+      new Chart(ctx, {
+        type: 'line',
+        data: {
+          labels: datos.map(v => v.Variedad),
+          datasets: [
+            {
+              label: 'Total Oferta',
+              data: datos.map(v => parseFloat(v['TOTAL OFERTA']) || 0),
+              borderColor: 'rgba(75, 192, 192, 1)',
+              fill: false
+            },
+            {
+              label: 'Total Ventas',
+              data: datos.map(v => parseFloat(v['TOTAL VENTAS']) || 0),
+              borderColor: 'rgba(255, 99, 132, 1)',
+              fill: false
+            }
+          ]
+        }
+      });
+    }
+
+    cargarVentas();
+  </script>
+</body>
+</html>
