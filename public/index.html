@@ -6,11 +6,11 @@
   <style>
     body { font-family: Arial, sans-serif; margin: 20px; }
     table { border-collapse: collapse; width: 100%; margin-bottom: 30px; }
-    th, td { border: 1px solid #ccc; padding: 8px; text-align: center; }
+    th, td { border: 1px solid #ccc; padding: 6px; text-align: center; }
     th { background-color: #f2f2f2; }
     h1 { margin-bottom: 10px; }
-    .agotada { background-color: #ffcccc; } /* filas en rojo si está agotada */
-    .totales { font-weight: bold; background-color: #e6ffe6; } /* fila de totales en verde */
+    .agotada { background-color: #ffcccc; }
+    .totales { font-weight: bold; background-color: #e6ffe6; }
   </style>
 </head>
 <body>
@@ -18,21 +18,38 @@
   <table id="tablaVentas">
     <thead>
       <tr>
-        <th>Variedad</th>
-        <th>Calidad</th>
-        <th>Total Oferta</th>
-        <th>Total Ventas</th>
-        <th>Total Disponible</th>
-        <th>Comentarios</th>
+        <th rowspan="2">Variedad</th>
+        <th rowspan="2">Calidad</th>
+        <th colspan="3">Oferta</th>
+        <th colspan="3">Ventas</th>
+        <th colspan="3">Disponible</th>
+        <th rowspan="2">Comentarios</th>
+      </tr>
+      <tr>
+        <th>Sin Curar</th>
+        <th>Curado</th>
+        <th>Total</th>
+        <th>Sin Curar</th>
+        <th>Curado</th>
+        <th>Total</th>
+        <th>Sin Curar</th>
+        <th>Curado</th>
+        <th>Total</th>
       </tr>
     </thead>
     <tbody></tbody>
     <tfoot>
       <tr class="totales">
         <td colspan="2">Totales Generales</td>
-        <td id="totalOferta"></td>
-        <td id="totalVentas"></td>
-        <td id="totalDisponible"></td>
+        <td id="totalOfertaSinCurar"></td>
+        <td id="totalOfertaCurado"></td>
+        <td id="totalOfertaTotal"></td>
+        <td id="totalVentasSinCurar"></td>
+        <td id="totalVentasCurado"></td>
+        <td id="totalVentasTotal"></td>
+        <td id="totalDispSinCurar"></td>
+        <td id="totalDispCurado"></td>
+        <td id="totalDispTotal"></td>
         <td></td>
       </tr>
     </tfoot>
@@ -43,7 +60,11 @@
       .then(res => res.json())
       .then(data => {
         const tbody = document.querySelector('#tablaVentas tbody');
-        let sumaOferta = 0, sumaVentas = 0, sumaDisponible = 0;
+
+        // Inicializar acumuladores
+        let totOfertaSinCurar=0, totOfertaCurado=0, totOfertaTotal=0;
+        let totVentasSinCurar=0, totVentasCurado=0, totVentasTotal=0;
+        let totDispSinCurar=0, totDispCurado=0, totDispTotal=0;
 
         data.forEach(item => {
           const agotadaClass = item.Comentarios === "AGOTADA" ? "agotada" : "";
@@ -51,8 +72,14 @@
             <tr class="${agotadaClass}">
               <td>${item.Variedad}</td>
               <td>${item.Variedad_Calidad}</td>
+              <td>${item.OFERTA.Sin_Curar}</td>
+              <td>${item.OFERTA.Curado}</td>
               <td>${item.OFERTA.Total}</td>
+              <td>${item.VENTAS.Sin_Curar}</td>
+              <td>${item.VENTAS.Curado}</td>
               <td>${item.VENTAS.Total}</td>
+              <td>${item.DISPONIBLE.Sin_Curar}</td>
+              <td>${item.DISPONIBLE.Curado}</td>
               <td>${item.DISPONIBLE.Total}</td>
               <td>${item.Comentarios}</td>
             </tr>
@@ -60,15 +87,31 @@
           tbody.innerHTML += row;
 
           // Acumular totales
-          sumaOferta += item.OFERTA.Total;
-          sumaVentas += item.VENTAS.Total;
-          sumaDisponible += item.DISPONIBLE.Total;
+          totOfertaSinCurar += item.OFERTA.Sin_Curar;
+          totOfertaCurado   += item.OFERTA.Curado;
+          totOfertaTotal    += item.OFERTA.Total;
+
+          totVentasSinCurar += item.VENTAS.Sin_Curar;
+          totVentasCurado   += item.VENTAS.Curado;
+          totVentasTotal    += item.VENTAS.Total;
+
+          totDispSinCurar   += item.DISPONIBLE.Sin_Curar;
+          totDispCurado     += item.DISPONIBLE.Curado;
+          totDispTotal      += item.DISPONIBLE.Total;
         });
 
-        // Mostrar totales en el pie de la tabla
-        document.getElementById('totalOferta').innerText = sumaOferta;
-        document.getElementById('totalVentas').innerText = sumaVentas;
-        document.getElementById('totalDisponible').innerText = sumaDisponible;
+        // Mostrar totales
+        document.getElementById('totalOfertaSinCurar').innerText = totOfertaSinCurar;
+        document.getElementById('totalOfertaCurado').innerText   = totOfertaCurado;
+        document.getElementById('totalOfertaTotal').innerText    = totOfertaTotal;
+
+        document.getElementById('totalVentasSinCurar').innerText = totVentasSinCurar;
+        document.getElementById('totalVentasCurado').innerText   = totVentasCurado;
+        document.getElementById('totalVentasTotal').innerText    = totVentasTotal;
+
+        document.getElementById('totalDispSinCurar').innerText   = totDispSinCurar;
+        document.getElementById('totalDispCurado').innerText     = totDispCurado;
+        document.getElementById('totalDispTotal').innerText      = totDispTotal;
       })
       .catch(err => {
         document.body.innerHTML += "<p>Error cargando datos: " + err + "</p>";
