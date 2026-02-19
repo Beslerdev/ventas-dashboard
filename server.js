@@ -45,7 +45,7 @@ app.post('/login', (req, res) => {
 
   if (users[username] && users[username] === password) {
     req.session.user = username;
-    res.redirect('/');
+    res.redirect('/dashboard'); // 🔒 después del login, va al dashboard
   } else {
     res.send('Credenciales inválidas. <a href="/login">Intentar de nuevo</a>');
   }
@@ -58,19 +58,18 @@ app.get('/logout', (req, res) => {
   });
 });
 
-// 🔒 Todas las rutas protegidas
-app.use(requireLogin);
+// 🔒 Dashboard protegido
+app.get('/dashboard', requireLogin, (req, res) => {
+  res.sendFile(path.join(__dirname, 'public', 'index.html'));
+});
 
-// Frontend protegido
-app.use(express.static(path.join(__dirname, 'public')));
-
-// API protegida
-app.get('/api/ventas', (req, res) => {
+// 🔒 APIs protegidas
+app.get('/api/ventas', requireLogin, (req, res) => {
   const ventas = require('./data/ventas.json');
   res.json(ventas);
 });
 
-app.get('/api/avance', (req, res) => {
+app.get('/api/avance', requireLogin, (req, res) => {
   const avance = require('./data/avance.json');
   res.json(avance);
 });
