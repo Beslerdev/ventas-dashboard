@@ -25,6 +25,11 @@ function requireLogin(req, res, next) {
   }
 }
 
+// 👉 Ruta raíz para evitar "Cannot GET /"
+app.get('/', (req, res) => {
+  res.redirect('/login'); // redirige directamente al login
+});
+
 // Página de login
 app.get('/login', (req, res) => {
   res.send(`
