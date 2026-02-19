@@ -58,15 +58,19 @@ app.get('/logout', (req, res) => {
   });
 });
 
-// Rutas protegidas
-app.use(requireLogin, express.static(path.join(__dirname, 'public')));
+// 🔒 Todas las rutas protegidas
+app.use(requireLogin);
 
-app.get('/api/ventas', requireLogin, (req, res) => {
+// Frontend protegido
+app.use(express.static(path.join(__dirname, 'public')));
+
+// API protegida
+app.get('/api/ventas', (req, res) => {
   const ventas = require('./data/ventas.json');
   res.json(ventas);
 });
 
-app.get('/api/avance', requireLogin, (req, res) => {
+app.get('/api/avance', (req, res) => {
   const avance = require('./data/avance.json');
   res.json(avance);
 });
