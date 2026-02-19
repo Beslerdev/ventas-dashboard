@@ -5,17 +5,16 @@ const path = require('path');
 const app = express();
 const PORT = process.env.PORT || 10000;
 
-// 🔒 Autenticación aplicada a todas las rutas
+// 🔒 Autenticación global
 app.use(basicAuth({
   users: { 'admin': '1234' }, // Cambiá usuario/contraseña
   challenge: true,
-  unauthorizedResponse: (req) => 'Acceso restringido: credenciales requeridas'
+  unauthorizedResponse: () => 'Acceso restringido: credenciales requeridas'
 }));
 
-// Servir frontend protegido
+// Todo lo demás queda protegido
 app.use(express.static(path.join(__dirname, 'public')));
 
-// API protegida
 app.get('/api/ventas', (req, res) => {
   const ventas = require('./data/ventas.json');
   res.json(ventas);
