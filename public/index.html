@@ -9,6 +9,8 @@
     th, td { border: 1px solid #ccc; padding: 8px; text-align: center; }
     th { background-color: #f2f2f2; }
     h1 { margin-bottom: 10px; }
+    .agotada { background-color: #ffcccc; } /* filas en rojo si está agotada */
+    .totales { font-weight: bold; background-color: #e6ffe6; } /* fila de totales en verde */
   </style>
 </head>
 <body>
@@ -18,46 +20,55 @@
       <tr>
         <th>Variedad</th>
         <th>Calidad</th>
-        <th>Oferta (Sin Curar)</th>
-        <th>Oferta (Curado)</th>
-        <th>Oferta (Total)</th>
-        <th>Ventas (Sin Curar)</th>
-        <th>Ventas (Curado)</th>
-        <th>Ventas (Total)</th>
-        <th>Disponible (Sin Curar)</th>
-        <th>Disponible (Curado)</th>
-        <th>Disponible (Total)</th>
+        <th>Total Oferta</th>
+        <th>Total Ventas</th>
+        <th>Total Disponible</th>
         <th>Comentarios</th>
       </tr>
     </thead>
     <tbody></tbody>
+    <tfoot>
+      <tr class="totales">
+        <td colspan="2">Totales Generales</td>
+        <td id="totalOferta"></td>
+        <td id="totalVentas"></td>
+        <td id="totalDisponible"></td>
+        <td></td>
+      </tr>
+    </tfoot>
   </table>
 
   <script>
-    // Cargar datos de ventas automáticamente
     fetch('/api/ventas')
       .then(res => res.json())
       .then(data => {
         const tbody = document.querySelector('#tablaVentas tbody');
+        let sumaOferta = 0, sumaVentas = 0, sumaDisponible = 0;
+
         data.forEach(item => {
+          const agotadaClass = item.Comentarios === "AGOTADA" ? "agotada" : "";
           const row = `
-            <tr>
+            <tr class="${agotadaClass}">
               <td>${item.Variedad}</td>
               <td>${item.Variedad_Calidad}</td>
-              <td>${item.OFERTA.Sin_Curar}</td>
-              <td>${item.OFERTA.Curado}</td>
               <td>${item.OFERTA.Total}</td>
-              <td>${item.VENTAS.Sin_Curar}</td>
-              <td>${item.VENTAS.Curado}</td>
               <td>${item.VENTAS.Total}</td>
-              <td>${item.DISPONIBLE.Sin_Curar}</td>
-              <td>${item.DISPONIBLE.Curado}</td>
               <td>${item.DISPONIBLE.Total}</td>
               <td>${item.Comentarios}</td>
             </tr>
           `;
           tbody.innerHTML += row;
+
+          // Acumular totales
+          sumaOferta += item.OFERTA.Total;
+          sumaVentas += item.VENTAS.Total;
+          sumaDisponible += item.DISPONIBLE.Total;
         });
+
+        // Mostrar totales en el pie de la tabla
+        document.getElementById('totalOferta').innerText = sumaOferta;
+        document.getElementById('totalVentas').innerText = sumaVentas;
+        document.getElementById('totalDisponible').innerText = sumaDisponible;
       })
       .catch(err => {
         document.body.innerHTML += "<p>Error cargando datos: " + err + "</p>";
