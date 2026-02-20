@@ -1,38 +1,25 @@
-# Node.js
+# Dependencias
 node_modules/
 npm-debug.log*
 yarn-debug.log*
 yarn-error.log*
 
-# Logs
-logs
-*.log
-*.log.*
-
-# Runtime data
-pids
-*.pid
-*.seed
-*.pid.lock
-
-# Coverage
-coverage/
-*.lcov
-
-# Build output
-dist/
-build/
-
-# System files
+# Archivos de configuración locales
+.env
 .DS_Store
 Thumbs.db
 
-# Environment variables
-.env
-.env.local
-.env.*.local
+# Archivos de datos fuente (no se suben, solo el JSON convertido)
+ventas.xlsx
+ventas.csv
 
-# IDE/editor settings
-.vscode/
-.idea/
-*.swp
+# Archivos de build temporales
+dist/
+build/
+.tmp/
+
+# Logs
+*.log
+
+# Sistema operativo
+desktop.ini
