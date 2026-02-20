@@ -1,19 +1,12 @@
 # Dependencias
 node_modules/
-npm-debug.log*
-yarn-debug.log*
-yarn-error.log*
 
-# Archivos de configuración locales
-.env
-.DS_Store
-Thumbs.db
-
-# Archivos de datos fuente (no se suben, solo el JSON convertido)
+# Archivos fuente de datos (no se suben)
 ventas.xlsx
 ventas.csv
+ventas.json   # el que queda en la raíz, no lo queremos
 
-# Archivos de build temporales
+# Archivos temporales
 dist/
 build/
 .tmp/
@@ -22,4 +15,6 @@ build/
 *.log
 
 # Sistema operativo
+.DS_Store
+Thumbs.db
 desktop.ini
