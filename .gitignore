@@ -4,7 +4,6 @@ node_modules/
 # Archivos fuente de datos (no se suben)
 ventas.xlsx
 ventas.csv
-ventas.json   # el que queda en la raíz, no lo queremos
 
 # Archivos temporales
 dist/

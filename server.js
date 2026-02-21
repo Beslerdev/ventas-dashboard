@@ -13,13 +13,18 @@ app.use(bodyParser.urlencoded({ extended: true }));
 
 // Configuración de sesión
 app.use(session({
-  secret: 'clave-secreta', // cámbiala por algo seguro
+  secret: 'clave-secreta',
   resave: false,
   saveUninitialized: true
 }));
 
-// Servir archivos estáticos (index.html, logo.png, etc.)
+// Servir archivos estáticos (logo.png, CSS, etc.)
 app.use(express.static(path.join(__dirname)));
+
+// Ruta raíz -> index.html
+app.get('/', (req, res) => {
+  res.sendFile(path.join(__dirname, 'index.html'));
+});
 
 // Endpoint que tu frontend espera
 app.get('/api/ventas', (req, res) => {
