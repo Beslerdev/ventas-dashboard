@@ -1,86 +1,39 @@
 const express = require('express');
 const session = require('express-session');
+const bodyParser = require('body-parser');
+const cors = require('cors');
 const path = require('path');
 
 const app = express();
-const PORT = process.env.PORT || 10000;
 
-// Middleware para parsear formularios
-app.use(express.urlencoded({ extended: true }));
+// Middleware
+app.use(cors());
+app.use(bodyParser.json());
+app.use(bodyParser.urlencoded({ extended: true }));
 
-// Configuración de sesiones
+// Configuración de sesión (básica)
 app.use(session({
   secret: 'clave-secreta', // cámbiala por algo seguro
   resave: false,
-  saveUninitialized: false,
-  cookie: { maxAge: 5 * 60 * 1000 } // sesión expira en 5 minutos
+  saveUninitialized: true
 }));
 
-// Middleware de autenticación
-function requireLogin(req, res, next) {
-  if (req.session && req.session.user) {
-    next();
-  } else {
-    res.redirect('/login');
-  }
-}
+// Servir archivos estáticos (incluye ventas.json y frontend)
+app.use(express.static(path.join(__dirname)));
 
-// 👉 Ruta raíz para evitar "Cannot GET /"
+// Endpoint explícito para ventas.json
+app.get('/ventas', (req, res) => {
+  res.sendFile(path.join(__dirname, 'ventas.json'));
+});
+
+// Ruta principal (si tenés un index.html para el dashboard)
 app.get('/', (req, res) => {
-  res.redirect('/login'); // redirige directamente al login
+  res.sendFile(path.join(__dirname, 'index.html'));
 });
 
-// Página de login
-app.get('/login', (req, res) => {
-  res.send(`
-    <h2>Login</h2>
-    <form method="post" action="/login">
-      <label>Usuario: <input type="text" name="username"/></label><br/>
-      <label>Contraseña: <input type="password" name="password"/></label><br/>
-      <button type="submit">Ingresar</button>
-    </form>
-  `);
-});
-
-// Procesar login
-app.post('/login', (req, res) => {
-  const { username, password } = req.body;
-  // Usuarios válidos
-  const users = { admin: '1234', ventas: 'abcd', consulta: 'xyz' };
-
-  if (users[username] && users[username] === password) {
-    req.session.user = username;
-    res.redirect('/dashboard'); // 🔒 después del login, va al dashboard
-  } else {
-    res.send('Credenciales inválidas. <a href="/login">Intentar de nuevo</a>');
-  }
-});
-
-// Logout
-app.get('/logout', (req, res) => {
-  req.session.destroy(() => {
-    res.redirect('/login');
-  });
-});
-
-// 🔒 Dashboard protegido
-app.get('/dashboard', requireLogin, (req, res) => {
-  res.sendFile(path.join(__dirname, 'public', 'index.html'));
-});
-
-// 🔒 APIs protegidas
-app.get('/api/ventas', requireLogin, (req, res) => {
-  const ventas = require('./data/ventas.json');
-  res.json(ventas);
-});
-
-app.get('/api/avance', requireLogin, (req, res) => {
-  const avance = require('./data/avance.json');
-  res.json(avance);
-});
-
+// Arrancar servidor en Render (usa PORT si está definido)
+const PORT = process.env.PORT || 10000;
 app.listen(PORT, () => {
-  console.log(`Servidor corriendo en http://localhost:${PORT}`);
+  console.log(`Servidor corriendo en puerto ${PORT}`);
 });
-
  
