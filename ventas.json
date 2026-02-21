@@ -1,147 +1,322 @@
 [
   {
     "Variedad": "NEO 50T23",
-    "Variedad_Calidad": "50T23",
-    "Sin Curar": -140,
-    "Curado": 0,
-    "TOTAL OFERTA": 600,
-    "TOTAL VENTAS": 740,
-    "TOTAL DISPONIBLE": "AGOTADA"
+    "Calidad": "50T23",
+    "Oferta": {
+      "Sin_Curar": 1225,
+      "Curado": 0,
+      "Total": 600
+    },
+    "Ventas": {
+      "Sin_Curar": 740,
+      "Curado": 0,
+      "Total": 740
+    },
+    "Disponible": {
+      "Sin_Curar": -140,
+      "Curado": 0,
+      "Total": "AGOTADA"
+    },
+    "Comentarios": ""
   },
   {
     "Variedad": "NEO 70T25",
-    "Variedad_Calidad": "70T25",
-    "Sin Curar": 0,
-    "Curado": 0,
-    "TOTAL OFERTA": 380,
-    "TOTAL VENTAS": 380,
-    "TOTAL DISPONIBLE": "AGOTADA"
+    "Calidad": "70T25",
+    "Oferta": {
+      "Sin_Curar": 2028.95,
+      "Curado": 0,
+      "Total": 380
+    },
+    "Ventas": {
+      "Sin_Curar": 380,
+      "Curado": 0,
+      "Total": 380
+    },
+    "Disponible": {
+      "Sin_Curar": 0,
+      "Curado": 0,
+      "Total": "AGOTADA"
+    },
+    "Comentarios": ""
   },
   {
     "Variedad": "DM Araucaria",
-    "Variedad_Calidad": "Araucaria",
-    "Sin Curar": 857.375,
-    "Curado": -1361.125,
-    "TOTAL OFERTA": 5345.25,
-    "TOTAL VENTAS": 5849,
-    "TOTAL DISPONIBLE": "AGOTADA"
+    "Calidad": "Araucaria",
+    "Oferta": {
+      "Sin_Curar": 6155.375,
+      "Curado": 30005.250000000007,
+      "Total": 5345.25
+    },
+    "Ventas": {
+      "Sin_Curar": 1596,
+      "Curado": 4253,
+      "Total": 5849
+    },
+    "Disponible": {
+      "Sin_Curar": 857.375,
+      "Curado": -1361.125,
+      "Total": "AGOTADA"
+    },
+    "Comentarios": ""
   },
   {
     "Variedad": "BIO Arazá",
-    "Variedad_Calidad": "Araza",
-    "Sin Curar": 1496.3249999999998,
-    "Curado": -1504,
-    "TOTAL OFERTA": 2938.325,
-    "TOTAL VENTAS": 2946,
-    "TOTAL DISPONIBLE": "AGOTADA"
+    "Calidad": "Araza",
+    "Oferta": {
+      "Sin_Curar": 6214.375,
+      "Curado": 0,
+      "Total": 2938.325
+    },
+    "Ventas": {
+      "Sin_Curar": 1442,
+      "Curado": 1504,
+      "Total": 2946
+    },
+    "Disponible": {
+      "Sin_Curar": 1496.3249999999998,
+      "Curado": -1504,
+      "Total": "AGOTADA"
+    },
+    "Comentarios": ""
   },
   {
     "Variedad": "NS Baguette 610",
-    "Variedad_Calidad": "Baguette 610",
-    "Sin Curar": 4677.049999999999,
-    "Curado": -2140,
-    "TOTAL OFERTA": 7957.049999999999,
-    "TOTAL VENTAS": 5420,
-    "TOTAL DISPONIBLE": 2537.0499999999993
+    "Calidad": "Baguette 610",
+    "Oferta": {
+      "Sin_Curar": 10547.125,
+      "Curado": 0,
+      "Total": 7957.049999999999
+    },
+    "Ventas": {
+      "Sin_Curar": 3280,
+      "Curado": 2140,
+      "Total": 5420
+    },
+    "Disponible": {
+      "Sin_Curar": 4677.049999999999,
+      "Curado": -2140,
+      "Total": 2537.0499999999993
+    },
+    "Comentarios": ""
   },
   {
     "Variedad": "NS Baguette 620",
-    "Variedad_Calidad": "Baguette 620",
-    "Sin Curar": 2213.675,
-    "Curado": -1622,
-    "TOTAL OFERTA": 2453.675,
-    "TOTAL VENTAS": 1862,
-    "TOTAL DISPONIBLE": 591.6750000000002
+    "Calidad": "Baguette 620",
+    "Oferta": {
+      "Sin_Curar": 2433.675,
+      "Curado": 0,
+      "Total": 2453.675
+    },
+    "Ventas": {
+      "Sin_Curar": 240,
+      "Curado": 1622,
+      "Total": 1862
+    },
+    "Disponible": {
+      "Sin_Curar": 2213.675,
+      "Curado": -1622,
+      "Total": 591.6750000000002
+    },
+    "Comentarios": ""
   },
   {
     "Variedad": "NS Baguette 750",
-    "Variedad_Calidad": "Baguette 750",
-    "Sin Curar": -1687.125,
-    "Curado": 1685.525,
-    "TOTAL OFERTA": 1336.4,
-    "TOTAL VENTAS": 1338,
-    "TOTAL DISPONIBLE": "AGOTADA"
+    "Calidad": "Baguette 750",
+    "Oferta": {
+      "Sin_Curar": 4337.975,
+      "Curado": 0,
+      "Total": 1336.4
+    },
+    "Ventas": {
+      "Sin_Curar": 852,
+      "Curado": 486,
+      "Total": 1338
+    },
+    "Disponible": {
+      "Sin_Curar": -1687.125,
+      "Curado": 1685.525,
+      "Total": "AGOTADA"
+    },
+    "Comentarios": ""
   },
   {
     "Variedad": "NS Baguette 820",
-    "Variedad_Calidad": "Baguette 820",
-    "Sin Curar": 1987.975,
-    "Curado": -2043.5,
-    "TOTAL OFERTA": 4354.975,
-    "TOTAL VENTAS": 4410.5,
-    "TOTAL DISPONIBLE": "AGOTADA"
+    "Calidad": "Baguette 820",
+    "Oferta": {
+      "Sin_Curar": 3524.725,
+      "Curado": 4715.374999999999,
+      "Total": 4354.975
+    },
+    "Ventas": {
+      "Sin_Curar": 207,
+      "Curado": 4203.5,
+      "Total": 4410.5
+    },
+    "Disponible": {
+      "Sin_Curar": 1987.975,
+      "Curado": -2043.5,
+      "Total": "AGOTADA"
+    },
+    "Comentarios": ""
   },
   {
     "Variedad": "RAGT Borsalino",
-    "Variedad_Calidad": "Borsalino",
-    "Sin Curar": 4248.55,
-    "Curado": -3258.5,
-    "TOTAL OFERTA": 5140.55,
-    "TOTAL VENTAS": 4150.5,
-    "TOTAL DISPONIBLE": 990.0500000000002
+    "Calidad": "Borsalino",
+    "Oferta": {
+      "Sin_Curar": 7003.925,
+      "Curado": 724.625,
+      "Total": 5140.55
+    },
+    "Ventas": {
+      "Sin_Curar": 892,
+      "Curado": 3258.5,
+      "Total": 4150.5
+    },
+    "Disponible": {
+      "Sin_Curar": 4248.55,
+      "Curado": -3258.5,
+      "Total": 990.0500000000002
+    },
+    "Comentarios": ""
   },
   {
     "Variedad": "DM Casuarina",
-    "Variedad_Calidad": "Casuarina",
-    "Sin Curar": 995,
-    "Curado": -911,
-    "TOTAL OFERTA": 1100,
-    "TOTAL VENTAS": 1016,
-    "TOTAL DISPONIBLE": 108,
-    "COMENTARIOS": "AGOTADA"
+    "Calidad": "Casuarina",
+    "Oferta": {
+      "Sin_Curar": 1099.975,
+      "Curado": 0,
+      "Total": 1100
+    },
+    "Ventas": {
+      "Sin_Curar": 100,
+      "Curado": 916,
+      "Total": 1016
+    },
+    "Disponible": {
+      "Sin_Curar": 995,
+      "Curado": -911,
+      "Total": 108
+    },
+    "Comentarios": "AGOTADA"
   },
   {
     "Variedad": "DM Catalpa",
-    "Variedad_Calidad": "Catalpa",
-    "Sin Curar": 5241.075000000001,
-    "Curado": -6112.625,
-    "TOTAL OFERTA": 22960.95,
-    "TOTAL VENTAS": 23832.5,
-    "TOTAL DISPONIBLE": "AGOTADA"
+    "Calidad": "Catalpa",
+    "Oferta": {
+      "Sin_Curar": 20169.2,
+      "Curado": 0,
+      "Total": 22960.95
+    },
+    "Ventas": {
+      "Sin_Curar": 16244,
+      "Curado": 7588.5,
+      "Total": 23832.5
+    },
+    "Disponible": {
+      "Sin_Curar": 5241.075000000001,
+      "Curado": -6112.625,
+      "Total": "AGOTADA"
+    },
+    "Comentarios": ""
   },
   {
     "Variedad": "BIO Laurel",
-    "Variedad_Calidad": "Laurel",
-    "Sin Curar": 3899.0249999999996,
-    "Curado": -2740,
-    "TOTAL OFERTA": 5851.025,
-    "TOTAL VENTAS": 4692,
-    "TOTAL DISPONIBLE": 1159.0249999999996
+    "Calidad": "Laurel",
+    "Oferta": {
+      "Sin_Curar": 5969.325,
+      "Curado": 0,
+      "Total": 5851.025
+    },
+    "Ventas": {
+      "Sin_Curar": 1952,
+      "Curado": 2740,
+      "Total": 4692
+    },
+    "Disponible": {
+      "Sin_Curar": 3899.0249999999996,
+      "Curado": -2740,
+      "Total": 1159.0249999999996
+    },
+    "Comentarios": ""
   },
   {
     "Variedad": "BIO Parana",
-    "Variedad_Calidad": "Parana",
-    "Sin Curar": 10853.375,
-    "Curado": -10700,
-    "TOTAL OFERTA": 10853.375,
-    "TOTAL VENTAS": 10700,
-    "TOTAL DISPONIBLE": 153.375
+    "Calidad": "Parana",
+    "Oferta": {
+      "Sin_Curar": 13381.25,
+      "Curado": 0,
+      "Total": 10853.375
+    },
+    "Ventas": {
+      "Sin_Curar": 0,
+      "Curado": 10700,
+      "Total": 10700
+    },
+    "Disponible": {
+      "Sin_Curar": 10853.375,
+      "Curado": -10700,
+      "Total": 153.375
+    },
+    "Comentarios": ""
   },
   {
     "Variedad": "DM Pehuén",
-    "Variedad_Calidad": "Pehuén",
-    "Sin Curar": 597.3500000000004,
-    "Curado": -750,
-    "TOTAL OFERTA": 5477.35,
-    "TOTAL VENTAS": 5630,
-    "TOTAL DISPONIBLE": "AGOTADA"
+    "Calidad": "Pehuén",
+    "Oferta": {
+      "Sin_Curar": 5656.4,
+      "Curado": 0,
+      "Total": 5477.35
+    },
+    "Ventas": {
+      "Sin_Curar": 4880,
+      "Curado": 750,
+      "Total": 5630
+    },
+    "Disponible": {
+      "Sin_Curar": 597.3500000000004,
+      "Curado": -750,
+      "Total": "AGOTADA"
+    },
+    "Comentarios": ""
   },
   {
     "Variedad": "RAGT Quiriko",
-    "Variedad_Calidad": "Quiriko",
-    "Sin Curar": 2127.775,
-    "Curado": -680,
-    "TOTAL OFERTA": 2127.775,
-    "TOTAL VENTAS": 680,
-    "TOTAL DISPONIBLE": 1447.775
+    "Calidad": "Quiriko",
+    "Oferta": {
+      "Sin_Curar": 2052.7500000000005,
+      "Curado": 0,
+      "Total": 2127.775
+    },
+    "Ventas": {
+      "Sin_Curar": 0,
+      "Curado": 680,
+      "Total": 680
+    },
+    "Disponible": {
+      "Sin_Curar": 2127.775,
+      "Curado": -680,
+      "Total": 1447.775
+    },
+    "Comentarios": ""
   },
   {
     "Variedad": "BIO Timbo",
-    "Variedad_Calidad": "Timbo",
-    "Sin Curar": 528.625,
-    "Curado": -540,
-    "TOTAL OFERTA": 528.625,
-    "TOTAL VENTAS": 540,
-    "TOTAL DISPONIBLE": "AGOTADA"
+    "Calidad": "Timbo",
+    "Oferta": {
+      "Sin_Curar": 1726.125,
+      "Curado": 0,
+      "Total": 528.625
+    },
+    "Ventas": {
+      "Sin_Curar": 0,
+      "Curado": 540,
+      "Total": 540
+    },
+    "Disponible": {
+      "Sin_Curar": 528.625,
+      "Curado": -540,
+      "Total": "AGOTADA"
+    },
+    "Comentarios": ""
   }
 ]
