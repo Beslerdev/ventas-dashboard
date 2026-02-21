@@ -9,6 +9,8 @@
     "watch-excel": "nodemon --watch ventas.xlsx --exec \"npm run convertir\""
   },
   "dependencies": {
+    "body-parser": "^2.2.2",
+    "cors": "^2.8.6",
     "express": "^4.18.2",
     "express-session": "^1.19.0",
     "xlsx": "^0.18.5"
