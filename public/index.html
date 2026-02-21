@@ -16,11 +16,11 @@
       position: fixed;
       top: 0; left: 0; right: 0; bottom: 0;
       background-image: url('logo.png'); /* poné aquí tu logo en public/logo.png */
-      background-repeat: repeat;         /* mosaico */
-      background-size: 200px;            /* tamaño del logo */
-      opacity: 0.05;                     /* transparencia */
-      pointer-events: none;              /* no bloquea clics ni scroll */
-      z-index: -1;                       /* queda detrás del contenido */
+      background-repeat: repeat;
+      background-size: 200px;
+      opacity: 0.05;
+      pointer-events: none;
+      z-index: -1;
     }
 
     table { border-collapse: collapse; width: 100%; margin-bottom: 30px; }
@@ -74,7 +74,6 @@
     </tfoot>
   </table>
 
-  <!-- Gráfico -->
   <h2>Visualización Gráfica</h2>
   <canvas id="graficoVentas" width="1000" height="400"></canvas>
   <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
@@ -85,12 +84,10 @@
       .then(data => {
         const tbody = document.querySelector('#tablaVentas tbody');
 
-        // Inicializar acumuladores
         let totOfertaSinCurar=0, totOfertaCurado=0, totOfertaTotal=0;
         let totVentasSinCurar=0, totVentasCurado=0, totVentasTotal=0;
         let totDispSinCurar=0, totDispCurado=0, totDispTotal=0;
 
-        // Arrays para gráfico
         const variedades = [];
         const ofertaSinCurar = [], ofertaCurado = [], ofertaTotal = [];
         const ventasSinCurar = [], ventasCurado = [], ventasTotal = [];
@@ -102,21 +99,20 @@
             <tr class="${agotadaClass}">
               <td>${item.Variedad}</td>
               <td>${item.Variedad_Calidad}</td>
-              <td>${item.OFERTA.Sin_Curar}</td>
-              <td>${item.OFERTA.Curado}</td>
-              <td>${item.OFERTA.Total}</td>
-              <td>${item.VENTAS.Sin_Curar}</td>
-              <td>${item.VENTAS.Curado}</td>
-              <td>${item.VENTAS.Total}</td>
-              <td>${item.DISPONIBLE.Sin_Curar}</td>
-              <td>${item.DISPONIBLE.Curado}</td>
-              <td>${item.DISPONIBLE.Total}</td>
+              <td>${Number(item.OFERTA.Sin_Curar).toFixed(2)}</td>
+              <td>${Number(item.OFERTA.Curado).toFixed(2)}</td>
+              <td>${Number(item.OFERTA.Total).toFixed(2)}</td>
+              <td>${Number(item.VENTAS.Sin_Curar).toFixed(2)}</td>
+              <td>${Number(item.VENTAS.Curado).toFixed(2)}</td>
+              <td>${Number(item.VENTAS.Total).toFixed(2)}</td>
+              <td>${Number(item.DISPONIBLE.Sin_Curar).toFixed(2)}</td>
+              <td>${Number(item.DISPONIBLE.Curado).toFixed(2)}</td>
+              <td>${item.DISPONIBLE.Total === "AGOTADA" ? "AGOTADA" : Number(item.DISPONIBLE.Total).toFixed(2)}</td>
               <td>${item.Comentarios}</td>
             </tr>
           `;
           tbody.innerHTML += row;
 
-          // Acumular totales
           totOfertaSinCurar += item.OFERTA.Sin_Curar;
           totOfertaCurado   += item.OFERTA.Curado;
           totOfertaTotal    += item.OFERTA.Total;
@@ -129,7 +125,6 @@
           totDispCurado     += item.DISPONIBLE.Curado;
           totDispTotal      += (item.DISPONIBLE.Total === "AGOTADA" ? 0 : item.DISPONIBLE.Total);
 
-          // Datos para gráfico
           variedades.push(item.Variedad);
           ofertaSinCurar.push(item.OFERTA.Sin_Curar);
           ofertaCurado.push(item.OFERTA.Curado);
@@ -142,18 +137,18 @@
           dispTotal.push(item.DISPONIBLE.Total === "AGOTADA" ? 0 : item.DISPONIBLE.Total);
         });
 
-        // Mostrar totales en pie
-        document.getElementById('totalOfertaSinCurar').innerText = totOfertaSinCurar;
-        document.getElementById('totalOfertaCurado').innerText   = totOfertaCurado;
-        document.getElementById('totalOfertaTotal').innerText    = totOfertaTotal;
-        document.getElementById('totalVentasSinCurar').innerText = totVentasSinCurar;
-        document.getElementById('totalVentasCurado').innerText   = totVentasCurado;
-        document.getElementById('totalVentasTotal').innerText    = totVentasTotal;
-        document.getElementById('totalDispSinCurar').innerText   = totDispSinCurar;
-        document.getElementById('totalDispCurado').innerText     = totDispCurado;
-        document.getElementById('totalDispTotal').innerText      = totDispTotal;
+        document.getElementById('totalOfertaSinCurar').innerText = totOfertaSinCurar.toFixed(2);
+        document.getElementById('totalOfertaCurado').innerText   = totOfertaCurado.toFixed(2);
+        document.getElementById('totalOfertaTotal').innerText    = totOfertaTotal.toFixed(2);
 
-        // Gráfico con Chart.js
+        document.getElementById('totalVentasSinCurar').innerText = totVentasSinCurar.toFixed(2);
+        document.getElementById('totalVentasCurado').innerText   = totVentasCurado.toFixed(2);
+        document.getElementById('totalVentasTotal').innerText    = totVentasTotal.toFixed(2);
+
+        document.getElementById('totalDispSinCurar').innerText   = totDispSinCurar.toFixed(2);
+        document.getElementById('totalDispCurado').innerText     = totDispCurado.toFixed(2);
+        document.getElementById('totalDispTotal').innerText      = totDispTotal.toFixed(2);
+
         const ctx = document.getElementById('graficoVentas').getContext('2d');
         new Chart(ctx, {
           type: 'bar',
@@ -180,7 +175,3 @@
             scales: { y: { beginAtZero: true } }
           }
         });
-      });
-  </script>
-</body>
-</html>
