@@ -17,3 +17,7 @@ build/
 .DS_Store
 Thumbs.db
 desktop.ini
+
+# ✅ Mantener archivos importantes
+!ventas.json
+!public/

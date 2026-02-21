@@ -18,12 +18,12 @@ app.use(session({
   saveUninitialized: true
 }));
 
-// Servir archivos estáticos (logo.png, CSS, etc.)
-app.use(express.static(path.join(__dirname)));
+// Servir archivos estáticos desde /public
+app.use(express.static(path.join(__dirname, 'public')));
 
-// Ruta raíz -> index.html
+// Ruta raíz -> index.html dentro de /public
 app.get('/', (req, res) => {
-  res.sendFile(path.join(__dirname, 'index.html'));
+  res.sendFile(path.join(__dirname, 'public', 'index.html'));
 });
 
 // Endpoint que tu frontend espera
@@ -31,9 +31,7 @@ app.get('/api/ventas', (req, res) => {
   res.sendFile(path.join(__dirname, 'ventas.json'));
 });
 
-// Arrancar servidor en Render
 const PORT = process.env.PORT || 10000;
 app.listen(PORT, () => {
   console.log(`Servidor corriendo en puerto ${PORT}`);
 });
- 
