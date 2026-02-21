@@ -9,17 +9,20 @@
       margin: 20px;
       position: relative;
     }
+
+    /* Marca de agua en mosaico */
     body::before {
       content: "";
       position: fixed;
       top: 0; left: 0; right: 0; bottom: 0;
-      background-image: url('logo.png');
-      background-repeat: repeat;
-      background-size: 200px;
-      opacity: 0.05;
-      pointer-events: none;
-      z-index: -1;
+      background-image: url('logo.png'); /* poné aquí tu logo en public/logo.png */
+      background-repeat: repeat;         /* mosaico */
+      background-size: 200px;            /* tamaño del logo */
+      opacity: 0.05;                     /* transparencia */
+      pointer-events: none;              /* no bloquea clics ni scroll */
+      z-index: -1;                       /* queda detrás del contenido */
     }
+
     table { border-collapse: collapse; width: 100%; margin-bottom: 30px; }
     th, td { border: 1px solid #ccc; padding: 6px; text-align: center; }
     th { background-color: #f2f2f2; }
@@ -71,28 +74,23 @@
     </tfoot>
   </table>
 
+  <!-- Gráfico -->
   <h2>Visualización Gráfica</h2>
   <canvas id="graficoVentas" width="1000" height="400"></canvas>
   <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
 
   <script>
-    // Funciones auxiliares
-    function valorNumerico(v) {
-      return (typeof v === "number" && !isNaN(v)) ? v : 0;
-    }
-    function mostrarValor(v) {
-      return (typeof v === "number" && !isNaN(v)) ? v.toFixed(2) : v;
-    }
-
     fetch('/api/ventas')
       .then(res => res.json())
       .then(data => {
         const tbody = document.querySelector('#tablaVentas tbody');
 
+        // Inicializar acumuladores
         let totOfertaSinCurar=0, totOfertaCurado=0, totOfertaTotal=0;
         let totVentasSinCurar=0, totVentasCurado=0, totVentasTotal=0;
         let totDispSinCurar=0, totDispCurado=0, totDispTotal=0;
 
+        // Arrays para gráfico
         const variedades = [];
         const ofertaSinCurar = [], ofertaCurado = [], ofertaTotal = [];
         const ventasSinCurar = [], ventasCurado = [], ventasTotal = [];
@@ -104,60 +102,58 @@
             <tr class="${agotadaClass}">
               <td>${item.Variedad}</td>
               <td>${item.Variedad_Calidad}</td>
-              <td>${mostrarValor(item.OFERTA.Sin_Curar)}</td>
-              <td>${mostrarValor(item.OFERTA.Curado)}</td>
-              <td>${mostrarValor(item.OFERTA.Total)}</td>
-              <td>${mostrarValor(item.VENTAS.Sin_Curar)}</td>
-              <td>${mostrarValor(item.VENTAS.Curado)}</td>
-              <td>${mostrarValor(item.VENTAS.Total)}</td>
-              <td>${mostrarValor(item.DISPONIBLE.Sin_Curar)}</td>
-              <td>${mostrarValor(item.DISPONIBLE.Curado)}</td>
-              <td>${mostrarValor(item.DISPONIBLE.Total)}</td>
+              <td>${item.OFERTA.Sin_Curar}</td>
+              <td>${item.OFERTA.Curado}</td>
+              <td>${item.OFERTA.Total}</td>
+              <td>${item.VENTAS.Sin_Curar}</td>
+              <td>${item.VENTAS.Curado}</td>
+              <td>${item.VENTAS.Total}</td>
+              <td>${item.DISPONIBLE.Sin_Curar}</td>
+              <td>${item.DISPONIBLE.Curado}</td>
+              <td>${item.DISPONIBLE.Total}</td>
               <td>${item.Comentarios}</td>
             </tr>
           `;
           tbody.innerHTML += row;
 
-          // Acumuladores seguros
-          totOfertaSinCurar += valorNumerico(item.OFERTA.Sin_Curar);
-          totOfertaCurado   += valorNumerico(item.OFERTA.Curado);
-          totOfertaTotal    += valorNumerico(item.OFERTA.Total);
+          // Acumular totales
+          totOfertaSinCurar += item.OFERTA.Sin_Curar;
+          totOfertaCurado   += item.OFERTA.Curado;
+          totOfertaTotal    += item.OFERTA.Total;
 
-          totVentasSinCurar += valorNumerico(item.VENTAS.Sin_Curar);
-          totVentasCurado   += valorNumerico(item.VENTAS.Curado);
-          totVentasTotal    += valorNumerico(item.VENTAS.Total);
+          totVentasSinCurar += item.VENTAS.Sin_Curar;
+          totVentasCurado   += item.VENTAS.Curado;
+          totVentasTotal    += item.VENTAS.Total;
 
-          totDispSinCurar   += valorNumerico(item.DISPONIBLE.Sin_Curar);
-          totDispCurado     += valorNumerico(item.DISPONIBLE.Curado);
-          totDispTotal      += valorNumerico(item.DISPONIBLE.Total);
+          totDispSinCurar   += item.DISPONIBLE.Sin_Curar;
+          totDispCurado     += item.DISPONIBLE.Curado;
+          totDispTotal      += (item.DISPONIBLE.Total === "AGOTADA" ? 0 : item.DISPONIBLE.Total);
 
           // Datos para gráfico
           variedades.push(item.Variedad);
-          ofertaSinCurar.push(valorNumerico(item.OFERTA.Sin_Curar));
-          ofertaCurado.push(valorNumerico(item.OFERTA.Curado));
-          ofertaTotal.push(valorNumerico(item.OFERTA.Total));
-          ventasSinCurar.push(valorNumerico(item.VENTAS.Sin_Curar));
-          ventasCurado.push(valorNumerico(item.VENTAS.Curado));
-          ventasTotal.push(valorNumerico(item.VENTAS.Total));
-          dispSinCurar.push(valorNumerico(item.DISPONIBLE.Sin_Curar));
-          dispCurado.push(valorNumerico(item.DISPONIBLE.Curado));
-          dispTotal.push(valorNumerico(item.DISPONIBLE.Total));
+          ofertaSinCurar.push(item.OFERTA.Sin_Curar);
+          ofertaCurado.push(item.OFERTA.Curado);
+          ofertaTotal.push(item.OFERTA.Total);
+          ventasSinCurar.push(item.VENTAS.Sin_Curar);
+          ventasCurado.push(item.VENTAS.Curado);
+          ventasTotal.push(item.VENTAS.Total);
+          dispSinCurar.push(item.DISPONIBLE.Sin_Curar);
+          dispCurado.push(item.DISPONIBLE.Curado);
+          dispTotal.push(item.DISPONIBLE.Total === "AGOTADA" ? 0 : item.DISPONIBLE.Total);
         });
 
-        // Mostrar totales
-        document.getElementById('totalOfertaSinCurar').innerText = mostrarValor(totOfertaSinCurar);
-        document.getElementById('totalOfertaCurado').innerText   = mostrarValor(totOfertaCurado);
-        document.getElementById('totalOfertaTotal').innerText    = mostrarValor(totOfertaTotal);
+        // Mostrar totales en pie
+        document.getElementById('totalOfertaSinCurar').innerText = totOfertaSinCurar;
+        document.getElementById('totalOfertaCurado').innerText   = totOfertaCurado;
+        document.getElementById('totalOfertaTotal').innerText    = totOfertaTotal;
+        document.getElementById('totalVentasSinCurar').innerText = totVentasSinCurar;
+        document.getElementById('totalVentasCurado').innerText   = totVentasCurado;
+        document.getElementById('totalVentasTotal').innerText    = totVentasTotal;
+        document.getElementById('totalDispSinCurar').innerText   = totDispSinCurar;
+        document.getElementById('totalDispCurado').innerText     = totDispCurado;
+        document.getElementById('totalDispTotal').innerText      = totDispTotal;
 
-        document.getElementById('totalVentasSinCurar').innerText = mostrarValor(totVentasSinCurar);
-        document.getElementById('totalVentasCurado').innerText   = mostrarValor(totVentasCurado);
-        document.getElementById('totalVentasTotal').innerText    = mostrarValor(totVentasTotal);
-
-        document.getElementById('totalDispSinCurar').innerText   = mostrarValor(totDispSinCurar);
-        document.getElementById('totalDispCurado').innerText     = mostrarValor(totDispCurado);
-        document.getElementById('totalDispTotal').innerText      = mostrarValor(totDispTotal);
-
-        // Gráfico
+        // Gráfico con Chart.js
         const ctx = document.getElementById('graficoVentas').getContext('2d');
         new Chart(ctx, {
           type: 'bar',
@@ -174,3 +170,17 @@
               { label: 'Disponible Curado', data: dispCurado, backgroundColor: '#00bcd4' },
               { label: 'Disponible Total', data: dispTotal, backgroundColor: '#ff5722' }
             ]
+          },
+          options: {
+            responsive: true,
+            plugins: {
+              legend: { position: 'top' },
+              title: { display: true, text: 'Oferta, Ventas y Disponible por Variedad' }
+            },
+            scales: { y: { beginAtZero: true } }
+          }
+        });
+      });
+  </script>
+</body>
+</html>
