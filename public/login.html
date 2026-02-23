@@ -24,6 +24,8 @@
       const password = document.getElementById('password').value;
 
       if (usuario === "ventas" && password === "abcd") {
+        // Guardamos login en localStorage (persistente)
+        localStorage.setItem("logueado", "true");
         window.location.href = "index.html";
       } else {
         alert("Usuario o contraseña incorrectos");

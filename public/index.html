@@ -54,13 +54,13 @@
   <canvas id="graficoTotales" width="400" height="200"></canvas>
 
   <script>
-    // 🔒 Verificación de login
-    if (!sessionStorage.getItem("logueado")) {
+    // 🔒 Verificación de login con localStorage
+    if (!localStorage.getItem("logueado")) {
       window.location.href = "login.html";
     }
 
     function logout() {
-      sessionStorage.removeItem("logueado");
+      localStorage.removeItem("logueado");
       window.location.href = "login.html";
     }
 
@@ -78,7 +78,6 @@
         let totDispSinCurar=0, totDispCurado=0, totDispTotal=0;
 
         data.forEach(item => {
-          // 👇 sombreado rojo si DISPONIBLE.Total es "AGOTADA"
           const agotada = item.DISPONIBLE.Total === "AGOTADA";
           const row = `
             <tr class="${agotada ? 'agotada' : ''}">
@@ -138,11 +137,4 @@
                 totVentasTotal.toFixed(2),
                 totDispTotal.toFixed(2)
               ],
-              backgroundColor: ['#4caf50','#2196f3','#ff9800']
-            }]
-          }
-        });
-      });
-  </script>
-</body>
-</html>
+              backgroundColor: ['#4caf
