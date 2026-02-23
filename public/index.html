@@ -43,6 +43,10 @@
   </table>
 
   <script>
+    function mostrarValor(v) {
+      return (typeof v === "number" && !isNaN(v)) ? v.toFixed(2) : v;
+    }
+
     fetch('/api/ventas')
       .then(res => res.json())
       .then(data => {
@@ -59,41 +63,41 @@
             <tr>
               <td>${item.Variedad}</td>
               <td>${item.Variedad_Calidad}</td>
-              <td>${item.OFERTA.Sin_Curar}</td>
-              <td>${item.OFERTA.Curado}</td>
-              <td>${item.OFERTA.Total}</td>
-              <td>${item.VENTAS.Sin_Curar}</td>
-              <td>${item.VENTAS.Curado}</td>
-              <td>${item.VENTAS.Total}</td>
-              <td>${item.DISPONIBLE.Sin_Curar}</td>
-              <td>${item.DISPONIBLE.Curado}</td>
-              <td>${item.DISPONIBLE.Total}</td>
+              <td>${mostrarValor(item.OFERTA.Sin_Curar)}</td>
+              <td>${mostrarValor(item.OFERTA.Curado)}</td>
+              <td>${mostrarValor(item.OFERTA.Total)}</td>
+              <td>${mostrarValor(item.VENTAS.Sin_Curar)}</td>
+              <td>${mostrarValor(item.VENTAS.Curado)}</td>
+              <td>${mostrarValor(item.VENTAS.Total)}</td>
+              <td>${mostrarValor(item.DISPONIBLE.Sin_Curar)}</td>
+              <td>${mostrarValor(item.DISPONIBLE.Curado)}</td>
+              <td>${mostrarValor(item.DISPONIBLE.Total)}</td>
               <td>${item.Comentarios}</td>
             </tr>
           `;
           tbody.innerHTML += row;
 
           // Acumuladores
-          totOfertaSinCurar += item.OFERTA.Sin_Curar;
-          totOfertaCurado   += item.OFERTA.Curado;
-          totOfertaTotal    += item.OFERTA.Total;
+          totOfertaSinCurar += (typeof item.OFERTA.Sin_Curar === "number") ? item.OFERTA.Sin_Curar : 0;
+          totOfertaCurado   += (typeof item.OFERTA.Curado === "number") ? item.OFERTA.Curado : 0;
+          totOfertaTotal    += (typeof item.OFERTA.Total === "number") ? item.OFERTA.Total : 0;
 
-          totVentasSinCurar += item.VENTAS.Sin_Curar;
-          totVentasCurado   += item.VENTAS.Curado;
-          totVentasTotal    += item.VENTAS.Total;
+          totVentasSinCurar += (typeof item.VENTAS.Sin_Curar === "number") ? item.VENTAS.Sin_Curar : 0;
+          totVentasCurado   += (typeof item.VENTAS.Curado === "number") ? item.VENTAS.Curado : 0;
+          totVentasTotal    += (typeof item.VENTAS.Total === "number") ? item.VENTAS.Total : 0;
 
-          totDispSinCurar   += item.DISPONIBLE.Sin_Curar;
-          totDispCurado     += item.DISPONIBLE.Curado;
-          totDispTotal      += (item.DISPONIBLE.Total === "AGOTADA" ? 0 : item.DISPONIBLE.Total);
+          totDispSinCurar   += (typeof item.DISPONIBLE.Sin_Curar === "number") ? item.DISPONIBLE.Sin_Curar : 0;
+          totDispCurado     += (typeof item.DISPONIBLE.Curado === "number") ? item.DISPONIBLE.Curado : 0;
+          totDispTotal      += (typeof item.DISPONIBLE.Total === "number") ? item.DISPONIBLE.Total : 0;
         });
 
-        console.log("Totales finales (sin redondeo):", {
+        console.log("Totales finales:", {
           totOfertaSinCurar, totOfertaCurado, totOfertaTotal,
           totVentasSinCurar, totVentasCurado, totVentasTotal,
           totDispSinCurar, totDispCurado, totDispTotal
         });
 
-        // Mostrar totales redondeados a 2 decimales
+        // Mostrar totales redondeados
         document.getElementById('totalOfertaSinCurar').innerText = totOfertaSinCurar.toFixed(2);
         document.getElementById('totalOfertaCurado').innerText   = totOfertaCurado.toFixed(2);
         document.getElementById('totalOfertaTotal').innerText    = totOfertaTotal.toFixed(2);
