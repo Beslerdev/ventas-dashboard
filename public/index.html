@@ -9,11 +9,19 @@
     th, td { border: 1px solid #ccc; padding: 6px; text-align: center; }
     th { background-color: #f2f2f2; }
     .totales { font-weight: bold; background-color: #e6ffe6; }
-    .agotada { background-color: #ffcccc; }
+    .agotada { background-color: #ffcccc; } /* sombreado rojo */
+    canvas { margin-top: 40px; }
+    button { margin-top: 20px; padding: 6px 12px; }
   </style>
+  <!-- Chart.js -->
+  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
 </head>
 <body>
   <h1>Informe de Ventas</h1>
+
+  <!-- Botón de logout -->
+  <button onclick="logout()">Salir</button>
+
   <table id="tablaVentas">
     <thead>
       <tr>
@@ -42,7 +50,20 @@
     </tfoot>
   </table>
 
+  <!-- Gráfico -->
+  <canvas id="graficoTotales" width="400" height="200"></canvas>
+
   <script>
+    // 🔒 Verificación de login
+    if (!sessionStorage.getItem("logueado")) {
+      window.location.href = "login.html";
+    }
+
+    function logout() {
+      sessionStorage.removeItem("logueado");
+      window.location.href = "login.html";
+    }
+
     function mostrarValor(v) {
       return (typeof v === "number" && !isNaN(v)) ? v.toFixed(2) : v;
     }
@@ -50,8 +71,6 @@
     fetch('/api/ventas')
       .then(res => res.json())
       .then(data => {
-        console.log("Datos recibidos:", data);
-
         const tbody = document.querySelector('#tablaVentas tbody');
 
         let totOfertaSinCurar=0, totOfertaCurado=0, totOfertaTotal=0;
@@ -59,8 +78,10 @@
         let totDispSinCurar=0, totDispCurado=0, totDispTotal=0;
 
         data.forEach(item => {
+          // 👇 sombreado rojo si DISPONIBLE.Total es "AGOTADA"
+          const agotada = item.DISPONIBLE.Total === "AGOTADA";
           const row = `
-            <tr>
+            <tr class="${agotada ? 'agotada' : ''}">
               <td>${item.Variedad}</td>
               <td>${item.Variedad_Calidad}</td>
               <td>${mostrarValor(item.OFERTA.Sin_Curar)}</td>
@@ -91,12 +112,6 @@
           totDispTotal      += (typeof item.DISPONIBLE.Total === "number") ? item.DISPONIBLE.Total : 0;
         });
 
-        console.log("Totales finales:", {
-          totOfertaSinCurar, totOfertaCurado, totOfertaTotal,
-          totVentasSinCurar, totVentasCurado, totVentasTotal,
-          totDispSinCurar, totDispCurado, totDispTotal
-        });
-
         // Mostrar totales redondeados
         document.getElementById('totalOfertaSinCurar').innerText = totOfertaSinCurar.toFixed(2);
         document.getElementById('totalOfertaCurado').innerText   = totOfertaCurado.toFixed(2);
@@ -109,6 +124,24 @@
         document.getElementById('totalDispSinCurar').innerText   = totDispSinCurar.toFixed(2);
         document.getElementById('totalDispCurado').innerText     = totDispCurado.toFixed(2);
         document.getElementById('totalDispTotal').innerText      = totDispTotal.toFixed(2);
+
+        // Gráfico con Chart.js
+        const ctx = document.getElementById('graficoTotales').getContext('2d');
+        new Chart(ctx, {
+          type: 'bar',
+          data: {
+            labels: ['Oferta Total', 'Ventas Total', 'Disponible Total'],
+            datasets: [{
+              label: 'Totales',
+              data: [
+                totOfertaTotal.toFixed(2),
+                totVentasTotal.toFixed(2),
+                totDispTotal.toFixed(2)
+              ],
+              backgroundColor: ['#4caf50','#2196f3','#ff9800']
+            }]
+          }
+        });
       });
   </script>
 </body>
