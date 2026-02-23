@@ -2,7 +2,7 @@
 <html lang="es">
 <head>
   <meta charset="UTF-8">
-  <title>Informe de Ventas (Debug)</title>
+  <title>Informe de Ventas</title>
   <style>
     body { font-family: Arial, sans-serif; margin: 20px; }
     table { border-collapse: collapse; width: 100%; margin-bottom: 30px; }
@@ -13,7 +13,7 @@
   </style>
 </head>
 <body>
-  <h1>Informe de Ventas (Debug)</h1>
+  <h1>Informe de Ventas</h1>
   <table id="tablaVentas">
     <thead>
       <tr>
@@ -46,7 +46,7 @@
     fetch('/api/ventas')
       .then(res => res.json())
       .then(data => {
-        console.log("Datos recibidos:", data); // 👈 Paso 1: ver JSON crudo
+        console.log("Datos recibidos:", data);
 
         const tbody = document.querySelector('#tablaVentas tbody');
 
@@ -55,8 +55,6 @@
         let totDispSinCurar=0, totDispCurado=0, totDispTotal=0;
 
         data.forEach(item => {
-          console.log("Fila original:", item); // 👈 Paso 2: ver cada fila
-
           const row = `
             <tr>
               <td>${item.Variedad}</td>
@@ -75,13 +73,10 @@
           `;
           tbody.innerHTML += row;
 
-          // 👇 Paso 3: log antes y después de sumar
-          console.log("Antes de sumar Oferta Total:", totOfertaTotal, " + ", item.OFERTA.Total);
-          totOfertaTotal += item.OFERTA.Total;
-          console.log("Después de sumar Oferta Total:", totOfertaTotal);
-
+          // Acumuladores
           totOfertaSinCurar += item.OFERTA.Sin_Curar;
           totOfertaCurado   += item.OFERTA.Curado;
+          totOfertaTotal    += item.OFERTA.Total;
 
           totVentasSinCurar += item.VENTAS.Sin_Curar;
           totVentasCurado   += item.VENTAS.Curado;
@@ -92,25 +87,24 @@
           totDispTotal      += (item.DISPONIBLE.Total === "AGOTADA" ? 0 : item.DISPONIBLE.Total);
         });
 
-        // 👇 Paso 4: log totales finales
-        console.log("Totales finales:", {
+        console.log("Totales finales (sin redondeo):", {
           totOfertaSinCurar, totOfertaCurado, totOfertaTotal,
           totVentasSinCurar, totVentasCurado, totVentasTotal,
           totDispSinCurar, totDispCurado, totDispTotal
         });
 
-        // Mostrar totales (sin redondeo, para ver problema)
-        document.getElementById('totalOfertaSinCurar').innerText = totOfertaSinCurar;
-        document.getElementById('totalOfertaCurado').innerText   = totOfertaCurado;
-        document.getElementById('totalOfertaTotal').innerText    = totOfertaTotal;
+        // Mostrar totales redondeados a 2 decimales
+        document.getElementById('totalOfertaSinCurar').innerText = totOfertaSinCurar.toFixed(2);
+        document.getElementById('totalOfertaCurado').innerText   = totOfertaCurado.toFixed(2);
+        document.getElementById('totalOfertaTotal').innerText    = totOfertaTotal.toFixed(2);
 
-        document.getElementById('totalVentasSinCurar').innerText = totVentasSinCurar;
-        document.getElementById('totalVentasCurado').innerText   = totVentasCurado;
-        document.getElementById('totalVentasTotal').innerText    = totVentasTotal;
+        document.getElementById('totalVentasSinCurar').innerText = totVentasSinCurar.toFixed(2);
+        document.getElementById('totalVentasCurado').innerText   = totVentasCurado.toFixed(2);
+        document.getElementById('totalVentasTotal').innerText    = totVentasTotal.toFixed(2);
 
-        document.getElementById('totalDispSinCurar').innerText   = totDispSinCurar;
-        document.getElementById('totalDispCurado').innerText     = totDispCurado;
-        document.getElementById('totalDispTotal').innerText      = totDispTotal;
+        document.getElementById('totalDispSinCurar').innerText   = totDispSinCurar.toFixed(2);
+        document.getElementById('totalDispCurado').innerText     = totDispCurado.toFixed(2);
+        document.getElementById('totalDispTotal').innerText      = totDispTotal.toFixed(2);
       });
   </script>
 </body>
