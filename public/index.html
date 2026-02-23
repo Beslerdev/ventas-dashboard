@@ -3,6 +3,12 @@
 <head>
   <meta charset="UTF-8">
   <title>Informe de Ventas</title>
+  <script>
+    // 🔒 Verificación de login lo más temprano posible
+    if (!localStorage.getItem("logueado")) {
+      window.location.href = "login.html";
+    }
+  </script>
   <style>
     body { font-family: Arial, sans-serif; margin: 20px; }
     table { border-collapse: collapse; width: 100%; margin-bottom: 30px; }
@@ -54,11 +60,6 @@
   <canvas id="graficoTotales" width="400" height="200"></canvas>
 
   <script>
-    // 🔒 Verificación de login con localStorage
-    if (!localStorage.getItem("logueado")) {
-      window.location.href = "login.html";
-    }
-
     function logout() {
       localStorage.removeItem("logueado");
       window.location.href = "login.html";
