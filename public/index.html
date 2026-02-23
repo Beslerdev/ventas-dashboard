@@ -2,64 +2,32 @@
 <html lang="es">
 <head>
   <meta charset="UTF-8">
-  <title>Informe de Ventas</title>
+  <title>Informe de Ventas (Debug)</title>
   <style>
-    body {
-      font-family: Arial, sans-serif;
-      margin: 20px;
-      position: relative;
-    }
-
-    /* Marca de agua en mosaico */
-    body::before {
-      content: "";
-      position: fixed;
-      top: 0; left: 0; right: 0; bottom: 0;
-      background-image: url('logo.png'); /* poné aquí tu logo en public/logo.png */
-      background-repeat: repeat;         /* mosaico */
-      background-size: 200px;            /* tamaño del logo */
-      opacity: 0.05;                     /* transparencia */
-      pointer-events: none;              /* no bloquea clics ni scroll */
-      z-index: -1;                       /* queda detrás del contenido */
-    }
-
+    body { font-family: Arial, sans-serif; margin: 20px; }
     table { border-collapse: collapse; width: 100%; margin-bottom: 30px; }
     th, td { border: 1px solid #ccc; padding: 6px; text-align: center; }
     th { background-color: #f2f2f2; }
-    h1 { margin-bottom: 10px; }
-    .agotada { background-color: #ffcccc; }
     .totales { font-weight: bold; background-color: #e6ffe6; }
-    canvas { margin-top: 40px; }
+    .agotada { background-color: #ffcccc; }
   </style>
 </head>
 <body>
-  <h1>Informe de Ventas</h1>
+  <h1>Informe de Ventas (Debug)</h1>
   <table id="tablaVentas">
     <thead>
       <tr>
-        <th rowspan="2">Variedad</th>
-        <th rowspan="2">Calidad</th>
-        <th colspan="3">Oferta</th>
-        <th colspan="3">Ventas</th>
-        <th colspan="3">Disponible</th>
-        <th rowspan="2">Comentarios</th>
-      </tr>
-      <tr>
-        <th>Sin Curar</th>
-        <th>Curado</th>
-        <th>Total</th>
-        <th>Sin Curar</th>
-        <th>Curado</th>
-        <th>Total</th>
-        <th>Sin Curar</th>
-        <th>Curado</th>
-        <th>Total</th>
+        <th>Variedad</th><th>Calidad</th>
+        <th>Oferta Sin Curar</th><th>Oferta Curado</th><th>Oferta Total</th>
+        <th>Ventas Sin Curar</th><th>Ventas Curado</th><th>Ventas Total</th>
+        <th>Disp Sin Curar</th><th>Disp Curado</th><th>Disp Total</th>
+        <th>Comentarios</th>
       </tr>
     </thead>
     <tbody></tbody>
     <tfoot>
       <tr class="totales">
-        <td colspan="2">Totales Generales</td>
+        <td colspan="2">Totales</td>
         <td id="totalOfertaSinCurar"></td>
         <td id="totalOfertaCurado"></td>
         <td id="totalOfertaTotal"></td>
@@ -74,32 +42,23 @@
     </tfoot>
   </table>
 
-  <!-- Gráfico -->
-  <h2>Visualización Gráfica</h2>
-  <canvas id="graficoVentas" width="1000" height="400"></canvas>
-  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
-
   <script>
     fetch('/api/ventas')
       .then(res => res.json())
       .then(data => {
+        console.log("Datos recibidos:", data); // 👈 Paso 1: ver JSON crudo
+
         const tbody = document.querySelector('#tablaVentas tbody');
 
-        // Inicializar acumuladores
         let totOfertaSinCurar=0, totOfertaCurado=0, totOfertaTotal=0;
         let totVentasSinCurar=0, totVentasCurado=0, totVentasTotal=0;
         let totDispSinCurar=0, totDispCurado=0, totDispTotal=0;
 
-        // Arrays para gráfico
-        const variedades = [];
-        const ofertaSinCurar = [], ofertaCurado = [], ofertaTotal = [];
-        const ventasSinCurar = [], ventasCurado = [], ventasTotal = [];
-        const dispSinCurar = [], dispCurado = [], dispTotal = [];
-
         data.forEach(item => {
-          const agotadaClass = item.Comentarios === "AGOTADA" ? "agotada" : "";
+          console.log("Fila original:", item); // 👈 Paso 2: ver cada fila
+
           const row = `
-            <tr class="${agotadaClass}">
+            <tr>
               <td>${item.Variedad}</td>
               <td>${item.Variedad_Calidad}</td>
               <td>${item.OFERTA.Sin_Curar}</td>
@@ -116,10 +75,13 @@
           `;
           tbody.innerHTML += row;
 
-          // Acumular totales
+          // 👇 Paso 3: log antes y después de sumar
+          console.log("Antes de sumar Oferta Total:", totOfertaTotal, " + ", item.OFERTA.Total);
+          totOfertaTotal += item.OFERTA.Total;
+          console.log("Después de sumar Oferta Total:", totOfertaTotal);
+
           totOfertaSinCurar += item.OFERTA.Sin_Curar;
           totOfertaCurado   += item.OFERTA.Curado;
-          totOfertaTotal    += item.OFERTA.Total;
 
           totVentasSinCurar += item.VENTAS.Sin_Curar;
           totVentasCurado   += item.VENTAS.Curado;
@@ -128,58 +90,27 @@
           totDispSinCurar   += item.DISPONIBLE.Sin_Curar;
           totDispCurado     += item.DISPONIBLE.Curado;
           totDispTotal      += (item.DISPONIBLE.Total === "AGOTADA" ? 0 : item.DISPONIBLE.Total);
-
-          // Datos para gráfico
-          variedades.push(item.Variedad);
-          ofertaSinCurar.push(item.OFERTA.Sin_Curar);
-          ofertaCurado.push(item.OFERTA.Curado);
-          ofertaTotal.push(item.OFERTA.Total);
-          ventasSinCurar.push(item.VENTAS.Sin_Curar);
-          ventasCurado.push(item.VENTAS.Curado);
-          ventasTotal.push(item.VENTAS.Total);
-          dispSinCurar.push(item.DISPONIBLE.Sin_Curar);
-          dispCurado.push(item.DISPONIBLE.Curado);
-          dispTotal.push(item.DISPONIBLE.Total === "AGOTADA" ? 0 : item.DISPONIBLE.Total);
         });
 
-        // Mostrar totales en pie
+        // 👇 Paso 4: log totales finales
+        console.log("Totales finales:", {
+          totOfertaSinCurar, totOfertaCurado, totOfertaTotal,
+          totVentasSinCurar, totVentasCurado, totVentasTotal,
+          totDispSinCurar, totDispCurado, totDispTotal
+        });
+
+        // Mostrar totales (sin redondeo, para ver problema)
         document.getElementById('totalOfertaSinCurar').innerText = totOfertaSinCurar;
         document.getElementById('totalOfertaCurado').innerText   = totOfertaCurado;
         document.getElementById('totalOfertaTotal').innerText    = totOfertaTotal;
+
         document.getElementById('totalVentasSinCurar').innerText = totVentasSinCurar;
         document.getElementById('totalVentasCurado').innerText   = totVentasCurado;
         document.getElementById('totalVentasTotal').innerText    = totVentasTotal;
+
         document.getElementById('totalDispSinCurar').innerText   = totDispSinCurar;
         document.getElementById('totalDispCurado').innerText     = totDispCurado;
         document.getElementById('totalDispTotal').innerText      = totDispTotal;
-
-        // Gráfico con Chart.js
-        const ctx = document.getElementById('graficoVentas').getContext('2d');
-        new Chart(ctx, {
-          type: 'bar',
-          data: {
-            labels: variedades,
-            datasets: [
-              { label: 'Oferta Sin Curar', data: ofertaSinCurar, backgroundColor: '#4caf50' },
-              { label: 'Oferta Curado', data: ofertaCurado, backgroundColor: '#2196f3' },
-              { label: 'Oferta Total', data: ofertaTotal, backgroundColor: '#ff9800' },
-              { label: 'Ventas Sin Curar', data: ventasSinCurar, backgroundColor: '#8bc34a' },
-              { label: 'Ventas Curado', data: ventasCurado, backgroundColor: '#03a9f4' },
-              { label: 'Ventas Total', data: ventasTotal, backgroundColor: '#ffc107' },
-              { label: 'Disponible Sin Curar', data: dispSinCurar, backgroundColor: '#cddc39' },
-              { label: 'Disponible Curado', data: dispCurado, backgroundColor: '#00bcd4' },
-              { label: 'Disponible Total', data: dispTotal, backgroundColor: '#ff5722' }
-            ]
-          },
-          options: {
-            responsive: true,
-            plugins: {
-              legend: { position: 'top' },
-              title: { display: true, text: 'Oferta, Ventas y Disponible por Variedad' }
-            },
-            scales: { y: { beginAtZero: true } }
-          }
-        });
       });
   </script>
 </body>
