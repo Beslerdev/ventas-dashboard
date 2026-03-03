@@ -3,15 +3,59 @@
 <head>
   <meta charset="UTF-8">
   <title>Login</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <style>
-    body { font-family: Arial, sans-serif; margin: 50px; text-align: center; }
-    input { margin: 10px; padding: 8px; }
-    button { padding: 8px 16px; }
+    body {
+      font-family: Arial, sans-serif;
+      margin: 0;
+      height: 100vh;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      background-image: url("fondo.jpg"); /* Imagen en carpeta public */
+      background-size: cover;
+      background-position: center;
+    }
+
+    #loginForm {
+      background-color: rgba(255, 255, 255, 0.85); /* cuadro semitransparente */
+      padding: 20px;
+      border-radius: 8px;
+      box-shadow: 0 4px 10px rgba(0,0,0,0.3);
+      text-align: center;
+      width: 300px;
+    }
+
+    h2 {
+      margin-bottom: 20px;
+    }
+
+    input {
+      margin: 10px 0;
+      padding: 8px;
+      width: 90%;
+      border: 1px solid #ccc;
+      border-radius: 4px;
+    }
+
+    button {
+      padding: 8px 16px;
+      margin-top: 10px;
+      background-color: #2196f3;
+      color: white;
+      border: none;
+      border-radius: 4px;
+      cursor: pointer;
+    }
+
+    button:hover {
+      background-color: #1976d2;
+    }
   </style>
 </head>
 <body>
-  <h2>Acceso al sistema</h2>
   <form id="loginForm">
+    <h2>Acceso al sistema</h2>
     <input type="text" id="usuario" placeholder="Usuario" required><br>
     <input type="password" id="password" placeholder="Contraseña" required><br>
     <button type="submit">Ingresar</button>
