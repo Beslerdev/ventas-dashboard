@@ -53,21 +53,23 @@
       background-color: #1976d2;
     }
 
-    /* Logo girando */
+    /* Logo girando sobre eje Y */
     #logoAnimado {
       position: absolute;
       top: 20px;
       right: 20px;
       width: 60px;
       height: 60px;
-      animation: girar 4s linear infinite;
+      animation: girarY 2s ease-in-out infinite;
       opacity: 0.7; /* efecto marca de agua */
       z-index: 1;
+      transform-style: preserve-3d;
     }
 
-    @keyframes girar {
-      from { transform: rotate(0deg); }
-      to { transform: rotate(360deg); }
+    @keyframes girarY {
+      0%   { transform: rotateY(0deg); }
+      50%  { transform: rotateY(180deg); }
+      100% { transform: rotateY(360deg); }
     }
   </style>
 </head>
