@@ -24,6 +24,7 @@
       box-shadow: 0 4px 10px rgba(0,0,0,0.3);
       text-align: center;
       width: 300px;
+      z-index: 2;
     }
 
     h2 {
@@ -51,9 +52,30 @@
     button:hover {
       background-color: #1976d2;
     }
+
+    /* Logo girando */
+    #logoAnimado {
+      position: absolute;
+      top: 20px;
+      right: 20px;
+      width: 60px;
+      height: 60px;
+      animation: girar 4s linear infinite;
+      opacity: 0.7; /* efecto marca de agua */
+      z-index: 1;
+    }
+
+    @keyframes girar {
+      from { transform: rotate(0deg); }
+      to { transform: rotate(360deg); }
+    }
   </style>
 </head>
 <body>
+  <!-- Logo girando -->
+  <img src="logo.png" alt="Logo" id="logoAnimado">
+
+  <!-- Formulario de login -->
   <form id="loginForm">
     <h2>Acceso al sistema</h2>
     <input type="text" id="usuario" placeholder="Usuario" required><br>
@@ -62,13 +84,33 @@
   </form>
 
   <script>
+    // Lista de usuarios válidos
+    const usuariosValidos = {
+      "FabricioSouville": "FabricioDS",
+      "VanesaPoggio": "VanesaDS",
+      "AilinSuarez": "AilinDS",
+      "DoloresSastre": "DoloresDS",
+      "DiegoSastre": "DiegoDS",
+      "TomasRudy": "TomasDS",
+      "FranciscoTolosa": "FranciscoDS",
+      "LucianoBanfi": "LucianoDS",
+      "CiroGonzalez": "CiroDS",
+      "PatricioTorrijo": "PatricioDS",
+      "SebastianAlvarez": "SebastianDS",
+      "MilagrosMartinArrieta": "MilagrosDS",
+      "SantiagoUrruti": "SantiagoDS",
+      "MercedesRiega": "MercedesDS"
+    };
+
     document.getElementById('loginForm').addEventListener('submit', function(e) {
       e.preventDefault();
       const usuario = document.getElementById('usuario').value;
       const password = document.getElementById('password').value;
 
-      if (usuario === "ventas" && password === "abcd") {
+      if (usuariosValidos[usuario] && usuariosValidos[usuario] === password) {
         localStorage.setItem("logueado","true");
+        localStorage.setItem("usuario", usuario); // guarda quién entró
+        document.getElementById('logoAnimado').style.display = "none"; // oculta logo
         window.location.href = "index.html";
       } else {
         alert("Usuario o contraseña incorrectos");
