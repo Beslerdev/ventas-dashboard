@@ -1,322 +1,200 @@
 [
   {
-    "Variedad": "NEO 50T23",
-    "Variedad_Calidad": "50T23",
+    "Variedad": "BIO Arazá",
     "OFERTA": {
-      "Sin_Curar": 1225,
-      "Curado": 0,
-      "Total": 600
+      "Primu": 3409.975,
+      "Original": 0,
+      "Primu + Original": 3409.975
     },
-    "VENTAS": {
-      "Sin_Curar": 740,
-      "Curado": 0,
-      "Total": 740
+    "VENTA": {
+      "Primu": 0,
+      "Original": 0,
+      "Primu + Original": 0
     },
     "DISPONIBLE": {
-      "Sin_Curar": -140,
-      "Curado": 0,
-      "Total": "AGOTADA"
-    },
-    "Comentarios": ""
+      "Primu": 3409.975,
+      "Original": 0,
+      "Primu + Original": 3409.975
+    }
   },
   {
-    "Variedad": "NEO 70T25",
-    "Variedad_Calidad": "70T25",
+    "Variedad": "Bio Gingko",
     "OFERTA": {
-      "Sin_Curar": 2028.95,
-      "Curado": 0,
-      "Total": 380
+      "Primu": 4573.637500000001,
+      "Original": 0,
+      "Primu + Original": 4573.637500000001
     },
-    "VENTAS": {
-      "Sin_Curar": 380,
-      "Curado": 0,
-      "Total": 380
+    "VENTA": {
+      "Primu": 0,
+      "Original": 0,
+      "Primu + Original": 0
     },
     "DISPONIBLE": {
-      "Sin_Curar": 0,
-      "Curado": 0,
-      "Total": "AGOTADA"
+      "Primu": 4573.637500000001,
+      "Original": 0,
+      "Primu + Original": 4573.637500000001
+    }
+  },
+  {
+    "Variedad": "Bio Laurel",
+    "OFERTA": {
+      "Primu": 16191.862500000007,
+      "Original": 0,
+      "Primu + Original": 16191.862500000007
     },
-    "Comentarios": ""
+    "VENTA": {
+      "Primu": 0,
+      "Original": 0,
+      "Primu + Original": 0
+    },
+    "DISPONIBLE": {
+      "Primu": 16191.862500000007,
+      "Original": 0,
+      "Primu + Original": 16191.862500000007
+    }
   },
   {
     "Variedad": "DM Araucaria",
-    "Variedad_Calidad": "Araucaria",
     "OFERTA": {
-      "Sin_Curar": 6155.375,
-      "Curado": 30005.250000000007,
-      "Total": 5345.25
+      "Primu": 22816.125000000007,
+      "Original": 2154.7499999999995,
+      "Primu + Original": 24970.875000000007
     },
-    "VENTAS": {
-      "Sin_Curar": 1596,
-      "Curado": 4253,
-      "Total": 5849
+    "VENTA": {
+      "Primu": 100,
+      "Original": 0,
+      "Primu + Original": 100
     },
     "DISPONIBLE": {
-      "Sin_Curar": 857.375,
-      "Curado": -1361.125,
-      "Total": "AGOTADA"
-    },
-    "Comentarios": ""
-  },
-  {
-    "Variedad": "BIO Arazá",
-    "Variedad_Calidad": "Araza",
-    "OFERTA": {
-      "Sin_Curar": 6214.375,
-      "Curado": 0,
-      "Total": 2938.325
-    },
-    "VENTAS": {
-      "Sin_Curar": 1442,
-      "Curado": 1504,
-      "Total": 2946
-    },
-    "DISPONIBLE": {
-      "Sin_Curar": 1496.3249999999998,
-      "Curado": -1504,
-      "Total": "AGOTADA"
-    },
-    "Comentarios": ""
-  },
-  {
-    "Variedad": "NS Baguette 610",
-    "Variedad_Calidad": "Baguette 610",
-    "OFERTA": {
-      "Sin_Curar": 10547.125,
-      "Curado": 0,
-      "Total": 7957.049999999999
-    },
-    "VENTAS": {
-      "Sin_Curar": 3280,
-      "Curado": 2140,
-      "Total": 5420
-    },
-    "DISPONIBLE": {
-      "Sin_Curar": 4677.049999999999,
-      "Curado": -2140,
-      "Total": 2537.0499999999993
-    },
-    "Comentarios": ""
-  },
-  {
-    "Variedad": "NS Baguette 620",
-    "Variedad_Calidad": "Baguette 620",
-    "OFERTA": {
-      "Sin_Curar": 2433.675,
-      "Curado": 0,
-      "Total": 2453.675
-    },
-    "VENTAS": {
-      "Sin_Curar": 240,
-      "Curado": 1622,
-      "Total": 1862
-    },
-    "DISPONIBLE": {
-      "Sin_Curar": 2213.675,
-      "Curado": -1622,
-      "Total": 591.6750000000002
-    },
-    "Comentarios": ""
-  },
-  {
-    "Variedad": "NS Baguette 750",
-    "Variedad_Calidad": "Baguette 750",
-    "OFERTA": {
-      "Sin_Curar": 4337.975,
-      "Curado": 0,
-      "Total": 1336.4
-    },
-    "VENTAS": {
-      "Sin_Curar": 852,
-      "Curado": 486,
-      "Total": 1338
-    },
-    "DISPONIBLE": {
-      "Sin_Curar": -1687.125,
-      "Curado": 1685.525,
-      "Total": "AGOTADA"
-    },
-    "Comentarios": ""
-  },
-  {
-    "Variedad": "NS Baguette 820",
-    "Variedad_Calidad": "Baguette 820",
-    "OFERTA": {
-      "Sin_Curar": 3524.725,
-      "Curado": 4715.374999999999,
-      "Total": 4354.975
-    },
-    "VENTAS": {
-      "Sin_Curar": 207,
-      "Curado": 4203.5,
-      "Total": 4410.5
-    },
-    "DISPONIBLE": {
-      "Sin_Curar": 1987.975,
-      "Curado": -2043.5,
-      "Total": "AGOTADA"
-    },
-    "Comentarios": ""
-  },
-  {
-    "Variedad": "RAGT Borsalino",
-    "Variedad_Calidad": "Borsalino",
-    "OFERTA": {
-      "Sin_Curar": 7003.925,
-      "Curado": 724.625,
-      "Total": 5140.55
-    },
-    "VENTAS": {
-      "Sin_Curar": 892,
-      "Curado": 3258.5,
-      "Total": 4150.5
-    },
-    "DISPONIBLE": {
-      "Sin_Curar": 4248.55,
-      "Curado": -3258.5,
-      "Total": 990.0500000000002
-    },
-    "Comentarios": ""
+      "Primu": 22716.125000000007,
+      "Original": 2154.7499999999995,
+      "Primu + Original": 24870.875000000007
+    }
   },
   {
     "Variedad": "DM Casuarina",
-    "Variedad_Calidad": "Casuarina",
     "OFERTA": {
-      "Sin_Curar": 1099.975,
-      "Curado": 0,
-      "Total": 1100
+      "Primu": 27118.399999999994,
+      "Original": 6356.937500000002,
+      "Primu + Original": 33475.337499999994
     },
-    "VENTAS": {
-      "Sin_Curar": 100,
-      "Curado": 916,
-      "Total": 1016
+    "VENTA": {
+      "Primu": 975,
+      "Original": 0,
+      "Primu + Original": 975
     },
     "DISPONIBLE": {
-      "Sin_Curar": 995,
-      "Curado": -911,
-      "Total": 108
-    },
-    "Comentarios": "AGOTADA"
+      "Primu": 26143.399999999994,
+      "Original": 6356.937500000002,
+      "Primu + Original": 32500.337499999994
+    }
   },
   {
     "Variedad": "DM Catalpa",
-    "Variedad_Calidad": "Catalpa",
     "OFERTA": {
-      "Sin_Curar": 20169.2,
-      "Curado": 0,
-      "Total": 22960.95
+      "Primu": 46329.42500000001,
+      "Original": 2592.5,
+      "Primu + Original": 48921.92500000001
     },
-    "VENTAS": {
-      "Sin_Curar": 16244,
-      "Curado": 7588.5,
-      "Total": 23832.5
+    "VENTA": {
+      "Primu": 1250,
+      "Original": 0,
+      "Primu + Original": 1250
     },
     "DISPONIBLE": {
-      "Sin_Curar": 5241.075000000001,
-      "Curado": -6112.625,
-      "Total": "AGOTADA"
-    },
-    "Comentarios": ""
+      "Primu": 45079.42500000001,
+      "Original": 2592.5,
+      "Primu + Original": 47671.92500000001
+    }
   },
   {
-    "Variedad": "BIO Laurel",
-    "Variedad_Calidad": "Laurel",
+    "Variedad": "NS Baguette 610",
     "OFERTA": {
-      "Sin_Curar": 5969.325,
-      "Curado": 0,
-      "Total": 5851.025
+      "Primu": 5927.262500000002,
+      "Original": 0,
+      "Primu + Original": 5927.262500000002
     },
-    "VENTAS": {
-      "Sin_Curar": 1952,
-      "Curado": 2740,
-      "Total": 4692
+    "VENTA": {
+      "Primu": 0,
+      "Original": 0,
+      "Primu + Original": 0
     },
     "DISPONIBLE": {
-      "Sin_Curar": 3899.0249999999996,
-      "Curado": -2740,
-      "Total": 1159.0249999999996
-    },
-    "Comentarios": ""
+      "Primu": 5927.262500000002,
+      "Original": 0,
+      "Primu + Original": 5927.262500000002
+    }
   },
   {
-    "Variedad": "BIO Parana",
-    "Variedad_Calidad": "Parana",
+    "Variedad": "NS Baguette 750",
     "OFERTA": {
-      "Sin_Curar": 13381.25,
-      "Curado": 0,
-      "Total": 10853.375
+      "Primu": 4955.5,
+      "Original": 4377.35,
+      "Primu + Original": 9332.85
     },
-    "VENTAS": {
-      "Sin_Curar": 0,
-      "Curado": 10700,
-      "Total": 10700
+    "VENTA": {
+      "Primu": 0,
+      "Original": 1513,
+      "Primu + Original": 1513
     },
     "DISPONIBLE": {
-      "Sin_Curar": 10853.375,
-      "Curado": -10700,
-      "Total": 153.375
-    },
-    "Comentarios": ""
+      "Primu": 4955.5,
+      "Original": 2864.3500000000004,
+      "Primu + Original": 7819.85
+    }
   },
   {
-    "Variedad": "DM Pehuén",
-    "Variedad_Calidad": "Pehuén",
+    "Variedad": "NS Baguette 820",
     "OFERTA": {
-      "Sin_Curar": 5656.4,
-      "Curado": 0,
-      "Total": 5477.35
+      "Primu": 8919.6875,
+      "Original": 7523.375,
+      "Primu + Original": 16443.0625
     },
-    "VENTAS": {
-      "Sin_Curar": 4880,
-      "Curado": 750,
-      "Total": 5630
+    "VENTA": {
+      "Primu": 0,
+      "Original": 5350,
+      "Primu + Original": 5350
     },
     "DISPONIBLE": {
-      "Sin_Curar": 597.3500000000004,
-      "Curado": -750,
-      "Total": "AGOTADA"
-    },
-    "Comentarios": ""
+      "Primu": 8919.6875,
+      "Original": 2173.375,
+      "Primu + Original": 11093.0625
+    }
   },
   {
-    "Variedad": "RAGT Quiriko",
-    "Variedad_Calidad": "Quiriko",
+    "Variedad": "RAGT Borsalino",
     "OFERTA": {
-      "Sin_Curar": 2052.7500000000005,
-      "Curado": 0,
-      "Total": 2127.775
+      "Primu": 2455.6499999999996,
+      "Original": 0,
+      "Primu + Original": 2455.6499999999996
     },
-    "VENTAS": {
-      "Sin_Curar": 0,
-      "Curado": 680,
-      "Total": 680
+    "VENTA": {
+      "Primu": 125,
+      "Original": 0,
+      "Primu + Original": 125
     },
     "DISPONIBLE": {
-      "Sin_Curar": 2127.775,
-      "Curado": -680,
-      "Total": 1447.775
-    },
-    "Comentarios": ""
+      "Primu": 2330.6499999999996,
+      "Original": 0,
+      "Primu + Original": 2330.6499999999996
+    }
   },
   {
-    "Variedad": "BIO Timbo",
-    "Variedad_Calidad": "Timbo",
+    "Variedad": "RAGT Sidecar",
     "OFERTA": {
-      "Sin_Curar": 1726.125,
-      "Curado": 0,
-      "Total": 528.625
+      "Primu": 1096.925,
+      "Original": 0,
+      "Primu + Original": 1096.925
     },
-    "VENTAS": {
-      "Sin_Curar": 0,
-      "Curado": 540,
-      "Total": 540
+    "VENTA": {
+      "Primu": 0,
+      "Original": 0,
+      "Primu + Original": 0
     },
     "DISPONIBLE": {
-      "Sin_Curar": 528.625,
-      "Curado": -540,
-      "Total": "AGOTADA"
-    },
-    "Comentarios": ""
+      "Primu": 1096.925,
+      "Original": 0,
+      "Primu + Original": 1096.925
+    }
   }
 ]

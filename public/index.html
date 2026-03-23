@@ -4,59 +4,51 @@
   <meta charset="UTF-8">
   <title>Informe de Ventas</title>
   <script>
-    // 🔒 Verificación de login lo más temprano posible
     if (!localStorage.getItem("logueado")) {
       window.location.href = "login.html";
     }
   </script>
   <style>
     body { font-family: Arial, sans-serif; margin: 20px; }
-    table { border-collapse: collapse; width: 100%; margin-bottom: 30px; }
-    th, td { border: 1px solid #ccc; padding: 6px; text-align: center; }
+    table { border-collapse: collapse; width: 100%; margin-bottom: 30px; text-align: center; }
+    th, td { border: 1px solid #ccc; padding: 6px; }
     th { background-color: #f2f2f2; }
     .totales { font-weight: bold; background-color: #e6ffe6; }
-    .agotada { background-color: #ffcccc; } /* sombreado rojo */
+    .agotada { background-color: #ffcccc; }
     canvas { margin-top: 40px; }
     button { margin-top: 20px; padding: 6px 12px; }
   </style>
-  <!-- Chart.js -->
   <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
 </head>
 <body>
   <h1>Informe de Ventas</h1>
-
-  <!-- Botón de logout -->
   <button onclick="logout()">Salir</button>
 
   <table id="tablaVentas">
     <thead>
       <tr>
-        <th>Variedad</th><th>Calidad</th>
-        <th>Oferta Sin Curar</th><th>Oferta Curado</th><th>Oferta Total</th>
-        <th>Ventas Sin Curar</th><th>Ventas Curado</th><th>Ventas Total</th>
-        <th>Disp Sin Curar</th><th>Disp Curado</th><th>Disp Total</th>
-        <th>Comentarios</th>
+        <th rowspan="2">Variedad</th>
+        <th colspan="3">OFERTA TOTAL (Bls)</th>
+        <th colspan="3">VENTA (Bls)</th>
+        <th colspan="3">DISPONIBLE (Bls)</th>
+      </tr>
+      <tr>
+        <th>Primu</th><th>Original</th><th>Primu + Original</th>
+        <th>Primu</th><th>Original</th><th>Primu + Original</th>
+        <th>Primu</th><th>Original</th><th>Primu + Original</th>
       </tr>
     </thead>
     <tbody></tbody>
     <tfoot>
       <tr class="totales">
-        <td colspan="2">Totales</td>
-        <td id="totalOfertaSinCurar"></td>
-        <td id="totalOfertaCurado"></td>
-        <td id="totalOfertaTotal"></td>
-        <td id="totalVentasSinCurar"></td>
-        <td id="totalVentasCurado"></td>
-        <td id="totalVentasTotal"></td>
-        <td id="totalDispSinCurar"></td>
-        <td id="totalDispCurado"></td>
-        <td id="totalDispTotal"></td>
-        <td></td>
+        <td>Totales</td>
+        <td id="totalOfertaPrimu"></td><td id="totalOfertaOriginal"></td><td id="totalOfertaTotal"></td>
+        <td id="totalVentasPrimu"></td><td id="totalVentasOriginal"></td><td id="totalVentasTotal"></td>
+        <td id="totalDispPrimu"></td><td id="totalDispOriginal"></td><td id="totalDispTotal"></td>
       </tr>
     </tfoot>
   </table>
 
-  <!-- Gráfico -->
   <canvas id="graficoTotales" width="400" height="200"></canvas>
 
   <script>
@@ -66,7 +58,7 @@
     }
 
     function mostrarValor(v) {
-      return (typeof v === "number" && !isNaN(v)) ? v.toFixed(2) : v;
+      return (typeof v === "number" && !isNaN(v)) ? v.toFixed(2) : (v || "");
     }
 
     fetch('/api/ventas')
@@ -74,58 +66,53 @@
       .then(data => {
         const tbody = document.querySelector('#tablaVentas tbody');
 
-        let totOfertaSinCurar=0, totOfertaCurado=0, totOfertaTotal=0;
-        let totVentasSinCurar=0, totVentasCurado=0, totVentasTotal=0;
-        let totDispSinCurar=0, totDispCurado=0, totDispTotal=0;
+        let totOfertaPrimu=0, totOfertaOriginal=0, totOfertaTotal=0;
+        let totVentasPrimu=0, totVentasOriginal=0, totVentasTotal=0;
+        let totDispPrimu=0, totDispOriginal=0, totDispTotal=0;
 
         data.forEach(item => {
-          const agotada = item.DISPONIBLE.Total === "AGOTADA";
+          const agotada = item.DISPONIBLE["Primu + Original"] === "AGOTADA";
           const row = `
             <tr class="${agotada ? 'agotada' : ''}">
               <td>${item.Variedad}</td>
-              <td>${item.Variedad_Calidad}</td>
-              <td>${mostrarValor(item.OFERTA.Sin_Curar)}</td>
-              <td>${mostrarValor(item.OFERTA.Curado)}</td>
-              <td>${mostrarValor(item.OFERTA.Total)}</td>
-              <td>${mostrarValor(item.VENTAS.Sin_Curar)}</td>
-              <td>${mostrarValor(item.VENTAS.Curado)}</td>
-              <td>${mostrarValor(item.VENTAS.Total)}</td>
-              <td>${mostrarValor(item.DISPONIBLE.Sin_Curar)}</td>
-              <td>${mostrarValor(item.DISPONIBLE.Curado)}</td>
-              <td>${mostrarValor(item.DISPONIBLE.Total)}</td>
-              <td>${item.Comentarios}</td>
+              <td>${mostrarValor(item.OFERTA.Primu)}</td>
+              <td>${mostrarValor(item.OFERTA.Original)}</td>
+              <td>${mostrarValor(item.OFERTA["Primu + Original"])}</td>
+              <td>${mostrarValor(item.VENTA.Primu)}</td>
+              <td>${mostrarValor(item.VENTA.Original)}</td>
+              <td>${mostrarValor(item.VENTA["Primu + Original"])}</td>
+              <td>${mostrarValor(item.DISPONIBLE.Primu)}</td>
+              <td>${mostrarValor(item.DISPONIBLE.Original)}</td>
+              <td>${mostrarValor(item.DISPONIBLE["Primu + Original"])}</td>
             </tr>
           `;
           tbody.innerHTML += row;
 
-          // Acumuladores
-          totOfertaSinCurar += (typeof item.OFERTA.Sin_Curar === "number") ? item.OFERTA.Sin_Curar : 0;
-          totOfertaCurado   += (typeof item.OFERTA.Curado === "number") ? item.OFERTA.Curado : 0;
-          totOfertaTotal    += (typeof item.OFERTA.Total === "number") ? item.OFERTA.Total : 0;
+          totOfertaPrimu    += item.OFERTA.Primu    || 0;
+          totOfertaOriginal += item.OFERTA.Original || 0;
+          totOfertaTotal    += item.OFERTA["Primu + Original"] || 0;
 
-          totVentasSinCurar += (typeof item.VENTAS.Sin_Curar === "number") ? item.VENTAS.Sin_Curar : 0;
-          totVentasCurado   += (typeof item.VENTAS.Curado === "number") ? item.VENTAS.Curado : 0;
-          totVentasTotal    += (typeof item.VENTAS.Total === "number") ? item.VENTAS.Total : 0;
+          totVentasPrimu    += item.VENTA.Primu    || 0;
+          totVentasOriginal += item.VENTA.Original || 0;
+          totVentasTotal    += item.VENTA["Primu + Original"] || 0;
 
-          totDispSinCurar   += (typeof item.DISPONIBLE.Sin_Curar === "number") ? item.DISPONIBLE.Sin_Curar : 0;
-          totDispCurado     += (typeof item.DISPONIBLE.Curado === "number") ? item.DISPONIBLE.Curado : 0;
-          totDispTotal      += (typeof item.DISPONIBLE.Total === "number") ? item.DISPONIBLE.Total : 0;
+          totDispPrimu      += item.DISPONIBLE.Primu    || 0;
+          totDispOriginal   += item.DISPONIBLE.Original || 0;
+          totDispTotal      += item.DISPONIBLE["Primu + Original"] || 0;
         });
 
-        // Mostrar totales redondeados
-        document.getElementById('totalOfertaSinCurar').innerText = totOfertaSinCurar.toFixed(2);
-        document.getElementById('totalOfertaCurado').innerText   = totOfertaCurado.toFixed(2);
+        document.getElementById('totalOfertaPrimu').innerText    = totOfertaPrimu.toFixed(2);
+        document.getElementById('totalOfertaOriginal').innerText = totOfertaOriginal.toFixed(2);
         document.getElementById('totalOfertaTotal').innerText    = totOfertaTotal.toFixed(2);
 
-        document.getElementById('totalVentasSinCurar').innerText = totVentasSinCurar.toFixed(2);
-        document.getElementById('totalVentasCurado').innerText   = totVentasCurado.toFixed(2);
+        document.getElementById('totalVentasPrimu').innerText    = totVentasPrimu.toFixed(2);
+        document.getElementById('totalVentasOriginal').innerText = totVentasOriginal.toFixed(2);
         document.getElementById('totalVentasTotal').innerText    = totVentasTotal.toFixed(2);
 
-        document.getElementById('totalDispSinCurar').innerText   = totDispSinCurar.toFixed(2);
-        document.getElementById('totalDispCurado').innerText     = totDispCurado.toFixed(2);
+        document.getElementById('totalDispPrimu').innerText      = totDispPrimu.toFixed(2);
+        document.getElementById('totalDispOriginal').innerText   = totDispOriginal.toFixed(2);
         document.getElementById('totalDispTotal').innerText      = totDispTotal.toFixed(2);
 
-        // Gráfico con Chart.js
         const ctx = document.getElementById('graficoTotales').getContext('2d');
         new Chart(ctx, {
           type: 'bar',
