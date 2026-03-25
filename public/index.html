@@ -44,11 +44,27 @@
     .agotada {
       background-color: #ffcccc; /* sombreado rojo para agotadas */
     }
+
+    /* 🔄 Animación del logo */
+    .logo {
+      width: 80px;
+      height: 80px;
+      animation: girar 5s linear infinite;
+      display: block;
+      margin: 20px auto;
+    }
+
+    @keyframes girar {
+      from { transform: rotate(0deg); }
+      to { transform: rotate(360deg); }
+    }
   </style>
   <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
 </head>
 <body>
   <h1>Informe de Ventas</h1>
+  <!-- Logo girando -->
+  <img src="logo.png" class="logo" alt="Logo">
   <button onclick="logout()">Salir</button>
 
   <table id="tablaVentas">
