@@ -12,11 +12,38 @@
     body { font-family: Arial, sans-serif; margin: 20px; }
     table { border-collapse: collapse; width: 100%; margin-bottom: 30px; text-align: center; }
     th, td { border: 1px solid #ccc; padding: 6px; }
-    th { background-color: #f2f2f2; }
-    .totales { font-weight: bold; background-color: #e6ffe6; }
-    .agotada { background-color: #ffcccc; }
     canvas { margin-top: 40px; }
     button { margin-top: 20px; padding: 6px 12px; }
+
+    /* 🎨 Estilos de colores */
+    thead tr:first-child th {
+      background-color: #4caf50; /* verde para títulos */
+      color: white;
+      font-size: 1.1em;
+    }
+
+    thead tr:nth-child(2) th {
+      background-color: #a5d6a7; /* verde claro para subtítulos */
+    }
+
+    tbody tr td:first-child {
+      font-weight: bold;
+      background-color: #f9f9f9; /* fondo suave para variedades */
+    }
+
+    tbody tr:nth-child(even) {
+      background-color: #f2f2f2; /* alternar filas */
+    }
+
+    tfoot tr.totales {
+      background-color: #e6ffe6;
+      font-size: 1.05em;
+      font-weight: bold;
+    }
+
+    .agotada {
+      background-color: #ffcccc; /* sombreado rojo para agotadas */
+    }
   </style>
   <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
 </head>
@@ -58,7 +85,7 @@
     }
 
     function mostrarValor(v) {
-      return (typeof v === "number" && !isNaN(v)) ? v.toFixed(2) : (v || "");
+      return (typeof v === "number" && !isNaN(v)) ? Math.round(v) : (v || "");
     }
 
     fetch('/api/ventas')
@@ -101,17 +128,17 @@
           totDispTotal      += item.DISPONIBLE["Primu + Original"] || 0;
         });
 
-        document.getElementById('totalOfertaPrimu').innerText    = totOfertaPrimu.toFixed(2);
-        document.getElementById('totalOfertaOriginal').innerText = totOfertaOriginal.toFixed(2);
-        document.getElementById('totalOfertaTotal').innerText    = totOfertaTotal.toFixed(2);
+        document.getElementById('totalOfertaPrimu').innerText    = Math.round(totOfertaPrimu);
+        document.getElementById('totalOfertaOriginal').innerText = Math.round(totOfertaOriginal);
+        document.getElementById('totalOfertaTotal').innerText    = Math.round(totOfertaTotal);
 
-        document.getElementById('totalVentasPrimu').innerText    = totVentasPrimu.toFixed(2);
-        document.getElementById('totalVentasOriginal').innerText = totVentasOriginal.toFixed(2);
-        document.getElementById('totalVentasTotal').innerText    = totVentasTotal.toFixed(2);
+        document.getElementById('totalVentasPrimu').innerText    = Math.round(totVentasPrimu);
+        document.getElementById('totalVentasOriginal').innerText = Math.round(totVentasOriginal);
+        document.getElementById('totalVentasTotal').innerText    = Math.round(totVentasTotal);
 
-        document.getElementById('totalDispPrimu').innerText      = totDispPrimu.toFixed(2);
-        document.getElementById('totalDispOriginal').innerText   = totDispOriginal.toFixed(2);
-        document.getElementById('totalDispTotal').innerText      = totDispTotal.toFixed(2);
+        document.getElementById('totalDispPrimu').innerText      = Math.round(totDispPrimu);
+        document.getElementById('totalDispOriginal').innerText   = Math.round(totDispOriginal);
+        document.getElementById('totalDispTotal').innerText      = Math.round(totDispTotal);
 
         const ctx = document.getElementById('graficoTotales').getContext('2d');
         new Chart(ctx, {
@@ -121,9 +148,9 @@
             datasets: [{
               label: 'Totales',
               data: [
-                totOfertaTotal.toFixed(2),
-                totVentasTotal.toFixed(2),
-                totDispTotal.toFixed(2)
+                Math.round(totOfertaTotal),
+                Math.round(totVentasTotal),
+                Math.round(totDispTotal)
               ],
               backgroundColor: ['#4caf50','#2196f3','#ff9800']
             }]
