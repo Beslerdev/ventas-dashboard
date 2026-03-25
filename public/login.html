@@ -3,121 +3,80 @@
 <head>
   <meta charset="UTF-8">
   <title>Login</title>
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <style>
     body {
       font-family: Arial, sans-serif;
-      margin: 0;
-      height: 100vh;
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      background-image: url("fondo.jpg"); /* Imagen en carpeta public */
-      background-size: cover;
-      background-position: center;
-    }
-
-    #loginForm {
-      background-color: rgba(255, 255, 255, 0.85); /* cuadro semitransparente */
-      padding: 20px;
-      border-radius: 8px;
-      box-shadow: 0 4px 10px rgba(0,0,0,0.3);
       text-align: center;
-      width: 300px;
-      z-index: 2;
+      margin-top: 100px;
     }
 
-    h2 {
+    /* Logo girando en esquina superior derecha */
+    .logo {
+      width: 120px;
+      height: 120px;
+      animation: girar 5s linear infinite;
+      position: absolute;
+      top: 20px;
+      right: 20px;
+    }
+
+    @keyframes girar {
+      from { transform: rotate(0deg); }
+      to { transform: rotate(360deg); }
+    }
+
+    h1 {
       margin-bottom: 20px;
     }
 
-    input {
+    form {
+      display: inline-block;
+      text-align: left;
+      background: #f9f9f9;
+      padding: 20px;
+      border-radius: 8px;
+      box-shadow: 0 0 10px rgba(0,0,0,0.1);
+    }
+
+    input, button {
       margin: 10px 0;
       padding: 8px;
-      width: 90%;
-      border: 1px solid #ccc;
-      border-radius: 4px;
+      width: 100%;
+      box-sizing: border-box;
     }
 
     button {
-      padding: 8px 16px;
-      margin-top: 10px;
-      background-color: #2196f3;
+      background-color: #4caf50;
       color: white;
       border: none;
-      border-radius: 4px;
       cursor: pointer;
     }
 
     button:hover {
-      background-color: #1976d2;
-    }
-
-    /* Logo girando sobre eje Y */
-    #logoAnimado {
-      position: absolute;
-      top: 20px;
-      right: 20px;
-      width: 60px;
-      height: 60px;
-      animation: girarY 2s ease-in-out infinite;
-      opacity: 0.7; /* efecto marca de agua */
-      z-index: 1;
-      transform-style: preserve-3d;
-    }
-
-    @keyframes girarY {
-      0%   { transform: rotateY(0deg); }
-      50%  { transform: rotateY(180deg); }
-      100% { transform: rotateY(360deg); }
+      background-color: #45a049;
     }
   </style>
 </head>
 <body>
   <!-- Logo girando -->
-  <img src="logo.png" alt="Logo" id="logoAnimado">
+  <img src="logo-v2.png" class="logo" alt="Logo">
 
-  <!-- Formulario de login -->
-  <form id="loginForm">
-    <h2>Acceso al sistema</h2>
-    <input type="text" id="usuario" placeholder="Usuario" required><br>
-    <input type="password" id="password" placeholder="Contraseña" required><br>
+  <h1>Acceso al Dashboard</h1>
+  <form onsubmit="login(event)">
+    <label>Usuario</label><br>
+    <input type="text" required><br>
+    <label>Contraseña</label><br>
+    <input type="password" required><br>
     <button type="submit">Ingresar</button>
   </form>
 
   <script>
-    // Lista de usuarios válidos
-    const usuariosValidos = {
-      "FabricioSouville": "FabricioDS",
-      "VanesaPoggio": "VanesaDS",
-      "AilinSuarez": "AilinDS",
-      "DoloresSastre": "DoloresDS",
-      "DiegoSastre": "DiegoDS",
-      "TomasRudy": "TomasDS",
-      "FranciscoTolosa": "FranciscoDS",
-      "LucianoBanfi": "LucianoDS",
-      "CiroGonzalez": "CiroDS",
-      "PatricioTorrijo": "PatricioDS",
-      "SebastianAlvarez": "SebastianDS",
-      "MilagrosMartinArrieta": "MilagrosDS",
-      "SantiagoUrruti": "SantiagoDS",
-      "MercedesRiega": "MercedesDS"
-    };
-
-    document.getElementById('loginForm').addEventListener('submit', function(e) {
+    function login(e) {
       e.preventDefault();
-      const usuario = document.getElementById('usuario').value;
-      const password = document.getElementById('password').value;
-
-      if (usuariosValidos[usuario] && usuariosValidos[usuario] === password) {
-        localStorage.setItem("logueado","true");
-        localStorage.setItem("usuario", usuario); // guarda quién entró
-        document.getElementById('logoAnimado').style.display = "none"; // oculta logo
-        window.location.href = "index.html";
-      } else {
-        alert("Usuario o contraseña incorrectos");
-      }
-    });
+      // Simulación de login
+      localStorage.setItem("logueado", "true");
+      window.location.href = "index.html";
+    }
   </script>
 </body>
 </html>
