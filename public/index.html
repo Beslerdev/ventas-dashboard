@@ -15,35 +15,16 @@
     canvas { margin-top: 40px; }
     button { margin-top: 20px; padding: 6px 12px; }
 
-    /* 🎨 Estilos de colores */
     thead tr:first-child th {
-      background-color: #4caf50; /* verde para títulos */
+      background-color: #4caf50;
       color: white;
       font-size: 1.1em;
     }
-
-    thead tr:nth-child(2) th {
-      background-color: #a5d6a7; /* verde claro para subtítulos */
-    }
-
-    tbody tr td:first-child {
-      font-weight: bold;
-      background-color: #f9f9f9; /* fondo suave para variedades */
-    }
-
-    tbody tr:nth-child(even) {
-      background-color: #f2f2f2; /* alternar filas */
-    }
-
-    tfoot tr.totales {
-      background-color: #e6ffe6;
-      font-size: 1.05em;
-      font-weight: bold;
-    }
-
-    .agotada {
-      background-color: #ffcccc; /* sombreado rojo para agotadas */
-    }
+    thead tr:nth-child(2) th { background-color: #a5d6a7; }
+    tbody tr td:first-child { font-weight: bold; background-color: #f9f9f9; }
+    tbody tr:nth-child(even) { background-color: #f2f2f2; }
+    tfoot tr.totales { background-color: #e6ffe6; font-size: 1.05em; font-weight: bold; }
+    .agotada { background-color: #ffcccc; }
   </style>
   <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
 </head>
@@ -85,12 +66,16 @@
     }
 
     function mostrarValor(v) {
-      return (typeof v === "number" && !isNaN(v)) ? Math.round(v) : (v || "");
+      if (typeof v === "number" && !isNaN(v)) return Math.round(v);
+      if (typeof v === "string") return v;
+      return "";
     }
 
     fetch('/api/ventas')
       .then(res => res.json())
       .then(data => {
+        console.log("Datos recibidos:", data); // 👈 debug
+
         const tbody = document.querySelector('#tablaVentas tbody');
 
         let totOfertaPrimu=0, totOfertaOriginal=0, totOfertaTotal=0;
@@ -98,7 +83,8 @@
         let totDispPrimu=0, totDispOriginal=0, totDispTotal=0;
 
         data.forEach(item => {
-          const agotada = item.DISPONIBLE["Primu + Original"] === "AGOTADA";
+          const agotada = item.DISPONIBLE["Primu + Original"] === 0; // 👈 ahora marca agotadas
+
           const row = `
             <tr class="${agotada ? 'agotada' : ''}">
               <td>${item.Variedad}</td>
