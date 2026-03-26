@@ -38,9 +38,9 @@
   {
     "Variedad": "Bio Laurel",
     "OFERTA": {
-      "Primu": 16191.862500000007,
+      "Primu": 15441.525000000005,
       "Original": 0,
-      "Primu + Original": 16191.862500000007
+      "Primu + Original": 15441.525000000005
     },
     "VENTA": {
       "Primu": 0,
@@ -48,17 +48,17 @@
       "Primu + Original": 0
     },
     "DISPONIBLE": {
-      "Primu": 16191.862500000007,
+      "Primu": 15441.525000000005,
       "Original": 0,
-      "Primu + Original": 16191.862500000007
+      "Primu + Original": 15441.525000000005
     }
   },
   {
     "Variedad": "DM Araucaria",
     "OFERTA": {
-      "Primu": 22816.125000000007,
+      "Primu": 20134.375000000004,
       "Original": 2154.7499999999995,
-      "Primu + Original": 24970.875000000007
+      "Primu + Original": 22289.125000000004
     },
     "VENTA": {
       "Primu": 100,
@@ -66,17 +66,17 @@
       "Primu + Original": 100
     },
     "DISPONIBLE": {
-      "Primu": 22716.125000000007,
+      "Primu": 20034.375000000004,
       "Original": 2154.7499999999995,
-      "Primu + Original": 24870.875000000007
+      "Primu + Original": 22189.125000000004
     }
   },
   {
     "Variedad": "DM Casuarina",
     "OFERTA": {
-      "Primu": 27118.399999999994,
+      "Primu": 24382.249999999993,
       "Original": 6356.937500000002,
-      "Primu + Original": 33475.337499999994
+      "Primu + Original": 30739.187499999993
     },
     "VENTA": {
       "Primu": 975,
@@ -84,17 +84,17 @@
       "Primu + Original": 975
     },
     "DISPONIBLE": {
-      "Primu": 26143.399999999994,
+      "Primu": 23407.249999999993,
       "Original": 6356.937500000002,
-      "Primu + Original": 32500.337499999994
+      "Primu + Original": 29764.187499999993
     }
   },
   {
     "Variedad": "DM Catalpa",
     "OFERTA": {
-      "Primu": 46329.42500000001,
+      "Primu": 40617.424999999996,
       "Original": 2592.5,
-      "Primu + Original": 48921.92500000001
+      "Primu + Original": 43209.924999999996
     },
     "VENTA": {
       "Primu": 1250,
@@ -102,9 +102,9 @@
       "Primu + Original": 1250
     },
     "DISPONIBLE": {
-      "Primu": 45079.42500000001,
+      "Primu": 39367.424999999996,
       "Original": 2592.5,
-      "Primu + Original": 47671.92500000001
+      "Primu + Original": 41959.924999999996
     }
   },
   {
