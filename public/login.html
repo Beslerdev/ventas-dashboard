@@ -8,6 +8,24 @@
       font-family: Arial, sans-serif;
       text-align: center;
       margin-top: 100px;
+      position: relative;
+      min-height: 100vh;
+      overflow: hidden;
+    }
+
+    /* Fondo tipo marca de agua en mosaico */
+    body::before {
+      content: "";
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background-image: url("fondo.jpg");
+      background-repeat: repeat;
+      background-size: 33% auto; /* 3x3 → 9 repeticiones */
+      opacity: 0.15; /* más tenue, efecto marca de agua */
+      z-index: -1; /* detrás del contenido */
     }
 
     /* Logo girando en esquina superior derecha */
@@ -18,11 +36,13 @@
       position: absolute;
       top: 20px;
       right: 20px;
+      transform-style: preserve-3d;
     }
 
+    /* Giro sobre eje Y (izquierda a derecha) */
     @keyframes girar {
-      from { transform: rotate(0deg); }
-      to { transform: rotate(360deg); }
+      from { transform: rotateY(0deg); }
+      to { transform: rotateY(360deg); }
     }
 
     h1 {
@@ -88,7 +108,7 @@
       "IgnacioGarros": "IgnacioDS",
       "SantiagoUrruti": "SantiagoDS",
       "MercedesRiega": "MercedesDS",
-      "NuevoUsuario": "NuevaClave"   // tu usuario agregado
+      "NuevoUsuario": "NuevaClave"
     };
 
     document.getElementById('loginForm').addEventListener('submit', function(e) {
