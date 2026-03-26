@@ -3,6 +3,7 @@ const session = require('express-session');
 const bodyParser = require('body-parser');
 const cors = require('cors');
 const path = require('path');
+const fs = require('fs');
 
 const app = express();
 
@@ -28,7 +29,19 @@ app.get('/', (req, res) => {
 
 // Endpoint que tu frontend espera
 app.get('/api/ventas', (req, res) => {
-  res.sendFile(path.join(__dirname, 'ventas.json'));
+  fs.readFile(path.join(__dirname, 'ventas.json'), 'utf8', (err, data) => {
+    if (err) {
+      console.error('Error leyendo ventas.json:', err);
+      return res.status(500).json({ error: 'Error leyendo ventas.json' });
+    }
+    try {
+      const ventas = JSON.parse(data);
+      res.json(ventas);
+    } catch (parseErr) {
+      console.error('Error parseando ventas.json:', parseErr);
+      res.status(500).json({ error: 'Error parseando ventas.json' });
+    }
+  });
 });
 
 const PORT = process.env.PORT || 10000;
