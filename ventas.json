@@ -2,9 +2,9 @@
   {
     "Variedad": "BIO Arazá",
     "OFERTA": {
-      "Primu": 3409.975,
+      "Primu": 3249.975,
       "Original": 0,
-      "Primu + Original": 3409.975
+      "Primu + Original": 3249.975
     },
     "VENTA": {
       "Primu": 0,
@@ -12,9 +12,9 @@
       "Primu + Original": 0
     },
     "DISPONIBLE": {
-      "Primu": 3409.975,
+      "Primu": 3249.975,
       "Original": 0,
-      "Primu + Original": 3409.975
+      "Primu + Original": 3249.975
     }
   },
   {
@@ -79,14 +79,14 @@
       "Primu + Original": 30739.187499999993
     },
     "VENTA": {
-      "Primu": 975,
+      "Primu": 1015,
       "Original": 0,
-      "Primu + Original": 975
+      "Primu + Original": 1015
     },
     "DISPONIBLE": {
-      "Primu": 23407.249999999993,
+      "Primu": 23367.249999999993,
       "Original": 6356.937500000002,
-      "Primu + Original": 29764.187499999993
+      "Primu + Original": 29724.187499999993
     }
   },
   {
