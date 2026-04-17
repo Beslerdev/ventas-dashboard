@@ -20,9 +20,9 @@
   {
     "Variedad": "Bio Gingko",
     "OFERTA": {
-      "Primu": 4573.637500000001,
+      "Primu": 0,
       "Original": 0,
-      "Primu + Original": 4573.637500000001
+      "Primu + Original": 0
     },
     "VENTA": {
       "Primu": 0,
@@ -30,17 +30,17 @@
       "Primu + Original": 0
     },
     "DISPONIBLE": {
-      "Primu": 4573.637500000001,
+      "Primu": 0,
       "Original": 0,
-      "Primu + Original": 4573.637500000001
+      "Primu + Original": 0
     }
   },
   {
     "Variedad": "Bio Laurel",
     "OFERTA": {
-      "Primu": 15441.525000000005,
+      "Primu": 0,
       "Original": 0,
-      "Primu + Original": 15441.525000000005
+      "Primu + Original": 0
     },
     "VENTA": {
       "Primu": 0,
@@ -48,9 +48,9 @@
       "Primu + Original": 0
     },
     "DISPONIBLE": {
-      "Primu": 15441.525000000005,
+      "Primu": 0,
       "Original": 0,
-      "Primu + Original": 15441.525000000005
+      "Primu + Original": 0
     }
   },
   {
@@ -62,49 +62,49 @@
     },
     "VENTA": {
       "Primu": 820,
-      "Original": 0,
-      "Primu + Original": 820
+      "Original": 1200,
+      "Primu + Original": 2020
     },
     "DISPONIBLE": {
       "Primu": 19656.450000000004,
-      "Original": 2154.7499999999995,
-      "Primu + Original": 21811.200000000004
+      "Original": 954.7499999999995,
+      "Primu + Original": 20611.200000000004
     }
   },
   {
     "Variedad": "DM Casuarina",
     "OFERTA": {
-      "Primu": 27365.624999999993,
-      "Original": 3483.9375,
-      "Primu + Original": 30849.562499999993
+      "Primu": 2983.375,
+      "Original": 0,
+      "Primu + Original": 2983.375
     },
     "VENTA": {
       "Primu": 1503,
-      "Original": 0,
-      "Primu + Original": 1503
+      "Original": 1200,
+      "Primu + Original": 2703
     },
     "DISPONIBLE": {
-      "Primu": 25862.624999999993,
-      "Original": 3483.9375,
-      "Primu + Original": 29346.562499999993
+      "Primu": 1480.375,
+      "Original": -1200,
+      "Primu + Original": 280.375
     }
   },
   {
     "Variedad": "DM Catalpa",
     "OFERTA": {
-      "Primu": 42750.0125,
-      "Original": 2592.5,
-      "Primu + Original": 45342.5125
+      "Primu": 9625.3,
+      "Original": 0,
+      "Primu + Original": 9625.3
     },
     "VENTA": {
       "Primu": 1420,
-      "Original": 0,
-      "Primu + Original": 1420
+      "Original": 600,
+      "Primu + Original": 2020
     },
     "DISPONIBLE": {
-      "Primu": 41330.0125,
-      "Original": 2592.5,
-      "Primu + Original": 43922.5125
+      "Primu": 8205.3,
+      "Original": -600,
+      "Primu + Original": 7605.299999999999
     }
   },
   {
@@ -164,9 +164,9 @@
   {
     "Variedad": "RAGT Borsalino",
     "OFERTA": {
-      "Primu": 2455.6499999999996,
+      "Primu": 0,
       "Original": 0,
-      "Primu + Original": 2455.6499999999996
+      "Primu + Original": 0
     },
     "VENTA": {
       "Primu": 125,
@@ -174,17 +174,17 @@
       "Primu + Original": 125
     },
     "DISPONIBLE": {
-      "Primu": 2330.6499999999996,
+      "Primu": -125,
       "Original": 0,
-      "Primu + Original": 2330.6499999999996
+      "Primu + Original": -125
     }
   },
   {
     "Variedad": "RAGT Sidecar",
     "OFERTA": {
-      "Primu": 1096.925,
+      "Primu": 0,
       "Original": 0,
-      "Primu + Original": 1096.925
+      "Primu + Original": 0
     },
     "VENTA": {
       "Primu": 0,
@@ -192,9 +192,9 @@
       "Primu + Original": 0
     },
     "DISPONIBLE": {
-      "Primu": 1096.925,
+      "Primu": 0,
       "Original": 0,
-      "Primu + Original": 1096.925
+      "Primu + Original": 0
     }
   }
 ]
