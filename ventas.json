@@ -56,9 +56,9 @@
   {
     "Variedad": "DM Araucaria",
     "OFERTA": {
-      "Primu": 24302.125000000004,
+      "Primu": 24302.15,
       "Original": 0,
-      "Primu + Original": 24302.125000000004
+      "Primu + Original": 24302.15
     },
     "VENTA": {
       "Primu": 820,
@@ -66,17 +66,17 @@
       "Primu + Original": 2020
     },
     "DISPONIBLE": {
-      "Primu": 23482.125000000004,
+      "Primu": 23482.15,
       "Original": -1200,
-      "Primu + Original": 22282.125000000004
+      "Primu + Original": 22282.15
     }
   },
   {
     "Variedad": "DM Casuarina",
     "OFERTA": {
-      "Primu": 24222.349999999988,
+      "Primu": 21630.724999999995,
       "Original": 2978.4,
-      "Primu + Original": 27200.74999999999
+      "Primu + Original": 24609.124999999996
     },
     "VENTA": {
       "Primu": 1503,
@@ -84,9 +84,9 @@
       "Primu + Original": 2703
     },
     "DISPONIBLE": {
-      "Primu": 22719.349999999988,
+      "Primu": 20127.724999999995,
       "Original": 1778.4,
-      "Primu + Original": 24497.74999999999
+      "Primu + Original": 21906.124999999996
     }
   },
   {
@@ -110,9 +110,9 @@
   {
     "Variedad": "NS Baguette 610",
     "OFERTA": {
-      "Primu": 5927.262500000002,
+      "Primu": 4029.0000000000005,
       "Original": 0,
-      "Primu + Original": 5927.262500000002
+      "Primu + Original": 4029.0000000000005
     },
     "VENTA": {
       "Primu": 60,
@@ -120,9 +120,9 @@
       "Primu + Original": 60
     },
     "DISPONIBLE": {
-      "Primu": 5867.262500000002,
+      "Primu": 3969.0000000000005,
       "Original": 0,
-      "Primu + Original": 5867.262500000002
+      "Primu + Original": 3969.0000000000005
     }
   },
   {
@@ -169,14 +169,14 @@
       "Primu + Original": 2455.6499999999996
     },
     "VENTA": {
-      "Primu": 125,
+      "Primu": 140,
       "Original": 0,
-      "Primu + Original": 125
+      "Primu + Original": 140
     },
     "DISPONIBLE": {
-      "Primu": 2330.6499999999996,
+      "Primu": 2315.6499999999996,
       "Original": 0,
-      "Primu + Original": 2330.6499999999996
+      "Primu + Original": 2315.6499999999996
     }
   },
   {
