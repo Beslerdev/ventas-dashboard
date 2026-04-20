@@ -56,9 +56,9 @@
   {
     "Variedad": "DM Araucaria",
     "OFERTA": {
-      "Primu": 3882.75,
+      "Primu": 8202.7,
       "Original": 0,
-      "Primu + Original": 3882.75
+      "Primu + Original": 8202.7
     },
     "VENTA": {
       "Primu": 820,
@@ -66,17 +66,17 @@
       "Primu + Original": 2020
     },
     "DISPONIBLE": {
-      "Primu": 3062.75,
+      "Primu": 7382.700000000001,
       "Original": -1200,
-      "Primu + Original": 1862.75
+      "Primu + Original": 6182.700000000001
     }
   },
   {
     "Variedad": "DM Casuarina",
     "OFERTA": {
-      "Primu": 2983.375,
-      "Original": 0,
-      "Primu + Original": 2983.375
+      "Primu": 3703.35,
+      "Original": 2978.4,
+      "Primu + Original": 6681.75
     },
     "VENTA": {
       "Primu": 1503,
@@ -84,9 +84,9 @@
       "Primu + Original": 2703
     },
     "DISPONIBLE": {
-      "Primu": 1480.375,
-      "Original": -1200,
-      "Primu + Original": 280.375
+      "Primu": 2200.35,
+      "Original": 1778.4,
+      "Primu + Original": 3978.75
     }
   },
   {
