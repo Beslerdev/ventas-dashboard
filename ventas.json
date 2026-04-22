@@ -56,9 +56,9 @@
   {
     "Variedad": "DM Araucaria",
     "OFERTA": {
-      "Primu": 24302.15,
+      "Primu": 24350.800000000003,
       "Original": 0,
-      "Primu + Original": 24302.15
+      "Primu + Original": 24350.800000000003
     },
     "VENTA": {
       "Primu": 880,
@@ -66,17 +66,17 @@
       "Primu + Original": 2080
     },
     "DISPONIBLE": {
-      "Primu": 23422.15,
+      "Primu": 23470.800000000003,
       "Original": -1200,
-      "Primu + Original": 22222.15
+      "Primu + Original": 22270.800000000003
     }
   },
   {
     "Variedad": "DM Casuarina",
     "OFERTA": {
-      "Primu": 21630.724999999995,
+      "Primu": 26350.574999999997,
       "Original": 2978.4,
-      "Primu + Original": 24609.124999999996
+      "Primu + Original": 29328.975
     },
     "VENTA": {
       "Primu": 1863,
@@ -84,9 +84,9 @@
       "Primu + Original": 3063
     },
     "DISPONIBLE": {
-      "Primu": 19767.724999999995,
+      "Primu": 24487.574999999997,
       "Original": 1778.4,
-      "Primu + Original": 21546.124999999996
+      "Primu + Original": 26265.975
     }
   },
   {
@@ -110,9 +110,9 @@
   {
     "Variedad": "NS Baguette 610",
     "OFERTA": {
-      "Primu": 4029.0000000000005,
+      "Primu": 6188.925000000001,
       "Original": 0,
-      "Primu + Original": 4029.0000000000005
+      "Primu + Original": 6188.925000000001
     },
     "VENTA": {
       "Primu": 60,
@@ -120,9 +120,9 @@
       "Primu + Original": 60
     },
     "DISPONIBLE": {
-      "Primu": 3969.0000000000005,
+      "Primu": 6128.925000000001,
       "Original": 0,
-      "Primu + Original": 3969.0000000000005
+      "Primu + Original": 6128.925000000001
     }
   },
   {
@@ -152,13 +152,13 @@
     },
     "VENTA": {
       "Primu": 13,
-      "Original": 5350,
-      "Primu + Original": 5363
+      "Original": 6050,
+      "Primu + Original": 6063
     },
     "DISPONIBLE": {
       "Primu": 8906.6875,
-      "Original": 838.875,
-      "Primu + Original": 9745.5625
+      "Original": 138.875,
+      "Primu + Original": 9045.5625
     }
   },
   {
