@@ -2,63 +2,63 @@
   {
     "Variedad": "BIO Arazá",
     "OFERTA": {
-      "Primu": 3545,
-      "Original": "                -  ",
-      "Primu + Original": 3545
+      "Primu": 3545.1000000000004,
+      "Original": 0,
+      "Primu + Original": 3545.1000000000004
     },
     "VENTA": {
-      "Primu": "             -  ",
-      "Original": "               -  ",
-      "Primu + Original": "                                   -  "
+      "Primu": 0,
+      "Original": 0,
+      "Primu + Original": 0
     },
     "DISPONIBLE": {
-      "Primu": 3545,
-      "Original": "                -  ",
-      "Primu + Original": 3545
+      "Primu": 3545.1000000000004,
+      "Original": 0,
+      "Primu + Original": 3545.1000000000004
     }
   },
   {
     "Variedad": "Bio Gingko",
     "OFERTA": {
-      "Primu": 4574,
-      "Original": "                -  ",
-      "Primu + Original": 4574
+      "Primu": 4573.637500000001,
+      "Original": 0,
+      "Primu + Original": 4573.637500000001
     },
     "VENTA": {
-      "Primu": "             -  ",
-      "Original": "               -  ",
-      "Primu + Original": "                                   -  "
+      "Primu": 0,
+      "Original": 0,
+      "Primu + Original": 0
     },
     "DISPONIBLE": {
-      "Primu": 4574,
-      "Original": "                -  ",
-      "Primu + Original": 4574
+      "Primu": 4573.637500000001,
+      "Original": 0,
+      "Primu + Original": 4573.637500000001
     }
   },
   {
     "Variedad": "Bio Laurel",
     "OFERTA": {
-      "Primu": 15442,
-      "Original": "                -  ",
-      "Primu + Original": 15442
+      "Primu": 15441.525000000005,
+      "Original": 0,
+      "Primu + Original": 15441.525000000005
     },
     "VENTA": {
-      "Primu": "             -  ",
-      "Original": "               -  ",
-      "Primu + Original": "                                   -  "
+      "Primu": 0,
+      "Original": 0,
+      "Primu + Original": 0
     },
     "DISPONIBLE": {
-      "Primu": 15442,
-      "Original": "                -  ",
-      "Primu + Original": 15442
+      "Primu": 15441.525000000005,
+      "Original": 0,
+      "Primu + Original": 15441.525000000005
     }
   },
   {
     "Variedad": "DM Araucaria",
     "OFERTA": {
-      "Primu": 24351,
-      "Original": "                -  ",
-      "Primu + Original": 24351
+      "Primu": 24350.800000000003,
+      "Original": 0,
+      "Primu + Original": 24350.800000000003
     },
     "VENTA": {
       "Primu": 880,
@@ -66,17 +66,17 @@
       "Primu + Original": 2080
     },
     "DISPONIBLE": {
-      "Primu": 23471,
+      "Primu": 23470.800000000003,
       "Original": -1200,
-      "Primu + Original": 22271
+      "Primu + Original": 22270.800000000003
     }
   },
   {
     "Variedad": "DM Casuarina",
     "OFERTA": {
-      "Primu": 26371,
-      "Original": 2978,
-      "Primu + Original": 29349
+      "Primu": 26370.624999999993,
+      "Original": 2978.4,
+      "Primu + Original": 29349.024999999994
     },
     "VENTA": {
       "Primu": 1863,
@@ -84,17 +84,17 @@
       "Primu + Original": 3063
     },
     "DISPONIBLE": {
-      "Primu": 24508,
-      "Original": 1778,
-      "Primu + Original": 26286
+      "Primu": 24507.624999999993,
+      "Original": 1778.4,
+      "Primu + Original": 26286.024999999994
     }
   },
   {
     "Variedad": "DM Catalpa",
     "OFERTA": {
-      "Primu": 40039,
-      "Original": "                -  ",
-      "Primu + Original": 40039
+      "Primu": 40038.5125,
+      "Original": 0,
+      "Primu + Original": 40038.5125
     },
     "VENTA": {
       "Primu": 1420,
@@ -102,53 +102,53 @@
       "Primu + Original": 2020
     },
     "DISPONIBLE": {
-      "Primu": 38619,
+      "Primu": 38618.5125,
       "Original": -600,
-      "Primu + Original": 38019
+      "Primu + Original": 38018.5125
     }
   },
   {
     "Variedad": "NS Baguette 610",
     "OFERTA": {
-      "Primu": 6189,
-      "Original": "                -  ",
-      "Primu + Original": 6189
+      "Primu": 6188.950000000001,
+      "Original": 0,
+      "Primu + Original": 6188.950000000001
     },
     "VENTA": {
       "Primu": 60,
-      "Original": "               -  ",
+      "Original": 0,
       "Primu + Original": 60
     },
     "DISPONIBLE": {
-      "Primu": 6129,
-      "Original": "                -  ",
-      "Primu + Original": 6129
+      "Primu": 6128.950000000001,
+      "Original": 0,
+      "Primu + Original": 6128.950000000001
     }
   },
   {
     "Variedad": "NS Baguette 750",
     "OFERTA": {
-      "Primu": 4956,
-      "Original": 2958,
-      "Primu + Original": 7913
+      "Primu": 4955.5,
+      "Original": 2957.85,
+      "Primu + Original": 7913.35
     },
     "VENTA": {
-      "Primu": "             -  ",
+      "Primu": 0,
       "Original": 1513,
       "Primu + Original": 1513
     },
     "DISPONIBLE": {
-      "Primu": 4956,
-      "Original": 1445,
-      "Primu + Original": 6400
+      "Primu": 4955.5,
+      "Original": 1444.85,
+      "Primu + Original": 6400.35
     }
   },
   {
     "Variedad": "NS Baguette 820",
     "OFERTA": {
-      "Primu": 8920,
-      "Original": 6189,
-      "Primu + Original": 15109
+      "Primu": 8919.6875,
+      "Original": 6188.875,
+      "Primu + Original": 15108.5625
     },
     "VENTA": {
       "Primu": 13,
@@ -156,45 +156,45 @@
       "Primu + Original": 6063
     },
     "DISPONIBLE": {
-      "Primu": 8907,
-      "Original": 139,
-      "Primu + Original": 9046
+      "Primu": 8906.6875,
+      "Original": 138.875,
+      "Primu + Original": 9045.5625
     }
   },
   {
     "Variedad": "RAGT Borsalino",
     "OFERTA": {
-      "Primu": 2456,
-      "Original": "                -  ",
-      "Primu + Original": 2456
+      "Primu": 2455.6499999999996,
+      "Original": 0,
+      "Primu + Original": 2455.6499999999996
     },
     "VENTA": {
       "Primu": 287,
-      "Original": "               -  ",
+      "Original": 0,
       "Primu + Original": 287
     },
     "DISPONIBLE": {
-      "Primu": 2169,
-      "Original": "                -  ",
-      "Primu + Original": 2169
+      "Primu": 2168.6499999999996,
+      "Original": 0,
+      "Primu + Original": 2168.6499999999996
     }
   },
   {
     "Variedad": "RAGT Sidecar",
     "OFERTA": {
-      "Primu": 1097,
-      "Original": "                -  ",
-      "Primu + Original": 1097
+      "Primu": 1096.925,
+      "Original": 0,
+      "Primu + Original": 1096.925
     },
     "VENTA": {
-      "Primu": "             -  ",
-      "Original": "               -  ",
-      "Primu + Original": "                                   -  "
+      "Primu": 0,
+      "Original": 0,
+      "Primu + Original": 0
     },
     "DISPONIBLE": {
-      "Primu": 1097,
-      "Original": "                -  ",
-      "Primu + Original": 1097
+      "Primu": 1096.925,
+      "Original": 0,
+      "Primu + Original": 1096.925
     }
   }
 ]
