@@ -56,9 +56,9 @@
   {
     "Variedad": "DM Araucaria",
     "OFERTA": {
-      "Primu": 24351,
+      "Primu": 25791,
       "Original": 0,
-      "Primu + Original": 24351
+      "Primu + Original": 25791
     },
     "VENTA": {
       "Primu": 1373,
@@ -66,17 +66,17 @@
       "Primu + Original": 2573
     },
     "DISPONIBLE": {
-      "Primu": 22978,
+      "Primu": 24418,
       "Original": -1200,
-      "Primu + Original": 21778
+      "Primu + Original": 23218
     }
   },
   {
     "Variedad": "DM Casuarina",
     "OFERTA": {
-      "Primu": 26371,
-      "Original": 2978,
-      "Primu + Original": 29349
+      "Primu": 26454,
+      "Original": 4320,
+      "Primu + Original": 30774
     },
     "VENTA": {
       "Primu": 3056,
@@ -84,9 +84,9 @@
       "Primu + Original": 4256
     },
     "DISPONIBLE": {
-      "Primu": 23315,
-      "Original": 1778,
-      "Primu + Original": 25094
+      "Primu": 23399,
+      "Original": 3120,
+      "Primu + Original": 26519
     }
   },
   {
