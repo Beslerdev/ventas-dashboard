@@ -14,6 +14,14 @@ const subtitles = allRows[1];
 // Filas de datos (desde la fila 2 en adelante)
 const rows = allRows.slice(2);
 
+// Función para limpiar y convertir a número seguro
+function toNumber(value) {
+  if (value === undefined || value === null) return 0;
+  const limpio = value.toString().replace(/[^\d.-]/g, "");
+  const numero = Number(limpio);
+  return isNaN(numero) ? 0 : numero;
+}
+
 const result = rows.map(row => {
   const obj = {};
   // Variedad siempre en la primera columna
@@ -21,23 +29,23 @@ const result = rows.map(row => {
 
   // Bloque OFERTA (columnas 1-3)
   obj["OFERTA"] = {
-    "Primu": row[1],
-    "Original": row[2],
-    "Primu + Original": row[3]
+    "Primu": toNumber(row[1]),
+    "Original": toNumber(row[2]),
+    "Primu + Original": toNumber(row[3])
   };
 
   // Bloque VENTA (columnas 4-6)
   obj["VENTA"] = {
-    "Primu": row[4],
-    "Original": row[5],
-    "Primu + Original": row[6]
+    "Primu": toNumber(row[4]),
+    "Original": toNumber(row[5]),
+    "Primu + Original": toNumber(row[6])
   };
 
   // Bloque DISPONIBLE (columnas 7-9)
   obj["DISPONIBLE"] = {
-    "Primu": row[7],
-    "Original": row[8],
-    "Primu + Original": row[9]
+    "Primu": toNumber(row[7]),
+    "Original": toNumber(row[8]),
+    "Primu + Original": toNumber(row[9])
   };
 
   return obj;
