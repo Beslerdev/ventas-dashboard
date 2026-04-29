@@ -56,37 +56,37 @@
   {
     "Variedad": "DM Araucaria",
     "OFERTA": {
-      "Primu": 24314.125000000004,
+      "Primu": 23580.4,
       "Original": 0,
-      "Primu + Original": 24314.125000000004
+      "Primu + Original": 23580.4
     },
     "VENTA": {
-      "Primu": 1372.5,
+      "Primu": 2022.5,
       "Original": 1200,
-      "Primu + Original": 2572.5
+      "Primu + Original": 3222.5
     },
     "DISPONIBLE": {
-      "Primu": 22941.625000000004,
+      "Primu": 21557.9,
       "Original": -1200,
-      "Primu + Original": 21741.625000000004
+      "Primu + Original": 20357.9
     }
   },
   {
     "Variedad": "DM Casuarina",
     "OFERTA": {
       "Primu": 26443.324999999997,
-      "Original": 4519.975,
-      "Primu + Original": 30963.299999999996
+      "Original": 4520,
+      "Primu + Original": 30963.324999999997
     },
     "VENTA": {
-      "Primu": 3055.5,
+      "Primu": 3660.5,
       "Original": 1200,
-      "Primu + Original": 4255.5
+      "Primu + Original": 4860.5
     },
     "DISPONIBLE": {
-      "Primu": 23387.824999999997,
-      "Original": 3319.9750000000004,
-      "Primu + Original": 26707.799999999996
+      "Primu": 22782.824999999997,
+      "Original": 3320,
+      "Primu + Original": 26102.824999999997
     }
   },
   {
@@ -128,9 +128,9 @@
   {
     "Variedad": "NS Baguette 750",
     "OFERTA": {
-      "Primu": 4955.5,
+      "Primu": 0,
       "Original": 2957.85,
-      "Primu + Original": 7913.35
+      "Primu + Original": 2957.85
     },
     "VENTA": {
       "Primu": 0,
@@ -138,9 +138,9 @@
       "Primu + Original": 1513
     },
     "DISPONIBLE": {
-      "Primu": 4955.5,
+      "Primu": 0,
       "Original": 1444.85,
-      "Primu + Original": 6400.35
+      "Primu + Original": 1444.85
     }
   },
   {
