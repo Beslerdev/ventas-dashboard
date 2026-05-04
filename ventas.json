@@ -56,9 +56,9 @@
   {
     "Variedad": "DM Araucaria",
     "OFERTA": {
-      "Primu": 23580.425,
+      "Primu": 23580.449999999997,
       "Original": 0,
-      "Primu + Original": 23580.425
+      "Primu + Original": 23580.449999999997
     },
     "VENTA": {
       "Primu": 2022.5,
@@ -66,9 +66,9 @@
       "Primu + Original": 3222.5
     },
     "DISPONIBLE": {
-      "Primu": 21557.925,
+      "Primu": 21557.949999999997,
       "Original": -1200,
-      "Primu + Original": 20357.925
+      "Primu + Original": 20357.949999999997
     }
   },
   {
@@ -97,14 +97,14 @@
       "Primu + Original": 40038.5125
     },
     "VENTA": {
-      "Primu": 4137.75,
+      "Primu": 5637.75,
       "Original": 600,
-      "Primu + Original": 4737.75
+      "Primu + Original": 6237.75
     },
     "DISPONIBLE": {
-      "Primu": 35900.7625,
+      "Primu": 34400.7625,
       "Original": -600,
-      "Primu + Original": 35300.7625
+      "Primu + Original": 33800.7625
     }
   },
   {
