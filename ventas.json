@@ -56,9 +56,9 @@
   {
     "Variedad": "DM Araucaria",
     "OFERTA": {
-      "Primu": 23580.449999999997,
+      "Primu": 23732.35,
       "Original": 0,
-      "Primu + Original": 23580.449999999997
+      "Primu + Original": 23732.35
     },
     "VENTA": {
       "Primu": 2042.5,
@@ -66,9 +66,9 @@
       "Primu + Original": 3242.5
     },
     "DISPONIBLE": {
-      "Primu": 21537.949999999997,
+      "Primu": 21689.85,
       "Original": -1200,
-      "Primu + Original": 20337.949999999997
+      "Primu + Original": 20489.85
     }
   },
   {
@@ -146,9 +146,9 @@
   {
     "Variedad": "NS Baguette 820",
     "OFERTA": {
-      "Primu": 11799.5875,
+      "Primu": 11799.6125,
       "Original": 6188.875,
-      "Primu + Original": 17988.4625
+      "Primu + Original": 17988.4875
     },
     "VENTA": {
       "Primu": 391,
@@ -156,17 +156,17 @@
       "Primu + Original": 6441
     },
     "DISPONIBLE": {
-      "Primu": 11408.5875,
+      "Primu": 11408.6125,
       "Original": 138.875,
-      "Primu + Original": 11547.462500000001
+      "Primu + Original": 11547.4875
     }
   },
   {
     "Variedad": "RAGT Borsalino",
     "OFERTA": {
-      "Primu": 2455.6499999999996,
+      "Primu": 4915.575,
       "Original": 0,
-      "Primu + Original": 2455.6499999999996
+      "Primu + Original": 4915.575
     },
     "VENTA": {
       "Primu": 527,
@@ -174,9 +174,9 @@
       "Primu + Original": 527
     },
     "DISPONIBLE": {
-      "Primu": 1928.6499999999996,
+      "Primu": 4388.575,
       "Original": 0,
-      "Primu + Original": 1928.6499999999996
+      "Primu + Original": 4388.575
     }
   },
   {
