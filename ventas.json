@@ -61,14 +61,14 @@
       "Primu + Original": 23732.35
     },
     "VENTA": {
-      "Primu": 4832.5,
+      "Primu": 5032.5,
       "Original": 1200,
-      "Primu + Original": 6032.5
+      "Primu + Original": 6232.5
     },
     "DISPONIBLE": {
-      "Primu": 18899.85,
+      "Primu": 18699.85,
       "Original": -1200,
-      "Primu + Original": 17699.85
+      "Primu + Original": 17499.85
     }
   },
   {
@@ -79,14 +79,14 @@
       "Primu + Original": 31154.35
     },
     "VENTA": {
-      "Primu": 4555.5,
+      "Primu": 4680.5,
       "Original": 1200,
-      "Primu + Original": 5755.5
+      "Primu + Original": 5880.5
     },
     "DISPONIBLE": {
-      "Primu": 21887.824999999997,
+      "Primu": 21762.824999999997,
       "Original": 3511.0249999999996,
-      "Primu + Original": 25398.85
+      "Primu + Original": 25273.85
     }
   },
   {
@@ -151,22 +151,22 @@
       "Primu + Original": 17988.5125
     },
     "VENTA": {
-      "Primu": 391,
+      "Primu": 491,
       "Original": 6050,
-      "Primu + Original": 6441
+      "Primu + Original": 6541
     },
     "DISPONIBLE": {
-      "Primu": 11408.6375,
+      "Primu": 11308.6375,
       "Original": 138.875,
-      "Primu + Original": 11547.5125
+      "Primu + Original": 11447.5125
     }
   },
   {
     "Variedad": "RAGT Borsalino",
     "OFERTA": {
-      "Primu": 4915.575,
+      "Primu": 4915.599999999999,
       "Original": 0,
-      "Primu + Original": 4915.575
+      "Primu + Original": 4915.599999999999
     },
     "VENTA": {
       "Primu": 527,
@@ -174,9 +174,9 @@
       "Primu + Original": 527
     },
     "DISPONIBLE": {
-      "Primu": 4388.575,
+      "Primu": 4388.599999999999,
       "Original": 0,
-      "Primu + Original": 4388.575
+      "Primu + Original": 4388.599999999999
     }
   },
   {
