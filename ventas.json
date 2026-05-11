@@ -20,9 +20,9 @@
   {
     "Variedad": "Bio Gingko",
     "OFERTA": {
-      "Primu": 4573.637500000001,
+      "Primu": 4485.4125,
       "Original": 0,
-      "Primu + Original": 4573.637500000001
+      "Primu + Original": 4485.4125
     },
     "VENTA": {
       "Primu": 0,
@@ -30,9 +30,9 @@
       "Primu + Original": 0
     },
     "DISPONIBLE": {
-      "Primu": 4573.637500000001,
+      "Primu": 4485.4125,
       "Original": 0,
-      "Primu + Original": 4573.637500000001
+      "Primu + Original": 4485.4125
     }
   },
   {
@@ -43,14 +43,14 @@
       "Primu + Original": 15441.525000000005
     },
     "VENTA": {
-      "Primu": 0,
+      "Primu": 150,
       "Original": 0,
-      "Primu + Original": 0
+      "Primu + Original": 150
     },
     "DISPONIBLE": {
-      "Primu": 15441.525000000005,
+      "Primu": 15291.525000000005,
       "Original": 0,
-      "Primu + Original": 15441.525000000005
+      "Primu + Original": 15291.525000000005
     }
   },
   {
@@ -61,14 +61,14 @@
       "Primu + Original": 23732.35
     },
     "VENTA": {
-      "Primu": 5032.5,
+      "Primu": 5872.5,
       "Original": 1200,
-      "Primu + Original": 6232.5
+      "Primu + Original": 7072.5
     },
     "DISPONIBLE": {
-      "Primu": 18699.85,
+      "Primu": 17859.85,
       "Original": -1200,
-      "Primu + Original": 17499.85
+      "Primu + Original": 16659.85
     }
   },
   {
@@ -79,14 +79,14 @@
       "Primu + Original": 31154.35
     },
     "VENTA": {
-      "Primu": 4680.5,
+      "Primu": 6336.5,
       "Original": 1200,
-      "Primu + Original": 5880.5
+      "Primu + Original": 7536.5
     },
     "DISPONIBLE": {
-      "Primu": 21762.824999999997,
+      "Primu": 20106.824999999997,
       "Original": 3511.0249999999996,
-      "Primu + Original": 25273.85
+      "Primu + Original": 23617.85
     }
   },
   {
@@ -97,14 +97,14 @@
       "Primu + Original": 40038.5125
     },
     "VENTA": {
-      "Primu": 5637.75,
+      "Primu": 6368.75,
       "Original": 600,
-      "Primu + Original": 6237.75
+      "Primu + Original": 6968.75
     },
     "DISPONIBLE": {
-      "Primu": 34400.7625,
+      "Primu": 33669.7625,
       "Original": -600,
-      "Primu + Original": 33800.7625
+      "Primu + Original": 33069.7625
     }
   },
   {
@@ -128,9 +128,9 @@
   {
     "Variedad": "NS Baguette 750",
     "OFERTA": {
-      "Primu": 0,
-      "Original": 2957.85,
-      "Primu + Original": 2957.85
+      "Primu": 1469.475,
+      "Original": 1513,
+      "Primu + Original": 2982.475
     },
     "VENTA": {
       "Primu": 0,
@@ -138,17 +138,17 @@
       "Primu + Original": 1513
     },
     "DISPONIBLE": {
-      "Primu": 0,
-      "Original": 1444.85,
-      "Primu + Original": 1444.85
+      "Primu": 1469.475,
+      "Original": 0,
+      "Primu + Original": 1469.475
     }
   },
   {
     "Variedad": "NS Baguette 820",
     "OFERTA": {
-      "Primu": 11799.6375,
+      "Primu": 11799.6875,
       "Original": 6188.875,
-      "Primu + Original": 17988.5125
+      "Primu + Original": 17988.5625
     },
     "VENTA": {
       "Primu": 751,
@@ -156,27 +156,27 @@
       "Primu + Original": 6801
     },
     "DISPONIBLE": {
-      "Primu": 11048.6375,
+      "Primu": 11048.6875,
       "Original": 138.875,
-      "Primu + Original": 11187.5125
+      "Primu + Original": 11187.5625
     }
   },
   {
     "Variedad": "RAGT Borsalino",
     "OFERTA": {
-      "Primu": 4915.599999999999,
+      "Primu": 2538,
       "Original": 0,
-      "Primu + Original": 4915.599999999999
+      "Primu + Original": 2538
     },
     "VENTA": {
-      "Primu": 527,
+      "Primu": 739.5,
       "Original": 0,
-      "Primu + Original": 527
+      "Primu + Original": 739.5
     },
     "DISPONIBLE": {
-      "Primu": 4388.599999999999,
+      "Primu": 1798.5,
       "Original": 0,
-      "Primu + Original": 4388.599999999999
+      "Primu + Original": 1798.5
     }
   },
   {
