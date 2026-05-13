@@ -20,9 +20,9 @@
   {
     "Variedad": "Bio Gingko",
     "OFERTA": {
-      "Primu": 4485.4375,
+      "Primu": 4471.4625,
       "Original": 0,
-      "Primu + Original": 4485.4375
+      "Primu + Original": 4471.4625
     },
     "VENTA": {
       "Primu": 4580,
@@ -30,17 +30,17 @@
       "Primu + Original": 4580
     },
     "DISPONIBLE": {
-      "Primu": -94.5625,
+      "Primu": -108.53750000000036,
       "Original": 0,
-      "Primu + Original": -94.5625
+      "Primu + Original": -108.53750000000036
     }
   },
   {
     "Variedad": "Bio Laurel",
     "OFERTA": {
-      "Primu": 12421.687500000004,
+      "Primu": 15234.462500000003,
       "Original": 0,
-      "Primu + Original": 12421.687500000004
+      "Primu + Original": 15234.462500000003
     },
     "VENTA": {
       "Primu": 5150,
@@ -48,9 +48,9 @@
       "Primu + Original": 5150
     },
     "DISPONIBLE": {
-      "Primu": 7271.687500000004,
+      "Primu": 10084.462500000003,
       "Original": 0,
-      "Primu + Original": 7271.687500000004
+      "Primu + Original": 10084.462500000003
     }
   },
   {
