@@ -38,9 +38,9 @@
   {
     "Variedad": "Bio Laurel",
     "OFERTA": {
-      "Primu": 16054.512500000004,
+      "Primu": 16054.562500000004,
       "Original": 0,
-      "Primu + Original": 16054.512500000004
+      "Primu + Original": 16054.562500000004
     },
     "VENTA": {
       "Primu": 5150,
@@ -48,9 +48,9 @@
       "Primu + Original": 5150
     },
     "DISPONIBLE": {
-      "Primu": 10904.512500000004,
+      "Primu": 10904.562500000004,
       "Original": 0,
-      "Primu + Original": 10904.512500000004
+      "Primu + Original": 10904.562500000004
     }
   },
   {
@@ -61,14 +61,14 @@
       "Primu + Original": 23732.35
     },
     "VENTA": {
-      "Primu": 6155,
+      "Primu": 6355,
       "Original": 1200,
-      "Primu + Original": 7355
+      "Primu + Original": 7555
     },
     "DISPONIBLE": {
-      "Primu": 17577.35,
+      "Primu": 17377.35,
       "Original": -1200,
-      "Primu + Original": 16377.349999999999
+      "Primu + Original": 16177.349999999999
     }
   },
   {
@@ -92,9 +92,9 @@
   {
     "Variedad": "DM Catalpa",
     "OFERTA": {
-      "Primu": 42298.4375,
+      "Primu": 38008.0625,
       "Original": 0,
-      "Primu + Original": 42298.4375
+      "Primu + Original": 38008.0625
     },
     "VENTA": {
       "Primu": 21656.25,
@@ -102,9 +102,9 @@
       "Primu + Original": 22256.25
     },
     "DISPONIBLE": {
-      "Primu": 20642.1875,
+      "Primu": 16351.8125,
       "Original": -600,
-      "Primu + Original": 20042.1875
+      "Primu + Original": 15751.8125
     }
   },
   {
