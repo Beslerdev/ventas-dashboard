@@ -38,9 +38,9 @@
   {
     "Variedad": "Bio Laurel",
     "OFERTA": {
-      "Primu": 15234.462500000003,
+      "Primu": 15234.512500000004,
       "Original": 0,
-      "Primu + Original": 15234.462500000003
+      "Primu + Original": 15234.512500000004
     },
     "VENTA": {
       "Primu": 5150,
@@ -48,9 +48,9 @@
       "Primu + Original": 5150
     },
     "DISPONIBLE": {
-      "Primu": 10084.462500000003,
+      "Primu": 10084.512500000004,
       "Original": 0,
-      "Primu + Original": 10084.462500000003
+      "Primu + Original": 10084.512500000004
     }
   },
   {
@@ -79,14 +79,14 @@
       "Primu + Original": 31154.35
     },
     "VENTA": {
-      "Primu": 7646.5,
+      "Primu": 7759,
       "Original": 1200,
-      "Primu + Original": 8846.5
+      "Primu + Original": 8959
     },
     "DISPONIBLE": {
-      "Primu": 18796.824999999997,
+      "Primu": 18684.324999999997,
       "Original": 3511.0249999999996,
-      "Primu + Original": 22307.85
+      "Primu + Original": 22195.35
     }
   },
   {
@@ -151,14 +151,14 @@
       "Primu + Original": 17988.5625
     },
     "VENTA": {
-      "Primu": 976,
+      "Primu": 1113.5,
       "Original": 6050,
-      "Primu + Original": 7026
+      "Primu + Original": 7163.5
     },
     "DISPONIBLE": {
-      "Primu": 10823.6875,
+      "Primu": 10686.1875,
       "Original": 138.875,
-      "Primu + Original": 10962.5625
+      "Primu + Original": 10825.0625
     }
   },
   {
