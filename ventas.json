@@ -62,13 +62,13 @@
     },
     "VENTA": {
       "Primu": 7478,
-      "Original": 1035.3875,
-      "Primu + Original": 8513.3875
+      "Original": 1775,
+      "Primu + Original": 9253
     },
     "DISPONIBLE": {
       "Primu": 16254.349999999999,
-      "Original": -1035.3875,
-      "Primu + Original": 15218.962499999998
+      "Original": -1775,
+      "Primu + Original": 14479.349999999999
     }
   },
   {
@@ -79,32 +79,32 @@
       "Primu + Original": 31154.35
     },
     "VENTA": {
-      "Primu": 8246.5,
-      "Original": 1200,
-      "Primu + Original": 9446.5
+      "Primu": 10201.5,
+      "Original": 1580,
+      "Primu + Original": 11781.5
     },
     "DISPONIBLE": {
-      "Primu": 18196.824999999997,
-      "Original": 3511.0249999999996,
-      "Primu + Original": 21707.85
+      "Primu": 16241.824999999997,
+      "Original": 3131.0249999999996,
+      "Primu + Original": 19372.85
     }
   },
   {
     "Variedad": "DM Catalpa",
     "OFERTA": {
-      "Primu": 43426.6375,
+      "Primu": 43426.6625,
       "Original": 0,
-      "Primu + Original": 43426.6375
+      "Primu + Original": 43426.6625
     },
     "VENTA": {
-      "Primu": 21656.25,
-      "Original": 730,
-      "Primu + Original": 22386.25
+      "Primu": 21856.25,
+      "Original": 990,
+      "Primu + Original": 22846.25
     },
     "DISPONIBLE": {
-      "Primu": 21770.387499999997,
-      "Original": -730,
-      "Primu + Original": 21040.387499999997
+      "Primu": 21570.4125,
+      "Original": -990,
+      "Primu + Original": 20580.4125
     }
   },
   {
@@ -116,13 +116,13 @@
     },
     "VENTA": {
       "Primu": 0,
-      "Original": 485,
-      "Primu + Original": 485
+      "Original": 350,
+      "Primu + Original": 350
     },
     "DISPONIBLE": {
       "Primu": 0,
-      "Original": -485,
-      "Primu + Original": -485
+      "Original": -350,
+      "Primu + Original": -350
     }
   },
   {
