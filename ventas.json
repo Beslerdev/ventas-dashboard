@@ -61,14 +61,14 @@
       "Primu + Original": 23732.35
     },
     "VENTA": {
-      "Primu": 7525.5,
+      "Primu": 8275.5,
       "Original": 1200,
-      "Primu + Original": 8725.5
+      "Primu + Original": 9475.5
     },
     "DISPONIBLE": {
-      "Primu": 16206.849999999999,
+      "Primu": 15456.849999999999,
       "Original": -1200,
-      "Primu + Original": 15006.849999999999
+      "Primu + Original": 14256.849999999999
     }
   },
   {
@@ -92,9 +92,9 @@
   {
     "Variedad": "DM Catalpa",
     "OFERTA": {
-      "Primu": 40846.049999999996,
+      "Primu": 38855.649999999994,
       "Original": 0,
-      "Primu + Original": 40846.049999999996
+      "Primu + Original": 38855.649999999994
     },
     "VENTA": {
       "Primu": 22116.25,
@@ -102,9 +102,9 @@
       "Primu + Original": 22923.75
     },
     "DISPONIBLE": {
-      "Primu": 18729.799999999996,
+      "Primu": 16739.399999999994,
       "Original": -807.5,
-      "Primu + Original": 17922.299999999996
+      "Primu + Original": 15931.899999999994
     }
   },
   {
@@ -182,9 +182,9 @@
   {
     "Variedad": "NS Baguette 820",
     "OFERTA": {
-      "Primu": 10354.6875,
+      "Primu": 8378.4375,
       "Original": 6188.875,
-      "Primu + Original": 16543.5625
+      "Primu + Original": 14567.3125
     },
     "VENTA": {
       "Primu": 1479,
@@ -192,9 +192,9 @@
       "Primu + Original": 7529
     },
     "DISPONIBLE": {
-      "Primu": 8875.6875,
+      "Primu": 6899.4375,
       "Original": 138.875,
-      "Primu + Original": 9014.5625
+      "Primu + Original": 7038.3125
     }
   },
   {
