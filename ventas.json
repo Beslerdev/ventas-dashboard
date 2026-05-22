@@ -2,9 +2,9 @@
   {
     "Variedad": "BIO Araza",
     "OFERTA": {
-      "Primu": 5905.05,
+      "Primu": 5865.1,
       "Original": 0,
-      "Primu + Original": 5905.05
+      "Primu + Original": 5865.1
     },
     "VENTA": {
       "Primu": 3540,
@@ -12,17 +12,17 @@
       "Primu + Original": 3540
     },
     "DISPONIBLE": {
-      "Primu": 2365.05,
+      "Primu": 2325.1000000000004,
       "Original": 0,
-      "Primu + Original": 2365.05
+      "Primu + Original": 2325.1000000000004
     }
   },
   {
     "Variedad": "BIO Gingko",
     "OFERTA": {
-      "Primu": 4471.4625,
+      "Primu": 1526,
       "Original": 0,
-      "Primu + Original": 4471.4625
+      "Primu + Original": 1526
     },
     "VENTA": {
       "Primu": 4580,
@@ -30,9 +30,9 @@
       "Primu + Original": 4580
     },
     "DISPONIBLE": {
-      "Primu": -108.53750000000036,
+      "Primu": -3054,
       "Original": 0,
-      "Primu + Original": -108.53750000000036
+      "Primu + Original": -3054
     }
   },
   {
@@ -62,13 +62,13 @@
     },
     "VENTA": {
       "Primu": 8715.5,
-      "Original": 1200,
-      "Primu + Original": 9915.5
+      "Original": 1085,
+      "Primu + Original": 9800.5
     },
     "DISPONIBLE": {
       "Primu": 15016.849999999999,
-      "Original": -1200,
-      "Primu + Original": 13816.849999999999
+      "Original": -1085,
+      "Primu + Original": 13931.849999999999
     }
   },
   {
@@ -79,22 +79,22 @@
       "Primu + Original": 31154.35
     },
     "VENTA": {
-      "Primu": 11809,
+      "Primu": 11789,
       "Original": 1200,
-      "Primu + Original": 13009
+      "Primu + Original": 12989
     },
     "DISPONIBLE": {
-      "Primu": 14634.324999999997,
+      "Primu": 14654.324999999997,
       "Original": 3511.0249999999996,
-      "Primu + Original": 18145.35
+      "Primu + Original": 18165.35
     }
   },
   {
     "Variedad": "DM Catalpa",
     "OFERTA": {
-      "Primu": 39021.337499999994,
+      "Primu": 40661.3125,
       "Original": 0,
-      "Primu + Original": 39021.337499999994
+      "Primu + Original": 40661.3125
     },
     "VENTA": {
       "Primu": 22116.25,
@@ -102,9 +102,9 @@
       "Primu + Original": 22923.75
     },
     "DISPONIBLE": {
-      "Primu": 16905.087499999994,
+      "Primu": 18545.0625,
       "Original": -807.5,
-      "Primu + Original": 16097.587499999994
+      "Primu + Original": 17737.5625
     }
   },
   {
@@ -187,14 +187,14 @@
       "Primu + Original": 14567.3125
     },
     "VENTA": {
-      "Primu": 1955,
+      "Primu": 2230,
       "Original": 6050,
-      "Primu + Original": 8005
+      "Primu + Original": 8280
     },
     "DISPONIBLE": {
-      "Primu": 6423.4375,
+      "Primu": 6148.4375,
       "Original": 138.875,
-      "Primu + Original": 6562.3125
+      "Primu + Original": 6287.3125
     }
   },
   {
