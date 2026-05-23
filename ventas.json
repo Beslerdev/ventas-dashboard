@@ -2,9 +2,9 @@
   {
     "Variedad": "BIO Araza",
     "OFERTA": {
-      "Primu": 5865.1,
+      "Primu": 5937.225,
       "Original": 0,
-      "Primu + Original": 5865.1
+      "Primu + Original": 5937.225
     },
     "VENTA": {
       "Primu": 3540,
@@ -12,9 +12,9 @@
       "Primu + Original": 3540
     },
     "DISPONIBLE": {
-      "Primu": 2325.1000000000004,
+      "Primu": 2397.2250000000004,
       "Original": 0,
-      "Primu + Original": 2325.1000000000004
+      "Primu + Original": 2397.2250000000004
     }
   },
   {
@@ -61,14 +61,14 @@
       "Primu + Original": 23732.35
     },
     "VENTA": {
-      "Primu": 8935.5,
+      "Primu": 9335.5,
       "Original": 1085,
-      "Primu + Original": 10020.5
+      "Primu + Original": 10420.5
     },
     "DISPONIBLE": {
-      "Primu": 14796.849999999999,
+      "Primu": 14396.849999999999,
       "Original": -1085,
-      "Primu + Original": 13711.849999999999
+      "Primu + Original": 13311.849999999999
     }
   },
   {
@@ -92,9 +92,9 @@
   {
     "Variedad": "DM Catalpa",
     "OFERTA": {
-      "Primu": 40661.3125,
+      "Primu": 40661.337499999994,
       "Original": 0,
-      "Primu + Original": 40661.3125
+      "Primu + Original": 40661.337499999994
     },
     "VENTA": {
       "Primu": 22116.25,
@@ -102,9 +102,9 @@
       "Primu + Original": 22923.75
     },
     "DISPONIBLE": {
-      "Primu": 18545.0625,
+      "Primu": 18545.087499999994,
       "Original": -807.5,
-      "Primu + Original": 17737.5625
+      "Primu + Original": 17737.587499999994
     }
   },
   {
