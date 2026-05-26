@@ -20,9 +20,9 @@
   {
     "Variedad": "BIO Gingko",
     "OFERTA": {
-      "Primu": 1526,
+      "Primu": 1440,
       "Original": 0,
-      "Primu + Original": 1526
+      "Primu + Original": 1440
     },
     "VENTA": {
       "Primu": 4580,
@@ -30,9 +30,9 @@
       "Primu + Original": 4580
     },
     "DISPONIBLE": {
-      "Primu": -3054,
+      "Primu": -3140,
       "Original": 0,
-      "Primu + Original": -3054
+      "Primu + Original": -3140
     }
   },
   {
@@ -61,14 +61,14 @@
       "Primu + Original": 23732.35
     },
     "VENTA": {
-      "Primu": 9335.5,
+      "Primu": 9367.5,
       "Original": 1085,
-      "Primu + Original": 10420.5
+      "Primu + Original": 10452.5
     },
     "DISPONIBLE": {
-      "Primu": 14396.849999999999,
+      "Primu": 14364.849999999999,
       "Original": -1085,
-      "Primu + Original": 13311.849999999999
+      "Primu + Original": 13279.849999999999
     }
   },
   {
@@ -92,19 +92,19 @@
   {
     "Variedad": "DM Catalpa",
     "OFERTA": {
-      "Primu": 40661.337499999994,
+      "Primu": 40661.3875,
       "Original": 0,
-      "Primu + Original": 40661.337499999994
+      "Primu + Original": 40661.3875
     },
     "VENTA": {
-      "Primu": 22116.25,
+      "Primu": 22122.25,
       "Original": 807.5,
-      "Primu + Original": 22923.75
+      "Primu + Original": 22929.75
     },
     "DISPONIBLE": {
-      "Primu": 18545.087499999994,
+      "Primu": 18539.137499999997,
       "Original": -807.5,
-      "Primu + Original": 17737.587499999994
+      "Primu + Original": 17731.637499999997
     }
   },
   {
