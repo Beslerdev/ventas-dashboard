@@ -20,9 +20,9 @@
   {
     "Variedad": "BIO Gingko",
     "OFERTA": {
-      "Primu": 4980,
+      "Primu": 4767.375,
       "Original": 0,
-      "Primu + Original": 4980
+      "Primu + Original": 4767.375
     },
     "VENTA": {
       "Primu": 4581,
@@ -30,9 +30,9 @@
       "Primu + Original": 4581
     },
     "DISPONIBLE": {
-      "Primu": 399,
+      "Primu": 186.375,
       "Original": 0,
-      "Primu + Original": 399
+      "Primu + Original": 186.375
     }
   },
   {
@@ -56,9 +56,9 @@
   {
     "Variedad": "DM Araucaria",
     "OFERTA": {
-      "Primu": 21855.199999999997,
+      "Primu": 24315.125,
       "Original": 0,
-      "Primu + Original": 21855.199999999997
+      "Primu + Original": 24315.125
     },
     "VENTA": {
       "Primu": 11520,
@@ -66,35 +66,35 @@
       "Primu + Original": 12605
     },
     "DISPONIBLE": {
-      "Primu": 10335.199999999997,
+      "Primu": 12795.125,
       "Original": -1085,
-      "Primu + Original": 9250.199999999997
+      "Primu + Original": 11710.125
     }
   },
   {
     "Variedad": "DM Casuarina",
     "OFERTA": {
-      "Primu": 22813.399999999994,
+      "Primu": 25073.324999999997,
       "Original": 4711.025,
-      "Primu + Original": 27524.424999999996
+      "Primu + Original": 29784.35
     },
     "VENTA": {
-      "Primu": 14096,
+      "Primu": 14376,
       "Original": 1200,
-      "Primu + Original": 15296
+      "Primu + Original": 15576
     },
     "DISPONIBLE": {
-      "Primu": 8717.399999999994,
+      "Primu": 10697.324999999997,
       "Original": 3511.0249999999996,
-      "Primu + Original": 12228.424999999996
+      "Primu + Original": 14208.349999999999
     }
   },
   {
     "Variedad": "DM Catalpa",
     "OFERTA": {
-      "Primu": 40988.325,
+      "Primu": 38438.325,
       "Original": 0,
-      "Primu + Original": 40988.325
+      "Primu + Original": 38438.325
     },
     "VENTA": {
       "Primu": 24497.25,
@@ -102,9 +102,9 @@
       "Primu + Original": 25304.75
     },
     "DISPONIBLE": {
-      "Primu": 16491.074999999997,
+      "Primu": 13941.074999999997,
       "Original": -807.5,
-      "Primu + Original": 15683.574999999997
+      "Primu + Original": 13133.574999999997
     }
   },
   {
@@ -182,9 +182,9 @@
   {
     "Variedad": "NS Baguette 820",
     "OFERTA": {
-      "Primu": 8378.4375,
+      "Primu": 8433.4125,
       "Original": 6188.875,
-      "Primu + Original": 14567.3125
+      "Primu + Original": 14622.2875
     },
     "VENTA": {
       "Primu": 2332.5,
@@ -192,9 +192,9 @@
       "Primu + Original": 8382.5
     },
     "DISPONIBLE": {
-      "Primu": 6045.9375,
+      "Primu": 6100.9125,
       "Original": 138.875,
-      "Primu + Original": 6184.8125
+      "Primu + Original": 6239.7875
     }
   },
   {
