@@ -56,9 +56,9 @@
   {
     "Variedad": "DM Araucaria",
     "OFERTA": {
-      "Primu": 24315.125,
+      "Primu": 24315.15,
       "Original": 0,
-      "Primu + Original": 24315.125
+      "Primu + Original": 24315.15
     },
     "VENTA": {
       "Primu": 11520,
@@ -66,9 +66,9 @@
       "Primu + Original": 12605
     },
     "DISPONIBLE": {
-      "Primu": 12795.125,
+      "Primu": 12795.150000000001,
       "Original": -1085,
-      "Primu + Original": 11710.125
+      "Primu + Original": 11710.150000000001
     }
   },
   {
