@@ -56,9 +56,9 @@
   {
     "Variedad": "DM Araucaria",
     "OFERTA": {
-      "Primu": 23948.425,
+      "Primu": 25688.375,
       "Original": 0,
-      "Primu + Original": 23948.425
+      "Primu + Original": 25688.375
     },
     "VENTA": {
       "Primu": 13186,
@@ -66,45 +66,45 @@
       "Primu + Original": 14271
     },
     "DISPONIBLE": {
-      "Primu": 10762.425,
+      "Primu": 12502.375,
       "Original": -1085,
-      "Primu + Original": 9677.425
+      "Primu + Original": 11417.375
     }
   },
   {
     "Variedad": "DM Casuarina",
     "OFERTA": {
-      "Primu": 25354,
+      "Primu": 25346.525,
       "Original": 4711.025,
-      "Primu + Original": 30065.025
+      "Primu + Original": 30057.550000000003
     },
     "VENTA": {
-      "Primu": 16368,
+      "Primu": 16868,
       "Original": 1200,
-      "Primu + Original": 17568
+      "Primu + Original": 18068
     },
     "DISPONIBLE": {
-      "Primu": 8986,
+      "Primu": 8478.525000000001,
       "Original": 3511.0249999999996,
-      "Primu + Original": 12497.025000000001
+      "Primu + Original": 11989.550000000003
     }
   },
   {
     "Variedad": "DM Catalpa",
     "OFERTA": {
-      "Primu": 38876.625,
+      "Primu": 38876.65,
       "Original": 0,
-      "Primu + Original": 38876.625
+      "Primu + Original": 38876.65
     },
     "VENTA": {
-      "Primu": 26629.75,
+      "Primu": 27409.75,
       "Original": 807.5,
-      "Primu + Original": 27437.25
+      "Primu + Original": 28217.25
     },
     "DISPONIBLE": {
-      "Primu": 12246.875,
+      "Primu": 11466.900000000001,
       "Original": -807.5,
-      "Primu + Original": 11439.375
+      "Primu + Original": 10659.400000000001
     }
   },
   {
