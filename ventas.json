@@ -2,7 +2,7 @@
   {
     "Variedad": "BIO Araza",
     "OFERTA": {
-      "Primu": 4737.525,
+      "Primu": 0,
       "Original": 0,
       "Primu + Original": 4737.525
     },
@@ -56,9 +56,9 @@
   {
     "Variedad": "DM Araucaria",
     "OFERTA": {
-      "Primu": 25306.55,
+      "Primu": 24614.225,
       "Original": 0,
-      "Primu + Original": 25306.55
+      "Primu + Original": 24614.225
     },
     "VENTA": {
       "Primu": 13186,
@@ -66,9 +66,9 @@
       "Primu + Original": 14271
     },
     "DISPONIBLE": {
-      "Primu": 12120.55,
+      "Primu": 11428.224999999999,
       "Original": -1085,
-      "Primu + Original": 11035.55
+      "Primu + Original": 10343.224999999999
     }
   },
   {
@@ -80,13 +80,13 @@
     },
     "VENTA": {
       "Primu": 17573,
-      "Original": 1200,
-      "Primu + Original": 18773
+      "Original": 1380,
+      "Primu + Original": 18953
     },
     "DISPONIBLE": {
       "Primu": 7773.5250000000015,
-      "Original": 3511.0249999999996,
-      "Primu + Original": 11284.550000000003
+      "Original": 3331.0249999999996,
+      "Primu + Original": 11104.550000000003
     }
   },
   {
@@ -97,14 +97,14 @@
       "Primu + Original": 38905.675
     },
     "VENTA": {
-      "Primu": 27409.75,
+      "Primu": 27949.75,
       "Original": 807.5,
-      "Primu + Original": 28217.25
+      "Primu + Original": 28757.25
     },
     "DISPONIBLE": {
-      "Primu": 11495.925000000003,
+      "Primu": 10955.925000000003,
       "Original": -807.5,
-      "Primu + Original": 10688.425000000003
+      "Primu + Original": 10148.425000000003
     }
   },
   {
