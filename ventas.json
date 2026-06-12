@@ -92,19 +92,19 @@
   {
     "Variedad": "DM Catalpa",
     "OFERTA": {
-      "Primu": 38905.675,
+      "Primu": 39625.65,
       "Original": 0,
-      "Primu + Original": 38905.675
+      "Primu + Original": 39625.65
     },
     "VENTA": {
-      "Primu": 27949.75,
+      "Primu": 27969.75,
       "Original": 807.5,
-      "Primu + Original": 28757.25
+      "Primu + Original": 28777.25
     },
     "DISPONIBLE": {
-      "Primu": 10955.925000000003,
+      "Primu": 11655.900000000001,
       "Original": -807.5,
-      "Primu + Original": 10148.425000000003
+      "Primu + Original": 10848.400000000001
     }
   },
   {
