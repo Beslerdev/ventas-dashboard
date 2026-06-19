@@ -2,9 +2,9 @@
   {
     "Variedad": "BIO Araza",
     "OFERTA": {
-      "Primu": 4737.525,
+      "Primu": 4740,
       "Original": 0,
-      "Primu + Original": 4737.525
+      "Primu + Original": 4740
     },
     "VENTA": {
       "Primu": 5481,
@@ -12,9 +12,9 @@
       "Primu + Original": 5668.5
     },
     "DISPONIBLE": {
-      "Primu": -743.4750000000004,
+      "Primu": -741,
       "Original": -187.5,
-      "Primu + Original": -930.9750000000004
+      "Primu + Original": -928.5
     }
   },
   {
@@ -74,19 +74,19 @@
   {
     "Variedad": "DM Casuarina",
     "OFERTA": {
-      "Primu": 26707.475,
+      "Primu": 28027.449999999997,
       "Original": 4711.025,
-      "Primu + Original": 31418.5
+      "Primu + Original": 32738.475
     },
     "VENTA": {
-      "Primu": 18913,
+      "Primu": 19213,
       "Original": 1380,
-      "Primu + Original": 20293
+      "Primu + Original": 20593
     },
     "DISPONIBLE": {
-      "Primu": 7794.4749999999985,
+      "Primu": 8814.449999999997,
       "Original": 3331.0249999999996,
-      "Primu + Original": 11125.5
+      "Primu + Original": 12145.474999999999
     }
   },
   {
