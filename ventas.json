@@ -2,9 +2,9 @@
   {
     "Variedad": "BIO Araza",
     "OFERTA": {
-      "Primu": 4740,
+      "Primu": 5480,
       "Original": 0,
-      "Primu + Original": 4740
+      "Primu + Original": 5480
     },
     "VENTA": {
       "Primu": 5481,
@@ -12,9 +12,9 @@
       "Primu + Original": 5668.5
     },
     "DISPONIBLE": {
-      "Primu": -741,
+      "Primu": -1,
       "Original": -187.5,
-      "Primu + Original": -928.5
+      "Primu + Original": -188.5
     }
   },
   {
@@ -56,9 +56,9 @@
   {
     "Variedad": "DM Araucaria",
     "OFERTA": {
-      "Primu": 24618.199999999997,
+      "Primu": 25000.05,
       "Original": 0,
-      "Primu + Original": 24618.199999999997
+      "Primu + Original": 25000.05
     },
     "VENTA": {
       "Primu": 14036,
@@ -66,35 +66,35 @@
       "Primu + Original": 15121
     },
     "DISPONIBLE": {
-      "Primu": 10582.199999999997,
+      "Primu": 10964.05,
       "Original": -1085,
-      "Primu + Original": 9497.199999999997
+      "Primu + Original": 9879.05
     }
   },
   {
     "Variedad": "DM Casuarina",
     "OFERTA": {
-      "Primu": 24999.325,
+      "Primu": 23719.55,
       "Original": 4711.025,
-      "Primu + Original": 29710.35
+      "Primu + Original": 28430.574999999997
     },
     "VENTA": {
-      "Primu": 19870.5,
+      "Primu": 19970.5,
       "Original": 1500,
-      "Primu + Original": 21370.5
+      "Primu + Original": 21470.5
     },
     "DISPONIBLE": {
-      "Primu": 5128.825000000001,
+      "Primu": 3749.0499999999993,
       "Original": 3211.0249999999996,
-      "Primu + Original": 8339.849999999999
+      "Primu + Original": 6960.074999999997
     }
   },
   {
     "Variedad": "DM Catalpa",
     "OFERTA": {
-      "Primu": 37484.25,
+      "Primu": 35883.9125,
       "Original": 0,
-      "Primu + Original": 37484.25
+      "Primu + Original": 35883.9125
     },
     "VENTA": {
       "Primu": 29602.25,
@@ -102,9 +102,9 @@
       "Primu + Original": 30526.75
     },
     "DISPONIBLE": {
-      "Primu": 7882,
+      "Primu": 6281.6624999999985,
       "Original": -924.5,
-      "Primu + Original": 6957.5
+      "Primu + Original": 5357.1624999999985
     }
   },
   {
