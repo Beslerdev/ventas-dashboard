@@ -74,9 +74,9 @@
   {
     "Variedad": "DM Casuarina",
     "OFERTA": {
-      "Primu": 24813.550000000003,
+      "Primu": 24666.075000000004,
       "Original": 4711.025,
-      "Primu + Original": 29524.575000000004
+      "Primu + Original": 29377.100000000006
     },
     "VENTA": {
       "Primu": 19808,
@@ -84,9 +84,9 @@
       "Primu + Original": 21308
     },
     "DISPONIBLE": {
-      "Primu": 5005.550000000003,
+      "Primu": 4858.075000000004,
       "Original": 3211.0249999999996,
-      "Primu + Original": 8216.575000000004
+      "Primu + Original": 8069.100000000006
     }
   },
   {
@@ -97,14 +97,14 @@
       "Primu + Original": 35883.9375
     },
     "VENTA": {
-      "Primu": 29602.25,
+      "Primu": 29642.249999999993,
       "Original": 924.5,
-      "Primu + Original": 30526.75
+      "Primu + Original": 30566.749999999993
     },
     "DISPONIBLE": {
-      "Primu": 6281.6875,
+      "Primu": 6241.687500000007,
       "Original": -924.5,
-      "Primu + Original": 5357.1875
+      "Primu + Original": 5317.187500000007
     }
   },
   {
