@@ -8,13 +8,13 @@
     },
     "VENTA": {
       "Primu": 5723.5,
-      "Original": 100,
-      "Primu + Original": 5823.5
+      "Original": 0,
+      "Primu + Original": 5723.5
     },
     "DISPONIBLE": {
       "Primu": -243.5,
-      "Original": -100,
-      "Primu + Original": -343.5
+      "Original": 0,
+      "Primu + Original": -243.5
     }
   },
   {
@@ -44,13 +44,13 @@
     },
     "VENTA": {
       "Primu": 4130,
-      "Original": 350,
-      "Primu + Original": 4480
+      "Original": 200,
+      "Primu + Original": 4330
     },
     "DISPONIBLE": {
       "Primu": 293.75,
-      "Original": -350,
-      "Primu + Original": -56.25
+      "Original": -200,
+      "Primu + Original": 93.75
     }
   },
   {
@@ -61,32 +61,32 @@
       "Primu + Original": 25025.074999999997
     },
     "VENTA": {
-      "Primu": 14556,
+      "Primu": 14606,
       "Original": 1085,
-      "Primu + Original": 15641
+      "Primu + Original": 15691
     },
     "DISPONIBLE": {
-      "Primu": 10469.074999999997,
+      "Primu": 10419.074999999997,
       "Original": -1085,
-      "Primu + Original": 9384.074999999997
+      "Primu + Original": 9334.074999999997
     }
   },
   {
     "Variedad": "DM Casuarina",
     "OFERTA": {
-      "Primu": 24866.1,
+      "Primu": 24936.225,
       "Original": 4711.025,
-      "Primu + Original": 29577.125
+      "Primu + Original": 29647.25
     },
     "VENTA": {
-      "Primu": 20218,
+      "Primu": 20468,
       "Original": 1500,
-      "Primu + Original": 21718
+      "Primu + Original": 21968
     },
     "DISPONIBLE": {
-      "Primu": 4648.0999999999985,
+      "Primu": 4468.2249999999985,
       "Original": 3211.0249999999996,
-      "Primu + Original": 7859.125
+      "Primu + Original": 7679.25
     }
   },
   {
