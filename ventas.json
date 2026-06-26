@@ -7,14 +7,14 @@
       "Primu + Original": 5480
     },
     "VENTA": {
-      "Primu": 5561,
+      "Primu": 5723.5,
       "Original": 100,
-      "Primu + Original": 5661
+      "Primu + Original": 5823.5
     },
     "DISPONIBLE": {
-      "Primu": -81,
+      "Primu": -243.5,
       "Original": -100,
-      "Primu + Original": -181
+      "Primu + Original": -343.5
     }
   },
   {
@@ -44,21 +44,21 @@
     },
     "VENTA": {
       "Primu": 4130,
-      "Original": 150,
-      "Primu + Original": 4280
+      "Original": 350,
+      "Primu + Original": 4480
     },
     "DISPONIBLE": {
       "Primu": 293.75,
-      "Original": -150,
-      "Primu + Original": 143.75
+      "Original": -350,
+      "Primu + Original": -56.25
     }
   },
   {
     "Variedad": "DM Araucaria",
     "OFERTA": {
-      "Primu": 25000.05,
+      "Primu": 25025.074999999997,
       "Original": 0,
-      "Primu + Original": 25000.05
+      "Primu + Original": 25025.074999999997
     },
     "VENTA": {
       "Primu": 14556,
@@ -66,9 +66,9 @@
       "Primu + Original": 15641
     },
     "DISPONIBLE": {
-      "Primu": 10444.05,
+      "Primu": 10469.074999999997,
       "Original": -1085,
-      "Primu + Original": 9359.05
+      "Primu + Original": 9384.074999999997
     }
   },
   {
@@ -79,14 +79,14 @@
       "Primu + Original": 29577.125
     },
     "VENTA": {
-      "Primu": 20068,
+      "Primu": 20218,
       "Original": 1500,
-      "Primu + Original": 21568
+      "Primu + Original": 21718
     },
     "DISPONIBLE": {
-      "Primu": 4798.0999999999985,
+      "Primu": 4648.0999999999985,
       "Original": 3211.0249999999996,
-      "Primu + Original": 8009.125
+      "Primu + Original": 7859.125
     }
   },
   {
@@ -97,14 +97,14 @@
       "Primu + Original": 35961.7875
     },
     "VENTA": {
-      "Primu": 29642.249999999993,
+      "Primu": 30059.749999999993,
       "Original": 924.5,
-      "Primu + Original": 30566.749999999993
+      "Primu + Original": 30984.249999999993
     },
     "DISPONIBLE": {
-      "Primu": 6319.537500000006,
+      "Primu": 5902.037500000006,
       "Original": -924.5,
-      "Primu + Original": 5395.037500000006
+      "Primu + Original": 4977.537500000006
     }
   },
   {
