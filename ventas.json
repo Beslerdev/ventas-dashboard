@@ -97,14 +97,14 @@
       "Primu + Original": 35961.7875
     },
     "VENTA": {
-      "Primu": 30972.249999999993,
+      "Primu": 31457.249999999993,
       "Original": 924.5,
-      "Primu + Original": 31896.749999999993
+      "Primu + Original": 32381.749999999993
     },
     "DISPONIBLE": {
-      "Primu": 4989.537500000006,
+      "Primu": 4504.537500000006,
       "Original": -924.5,
-      "Primu + Original": 4065.037500000006
+      "Primu + Original": 3580.037500000006
     }
   },
   {
@@ -182,9 +182,9 @@
   {
     "Variedad": "NS Baguette 820",
     "OFERTA": {
-      "Primu": 8433.4125,
+      "Primu": 2934.975,
       "Original": 6188.875,
-      "Primu + Original": 14622.2875
+      "Primu + Original": 9123.85
     },
     "VENTA": {
       "Primu": 2664,
@@ -192,9 +192,9 @@
       "Primu + Original": 8714
     },
     "DISPONIBLE": {
-      "Primu": 5769.4125,
+      "Primu": 270.9749999999999,
       "Original": 138.875,
-      "Primu + Original": 5908.2875
+      "Primu + Original": 409.85000000000036
     }
   },
   {
