@@ -61,14 +61,14 @@
       "Primu + Original": 25025.074999999997
     },
     "VENTA": {
-      "Primu": 14236,
+      "Primu": 14386,
       "Original": 1085,
-      "Primu + Original": 15321
+      "Primu + Original": 15471
     },
     "DISPONIBLE": {
-      "Primu": 10789.074999999997,
+      "Primu": 10639.074999999997,
       "Original": -1085,
-      "Primu + Original": 9704.074999999997
+      "Primu + Original": 9554.074999999997
     }
   },
   {
@@ -79,14 +79,14 @@
       "Primu + Original": 29647.25
     },
     "VENTA": {
-      "Primu": 20953,
+      "Primu": 21073,
       "Original": 1500,
-      "Primu + Original": 22453
+      "Primu + Original": 22573
     },
     "DISPONIBLE": {
-      "Primu": 3983.2249999999985,
+      "Primu": 3863.2249999999985,
       "Original": 3211.0249999999996,
-      "Primu + Original": 7194.25
+      "Primu + Original": 7074.25
     }
   },
   {
@@ -97,14 +97,14 @@
       "Primu + Original": 35875.375
     },
     "VENTA": {
-      "Primu": 31477.249999999993,
+      "Primu": 32132.249999999993,
       "Original": 924.5,
-      "Primu + Original": 32401.749999999993
+      "Primu + Original": 33056.74999999999
     },
     "DISPONIBLE": {
-      "Primu": 4398.125000000007,
+      "Primu": 3743.1250000000073,
       "Original": -924.5,
-      "Primu + Original": 3473.6250000000073
+      "Primu + Original": 2818.6250000000073
     }
   },
   {
@@ -151,14 +151,14 @@
       "Primu + Original": 6197.75
     },
     "VENTA": {
-      "Primu": 540,
+      "Primu": 740,
       "Original": 0,
-      "Primu + Original": 540
+      "Primu + Original": 740
     },
     "DISPONIBLE": {
-      "Primu": 5657.75,
+      "Primu": 5457.75,
       "Original": 0,
-      "Primu + Original": 5657.75
+      "Primu + Original": 5457.75
     }
   },
   {
