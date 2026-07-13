@@ -97,14 +97,14 @@
       "Primu + Original": 35905.325
     },
     "VENTA": {
-      "Primu": 31697.249999999993,
+      "Primu": 31712.249999999993,
       "Original": 924.5,
-      "Primu + Original": 32621.749999999993
+      "Primu + Original": 32636.749999999993
     },
     "DISPONIBLE": {
-      "Primu": 4208.075000000004,
+      "Primu": 4193.075000000004,
       "Original": -924.5,
-      "Primu + Original": 3283.5750000000044
+      "Primu + Original": 3268.5750000000044
     }
   },
   {
@@ -223,14 +223,14 @@
       "Primu + Original": 360
     },
     "VENTA": {
-      "Primu": 360,
+      "Primu": 560,
       "Original": 0,
-      "Primu + Original": 360
+      "Primu + Original": 560
     },
     "DISPONIBLE": {
-      "Primu": 0,
+      "Primu": -200,
       "Original": 0,
-      "Primu + Original": 0
+      "Primu + Original": -200
     }
   }
 ]
