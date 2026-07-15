@@ -97,14 +97,14 @@
       "Primu + Original": 35905.325
     },
     "VENTA": {
-      "Primu": 31804.749999999993,
+      "Primu": 32154.749999999993,
       "Original": 924.5,
-      "Primu + Original": 32729.249999999993
+      "Primu + Original": 33079.24999999999
     },
     "DISPONIBLE": {
-      "Primu": 4100.575000000004,
+      "Primu": 3750.5750000000044,
       "Original": -924.5,
-      "Primu + Original": 3176.0750000000044
+      "Primu + Original": 2826.0750000000044
     }
   },
   {
@@ -218,9 +218,9 @@
   {
     "Variedad": "RAGT Sidecar",
     "OFERTA": {
-      "Primu": 720,
+      "Primu": 1080.95,
       "Original": 0,
-      "Primu + Original": 720
+      "Primu + Original": 1080.95
     },
     "VENTA": {
       "Primu": 560,
@@ -228,9 +228,9 @@
       "Primu + Original": 560
     },
     "DISPONIBLE": {
-      "Primu": 160,
+      "Primu": 520.95,
       "Original": 0,
-      "Primu + Original": 160
+      "Primu + Original": 520.95
     }
   }
 ]
