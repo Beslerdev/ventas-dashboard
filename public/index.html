@@ -35,24 +35,26 @@
   <table id="tablaVentas">
     <thead>
       <tr>
+        <th rowspan="2">Semillero</th>
+        <th rowspan="2">Varied</th>
         <th rowspan="2">Variedad</th>
-        <th colspan="3">OFERTA TOTAL (Bls)</th>
-        <th colspan="3">VENTA (Bls)</th>
-        <th colspan="3">DISPONIBLE (Bls)</th>
+        <th>OFERTA TOTAL (Bls)</th>
+        <th>VENTA (Bls)</th>
+        <th>DISPONIBLE (Bls)</th>
       </tr>
       <tr>
-        <th>Primu</th><th>Original</th><th>Primu + Original</th>
-        <th>Primu</th><th>Original</th><th>Primu + Original</th>
-        <th>Primu</th><th>Original</th><th>Primu + Original</th>
+        <th>Primu</th>
+        <th>Primu</th>
+        <th>Primu</th>
       </tr>
     </thead>
     <tbody></tbody>
     <tfoot>
       <tr class="totales">
-        <td>Totales</td>
-        <td id="totalOfertaPrimu"></td><td id="totalOfertaOriginal"></td><td id="totalOfertaTotal"></td>
-        <td id="totalVentasPrimu"></td><td id="totalVentasOriginal"></td><td id="totalVentasTotal"></td>
-        <td id="totalDispPrimu"></td><td id="totalDispOriginal"></td><td id="totalDispTotal"></td>
+        <td colspan="3">Total</td>
+        <td id="totalOfertaPrimu"></td>
+        <td id="totalVentasPrimu"></td>
+        <td id="totalDispPrimu"></td>
       </tr>
     </tfoot>
   </table>
@@ -78,53 +80,31 @@
 
         const tbody = document.querySelector('#tablaVentas tbody');
 
-        let totOfertaPrimu=0, totOfertaOriginal=0, totOfertaTotal=0;
-        let totVentasPrimu=0, totVentasOriginal=0, totVentasTotal=0;
-        let totDispPrimu=0, totDispOriginal=0, totDispTotal=0;
+        let totOfertaPrimu=0, totVentasPrimu=0, totDispPrimu=0;
 
         data.forEach(item => {
-          const agotada = item.DISPONIBLE["Primu + Original"] === 0; // 👈 ahora marca agotadas
+          const agotada = item.DISPONIBLE.Primu === 0; // 👈 marca agotadas
 
           const row = `
             <tr class="${agotada ? 'agotada' : ''}">
+              <td>${item.Semillero || ''}</td>
+              <td>${item.Varied || ''}</td>
               <td>${item.Variedad}</td>
               <td>${mostrarValor(item.OFERTA.Primu)}</td>
-              <td>${mostrarValor(item.OFERTA.Original)}</td>
-              <td>${mostrarValor(item.OFERTA["Primu + Original"])}</td>
               <td>${mostrarValor(item.VENTA.Primu)}</td>
-              <td>${mostrarValor(item.VENTA.Original)}</td>
-              <td>${mostrarValor(item.VENTA["Primu + Original"])}</td>
               <td>${mostrarValor(item.DISPONIBLE.Primu)}</td>
-              <td>${mostrarValor(item.DISPONIBLE.Original)}</td>
-              <td>${mostrarValor(item.DISPONIBLE["Primu + Original"])}</td>
             </tr>
           `;
           tbody.innerHTML += row;
 
-          totOfertaPrimu    += item.OFERTA.Primu    || 0;
-          totOfertaOriginal += item.OFERTA.Original || 0;
-          totOfertaTotal    += item.OFERTA["Primu + Original"] || 0;
-
-          totVentasPrimu    += item.VENTA.Primu    || 0;
-          totVentasOriginal += item.VENTA.Original || 0;
-          totVentasTotal    += item.VENTA["Primu + Original"] || 0;
-
-          totDispPrimu      += item.DISPONIBLE.Primu    || 0;
-          totDispOriginal   += item.DISPONIBLE.Original || 0;
-          totDispTotal      += item.DISPONIBLE["Primu + Original"] || 0;
+          totOfertaPrimu += item.OFERTA.Primu    || 0;
+          totVentasPrimu += item.VENTA.Primu     || 0;
+          totDispPrimu   += item.DISPONIBLE.Primu || 0;
         });
 
-        document.getElementById('totalOfertaPrimu').innerText    = Math.round(totOfertaPrimu);
-        document.getElementById('totalOfertaOriginal').innerText = Math.round(totOfertaOriginal);
-        document.getElementById('totalOfertaTotal').innerText    = Math.round(totOfertaTotal);
-
-        document.getElementById('totalVentasPrimu').innerText    = Math.round(totVentasPrimu);
-        document.getElementById('totalVentasOriginal').innerText = Math.round(totVentasOriginal);
-        document.getElementById('totalVentasTotal').innerText    = Math.round(totVentasTotal);
-
-        document.getElementById('totalDispPrimu').innerText      = Math.round(totDispPrimu);
-        document.getElementById('totalDispOriginal').innerText   = Math.round(totDispOriginal);
-        document.getElementById('totalDispTotal').innerText      = Math.round(totDispTotal);
+        document.getElementById('totalOfertaPrimu').innerText = Math.round(totOfertaPrimu);
+        document.getElementById('totalVentasPrimu').innerText = Math.round(totVentasPrimu);
+        document.getElementById('totalDispPrimu').innerText   = Math.round(totDispPrimu);
 
         const ctx = document.getElementById('graficoTotales').getContext('2d');
         new Chart(ctx, {
@@ -134,9 +114,9 @@
             datasets: [{
               label: 'Totales',
               data: [
-                Math.round(totOfertaTotal),
-                Math.round(totVentasTotal),
-                Math.round(totDispTotal)
+                Math.round(totOfertaPrimu),
+                Math.round(totVentasPrimu),
+                Math.round(totDispPrimu)
               ],
               backgroundColor: ['#4caf50','#2196f3','#ff9800']
             }]

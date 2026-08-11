@@ -1,236 +1,142 @@
 [
   {
-    "Variedad": "BIO Araza",
+    "Semillero": "DM",
+    "Varied": "DM 2200",
+    "Variedad": "DON MARIO 2200",
     "OFERTA": {
-      "Primu": 5480,
-      "Original": 0,
-      "Primu + Original": 5480
+      "Primu": 3461
     },
     "VENTA": {
-      "Primu": 5723.5,
-      "Original": 0,
-      "Primu + Original": 5723.5
+      "Primu": 0
     },
     "DISPONIBLE": {
-      "Primu": -243.5,
-      "Original": 0,
-      "Primu + Original": -243.5
+      "Primu": 3461
     }
   },
   {
-    "Variedad": "BIO Gingko",
+    "Semillero": "DM",
+    "Varied": "DM 25E23 SE",
+    "Variedad": "DM25E23 SE",
     "OFERTA": {
-      "Primu": 5009.925,
-      "Original": 0,
-      "Primu + Original": 5009.925
+      "Primu": 16561
     },
     "VENTA": {
-      "Primu": 5106,
-      "Original": 0,
-      "Primu + Original": 5106
+      "Primu": 900
     },
     "DISPONIBLE": {
-      "Primu": -96.07499999999982,
-      "Original": 0,
-      "Primu + Original": -96.07499999999982
+      "Primu": 15661
     }
   },
   {
-    "Variedad": "BIO Laurel",
+    "Semillero": "DM",
+    "Varied": "DM 33E22 SE",
+    "Variedad": "DM 33E22 SE",
     "OFERTA": {
-      "Primu": 4423.75,
-      "Original": 0,
-      "Primu + Original": 4423.75
+      "Primu": 8038
     },
     "VENTA": {
-      "Primu": 4130,
-      "Original": 200,
-      "Primu + Original": 4330
+      "Primu": 0
     },
     "DISPONIBLE": {
-      "Primu": 293.75,
-      "Original": -200,
-      "Primu + Original": 93.75
+      "Primu": 8038
     }
   },
   {
-    "Variedad": "DM Araucaria",
+    "Semillero": "DM",
+    "Varied": "DM 38E26 SE",
+    "Variedad": "DM38E26 SE",
     "OFERTA": {
-      "Primu": 21635.699999999997,
-      "Original": 0,
-      "Primu + Original": 21635.699999999997
+      "Primu": 9078
     },
     "VENTA": {
-      "Primu": 14386,
-      "Original": 1085,
-      "Primu + Original": 15471
+      "Primu": 140
     },
     "DISPONIBLE": {
-      "Primu": 7249.699999999997,
-      "Original": -1085,
-      "Primu + Original": 6164.699999999997
+      "Primu": 8938
     }
   },
   {
-    "Variedad": "DM Casuarina",
+    "Semillero": "DM",
+    "Varied": "DM 40E25 SE",
+    "Variedad": "DM40E25 SE",
     "OFERTA": {
-      "Primu": 24228.6,
-      "Original": 4711.025,
-      "Primu + Original": 28939.625
+      "Primu": 33277
     },
     "VENTA": {
-      "Primu": 20845,
-      "Original": 1500,
-      "Primu + Original": 22345
+      "Primu": 5760
     },
     "DISPONIBLE": {
-      "Primu": 3383.5999999999985,
-      "Original": 3211.0249999999996,
-      "Primu + Original": 6594.625
+      "Primu": 27517
     }
   },
   {
-    "Variedad": "DM Catalpa",
+    "Semillero": "DM",
+    "Varied": "DM 40R26 STS",
+    "Variedad": "DM40R26",
     "OFERTA": {
-      "Primu": 35905.325,
-      "Original": 0,
-      "Primu + Original": 35905.325
+      "Primu": 5353
     },
     "VENTA": {
-      "Primu": 32106.749999999993,
-      "Original": 924.5,
-      "Primu + Original": 33031.24999999999
+      "Primu": 0
     },
     "DISPONIBLE": {
-      "Primu": 3798.5750000000044,
-      "Original": -924.5,
-      "Primu + Original": 2874.0750000000044
+      "Primu": 5353
     }
   },
   {
-    "Variedad": "DM RADAL",
+    "Semillero": "DM",
+    "Varied": "DM 46E25 SE",
+    "Variedad": "DM46E25 SE",
     "OFERTA": {
-      "Primu": 0,
-      "Original": 0,
-      "Primu + Original": 0
+      "Primu": 42253
     },
     "VENTA": {
-      "Primu": 0,
-      "Original": 660,
-      "Primu + Original": 660
+      "Primu": 3960
     },
     "DISPONIBLE": {
-      "Primu": 0,
-      "Original": -660,
-      "Primu + Original": -660
+      "Primu": 38293
     }
   },
   {
-    "Variedad": "DM EUCALIPTO",
+    "Semillero": "DM",
+    "Varied": "DM 46R25 STS",
+    "Variedad": "DM46R25",
     "OFERTA": {
-      "Primu": 0,
-      "Original": 0,
-      "Primu + Original": 0
+      "Primu": 0
     },
     "VENTA": {
-      "Primu": 0,
-      "Original": 180,
-      "Primu + Original": 180
+      "Primu": 0
     },
     "DISPONIBLE": {
-      "Primu": 0,
-      "Original": -180,
-      "Primu + Original": -180
+      "Primu": 0
     }
   },
   {
-    "Variedad": "NS Baguette 610",
+    "Semillero": "Nidera",
+    "Varied": "NK 37X26 E",
+    "Variedad": "37x26 E STS",
     "OFERTA": {
-      "Primu": 6197.75,
-      "Original": 0,
-      "Primu + Original": 6197.75
+      "Primu": 0
     },
     "VENTA": {
-      "Primu": 740,
-      "Original": 0,
-      "Primu + Original": 740
+      "Primu": 0
     },
     "DISPONIBLE": {
-      "Primu": 5457.75,
-      "Original": 0,
-      "Primu + Original": 5457.75
+      "Primu": 0
     }
   },
   {
-    "Variedad": "NS Baguette 750",
+    "Semillero": "Nidera",
+    "Varied": "NS 3925 E",
+    "Variedad": "3925 E",
     "OFERTA": {
-      "Primu": 1469.475,
-      "Original": 1513,
-      "Primu + Original": 2982.475
+      "Primu": 0
     },
     "VENTA": {
-      "Primu": 320,
-      "Original": 1513,
-      "Primu + Original": 1833
+      "Primu": 0
     },
     "DISPONIBLE": {
-      "Primu": 1149.475,
-      "Original": 0,
-      "Primu + Original": 1149.475
-    }
-  },
-  {
-    "Variedad": "NS Baguette 820",
-    "OFERTA": {
-      "Primu": 2934.975,
-      "Original": 6188.875,
-      "Primu + Original": 9123.85
-    },
-    "VENTA": {
-      "Primu": 2724,
-      "Original": 6050,
-      "Primu + Original": 8774
-    },
-    "DISPONIBLE": {
-      "Primu": 210.9749999999999,
-      "Original": 138.875,
-      "Primu + Original": 349.85000000000036
-    }
-  },
-  {
-    "Variedad": "RAGT Borsalino",
-    "OFERTA": {
-      "Primu": 2538,
-      "Original": 0,
-      "Primu + Original": 2538
-    },
-    "VENTA": {
-      "Primu": 993.5,
-      "Original": 0,
-      "Primu + Original": 993.5
-    },
-    "DISPONIBLE": {
-      "Primu": 1544.5,
-      "Original": 0,
-      "Primu + Original": 1544.5
-    }
-  },
-  {
-    "Variedad": "RAGT Sidecar",
-    "OFERTA": {
-      "Primu": 1080.95,
-      "Original": 0,
-      "Primu + Original": 1080.95
-    },
-    "VENTA": {
-      "Primu": 1085,
-      "Original": 0,
-      "Primu + Original": 1085
-    },
-    "DISPONIBLE": {
-      "Primu": -4.0499999999999545,
-      "Original": 0,
-      "Primu + Original": -4.0499999999999545
+      "Primu": 0
     }
   }
 ]
