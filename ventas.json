@@ -4,13 +4,13 @@
     "Varied": "DM 2200",
     "Variedad": "DON MARIO 2200",
     "OFERTA": {
-      "Primu": 3461
+      "Primu": 3460.5625
     },
     "VENTA": {
       "Primu": 0
     },
     "DISPONIBLE": {
-      "Primu": 3461
+      "Primu": 3460.5625
     }
   },
   {
@@ -18,13 +18,13 @@
     "Varied": "DM 25E23 SE",
     "Variedad": "DM25E23 SE",
     "OFERTA": {
-      "Primu": 16561
+      "Primu": 16560.549999999996
     },
     "VENTA": {
       "Primu": 900
     },
     "DISPONIBLE": {
-      "Primu": 15661
+      "Primu": 15660.549999999996
     }
   },
   {
@@ -32,13 +32,13 @@
     "Varied": "DM 33E22 SE",
     "Variedad": "DM 33E22 SE",
     "OFERTA": {
-      "Primu": 8038
+      "Primu": 8038.45
     },
     "VENTA": {
       "Primu": 0
     },
     "DISPONIBLE": {
-      "Primu": 8038
+      "Primu": 8038.45
     }
   },
   {
@@ -46,13 +46,13 @@
     "Varied": "DM 38E26 SE",
     "Variedad": "DM38E26 SE",
     "OFERTA": {
-      "Primu": 9078
+      "Primu": 9078.212499999998
     },
     "VENTA": {
       "Primu": 140
     },
     "DISPONIBLE": {
-      "Primu": 8938
+      "Primu": 8938.212499999998
     }
   },
   {
@@ -60,13 +60,13 @@
     "Varied": "DM 40E25 SE",
     "Variedad": "DM40E25 SE",
     "OFERTA": {
-      "Primu": 33277
+      "Primu": 33277.28749999999
     },
     "VENTA": {
       "Primu": 5760
     },
     "DISPONIBLE": {
-      "Primu": 27517
+      "Primu": 27517.28749999999
     }
   },
   {
@@ -74,13 +74,13 @@
     "Varied": "DM 40R26 STS",
     "Variedad": "DM40R26",
     "OFERTA": {
-      "Primu": 5353
+      "Primu": 5353.0875
     },
     "VENTA": {
       "Primu": 0
     },
     "DISPONIBLE": {
-      "Primu": 5353
+      "Primu": 5353.0875
     }
   },
   {
@@ -88,13 +88,13 @@
     "Varied": "DM 46E25 SE",
     "Variedad": "DM46E25 SE",
     "OFERTA": {
-      "Primu": 42253
+      "Primu": 42252.86250000001
     },
     "VENTA": {
       "Primu": 3960
     },
     "DISPONIBLE": {
-      "Primu": 38293
+      "Primu": 38292.86250000001
     }
   },
   {
@@ -102,13 +102,13 @@
     "Varied": "DM 46R25 STS",
     "Variedad": "DM46R25",
     "OFERTA": {
-      "Primu": 0
+      "Primu": 8821.937500000002
     },
     "VENTA": {
       "Primu": 0
     },
     "DISPONIBLE": {
-      "Primu": 0
+      "Primu": 8821.937500000002
     }
   },
   {
@@ -116,13 +116,13 @@
     "Varied": "NK 37X26 E",
     "Variedad": "37x26 E STS",
     "OFERTA": {
-      "Primu": 0
+      "Primu": 1717.425
     },
     "VENTA": {
       "Primu": 0
     },
     "DISPONIBLE": {
-      "Primu": 0
+      "Primu": 1717.425
     }
   },
   {
@@ -130,13 +130,13 @@
     "Varied": "NS 3925 E",
     "Variedad": "3925 E",
     "OFERTA": {
-      "Primu": 0
+      "Primu": 1794.35
     },
     "VENTA": {
       "Primu": 0
     },
     "DISPONIBLE": {
-      "Primu": 0
+      "Primu": 1794.35
     }
   }
 ]
