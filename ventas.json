@@ -7,10 +7,10 @@
       "Primu": 3460.5625
     },
     "VENTA": {
-      "Primu": 1500
+      "Primu": 2420
     },
     "DISPONIBLE": {
-      "Primu": 1960.5625
+      "Primu": 1040.5625
     }
   },
   {
@@ -35,10 +35,10 @@
       "Primu": 8038.45
     },
     "VENTA": {
-      "Primu": 4000
+      "Primu": 4070
     },
     "DISPONIBLE": {
-      "Primu": 4038.45
+      "Primu": 3968.45
     }
   },
   {
@@ -105,10 +105,10 @@
       "Primu": 8821.937500000002
     },
     "VENTA": {
-      "Primu": 0
+      "Primu": 3000
     },
     "DISPONIBLE": {
-      "Primu": 8821.937500000002
+      "Primu": 5821.937500000002
     }
   },
   {
@@ -116,13 +116,13 @@
     "Varied": "NK 37X26 E",
     "Variedad": "37x26 E STS",
     "OFERTA": {
-      "Primu": 574.175
+      "Primu": 2474.1
     },
     "VENTA": {
       "Primu": 0
     },
     "DISPONIBLE": {
-      "Primu": 574.175
+      "Primu": 2474.1
     }
   },
   {
