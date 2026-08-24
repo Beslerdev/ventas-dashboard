@@ -21,10 +21,10 @@
       "Primu": 21148.42499999999
     },
     "VENTA": {
-      "Primu": 12900
+      "Primu": 13020
     },
     "DISPONIBLE": {
-      "Primu": 8248.424999999988
+      "Primu": 8128.424999999988
     }
   },
   {
@@ -35,10 +35,10 @@
       "Primu": 8038.45
     },
     "VENTA": {
-      "Primu": 4070
+      "Primu": 4170
     },
     "DISPONIBLE": {
-      "Primu": 3968.45
+      "Primu": 3868.45
     }
   },
   {
@@ -63,10 +63,10 @@
       "Primu": 33277.28749999999
     },
     "VENTA": {
-      "Primu": 6105
+      "Primu": 6136
     },
     "DISPONIBLE": {
-      "Primu": 27172.28749999999
+      "Primu": 27141.28749999999
     }
   },
   {
@@ -88,13 +88,13 @@
     "Varied": "DM 46E25 SE",
     "Variedad": "DM46E25 SE",
     "OFERTA": {
-      "Primu": 41915.662500000006
+      "Primu": 43415.61250000001
     },
     "VENTA": {
       "Primu": 4278
     },
     "DISPONIBLE": {
-      "Primu": 37637.662500000006
+      "Primu": 39137.61250000001
     }
   },
   {
@@ -130,13 +130,13 @@
     "Varied": "NS 3925 E",
     "Variedad": "3925 E",
     "OFERTA": {
-      "Primu": 1799.925
+      "Primu": 1999.95
     },
     "VENTA": {
       "Primu": 0
     },
     "DISPONIBLE": {
-      "Primu": 1799.925
+      "Primu": 1999.95
     }
   }
 ]
