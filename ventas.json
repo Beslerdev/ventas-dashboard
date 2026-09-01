@@ -7,10 +7,10 @@
       "Primu": 4026.1375
     },
     "VENTA": {
-      "Primu": 2440
+      "Primu": 3120
     },
     "DISPONIBLE": {
-      "Primu": 1586.1374999999998
+      "Primu": 906.1374999999998
     }
   },
   {
@@ -18,13 +18,13 @@
     "Varied": "DM 25E23 SE",
     "Variedad": "DM25E23 SE",
     "OFERTA": {
-      "Primu": 18169.174999999996
+      "Primu": 17866.899999999987
     },
     "VENTA": {
       "Primu": 13145
     },
     "DISPONIBLE": {
-      "Primu": 5024.174999999996
+      "Primu": 4721.899999999987
     }
   },
   {
@@ -60,13 +60,13 @@
     "Varied": "DM 40E25 SE",
     "Variedad": "DM40E25 SE",
     "OFERTA": {
-      "Primu": 33277.28749999999
+      "Primu": 30986.74999999998
     },
     "VENTA": {
-      "Primu": 6136
+      "Primu": 8336
     },
     "DISPONIBLE": {
-      "Primu": 27141.28749999999
+      "Primu": 22650.74999999998
     }
   },
   {
@@ -88,13 +88,13 @@
     "Varied": "DM 46E25 SE",
     "Variedad": "DM46E25 SE",
     "OFERTA": {
-      "Primu": 43415.63750000001
+      "Primu": 43415.662500000006
     },
     "VENTA": {
       "Primu": 4672
     },
     "DISPONIBLE": {
-      "Primu": 38743.63750000001
+      "Primu": 38743.662500000006
     }
   },
   {
@@ -102,13 +102,13 @@
     "Varied": "DM 46R25 STS",
     "Variedad": "DM46R25",
     "OFERTA": {
-      "Primu": 8890.887499999997
+      "Primu": 8945.937499999998
     },
     "VENTA": {
       "Primu": 3000
     },
     "DISPONIBLE": {
-      "Primu": 5890.887499999997
+      "Primu": 5945.937499999998
     }
   },
   {
