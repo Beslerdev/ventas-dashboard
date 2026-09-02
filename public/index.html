@@ -8,58 +8,170 @@
       window.location.href = "login.html";
     }
   </script>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Newsreader:ital,wght@0,500;0,600;1,500;1,600&family=Manrope:wght@400;500;600;700;800&display=swap">
   <style>
-    body { font-family: Arial, sans-serif; margin: 20px; }
-    table { border-collapse: collapse; width: 100%; margin-bottom: 30px; text-align: center; }
-    th, td { border: 1px solid #ccc; padding: 6px; }
-    canvas { margin-top: 40px; }
-    button { margin-top: 20px; padding: 6px 12px; }
-
-    thead tr:first-child th {
-      background-color: #4caf50;
-      color: white;
-      font-size: 1.1em;
+    * { box-sizing: border-box; }
+    body {
+      margin: 0;
+      font-family: 'Manrope', system-ui, -apple-system, sans-serif;
+      background: #EAE6D3;
+      color: #2A3324;
+      -webkit-font-smoothing: antialiased;
     }
-    thead tr:nth-child(2) th { background-color: #a5d6a7; }
-    tbody tr td:first-child { font-weight: bold; background-color: #f9f9f9; }
-    tbody tr:nth-child(even) { background-color: #f2f2f2; }
-    tfoot tr.totales { background-color: #e6ffe6; font-size: 1.05em; font-weight: bold; }
-    .agotada { background-color: #ffcccc; }
+    .tabular { font-variant-numeric: tabular-nums; }
+    table { border-collapse: collapse; width: 100%; }
+    th, td { text-align: left; }
+    tbody tr { border-bottom: 1px solid rgba(43,57,36,0.07); }
+    tbody tr:last-child { border-bottom: none; }
+    tbody tr:hover { background: #F6F3E8; }
+    @keyframes pulse-dot {
+      0% { box-shadow: 0 0 0 0 rgba(169,201,62,0.55); }
+      70% { box-shadow: 0 0 0 6px rgba(169,201,62,0); }
+      100% { box-shadow: 0 0 0 0 rgba(169,201,62,0); }
+    }
+    .pulse { animation: pulse-dot 2.2s ease-out infinite; }
+    .badge {
+      background: #37472F; color: #fff; font-size: 11px; font-weight: 700;
+      padding: 3px 10px; border-radius: 100px; white-space: nowrap;
+    }
+    .pctTrack { flex-grow: 1; background: #F1EEE2; border-radius: 3px; height: 6px; }
+    .pctFill { height: 100%; border-radius: 3px; }
+    .pctLabel { font-size: 12px; font-weight: 700; color: #6B7362; width: 32px; display: inline-block; }
+    .kpiCard {
+      background: #FFFFFF; border: 1px solid rgba(43,57,36,0.10); border-radius: 14px; padding: 24px;
+    }
+    .kpiIcon {
+      width: 40px; height: 40px; border-radius: 10px; display: flex; align-items: center;
+      justify-content: center; margin-bottom: 18px;
+    }
+    .kpiLabel { font-size: 13px; color: #6B7362; font-weight: 600; letter-spacing: 0.3px; margin-bottom: 6px; }
+    .kpiValue { font-size: 32px; font-weight: 800; color: #263021; }
+    .kpiUnit { font-size: 16px; font-weight: 600; color: #8A9280; }
+    .kpiSub { font-size: 13px; color: #8A9280; margin-top: 6px; }
+    .card { background: #FFFFFF; border: 1px solid rgba(43,57,36,0.10); border-radius: 14px; }
+    .chartRow { display: flex; align-items: center; gap: 14px; }
+    .chartLabel { width: 130px; flex-shrink: 0; font-size: 13px; font-weight: 600; }
+    .chartTrack { flex-grow: 1; background: #F1EEE2; border-radius: 4px; height: 22px; }
+    .chartFill { height: 100%; border-radius: 4px; }
+    .chartValue { width: 60px; flex-shrink: 0; text-align: right; font-size: 13px; font-weight: 700; }
+    #estado { padding: 60px 48px; color: #6B7362; font-size: 14px; }
   </style>
-  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
 </head>
 <body>
-  <h1>Informe de Ventas</h1>
-  <button onclick="logout()">Salir</button>
 
-  <table id="tablaVentas">
-    <thead>
-      <tr>
-        <th rowspan="2">Semillero</th>
-        <th rowspan="2">Varied</th>
-        <th rowspan="2">Variedad</th>
-        <th>OFERTA TOTAL (Bls)</th>
-        <th>VENTA (Bls)</th>
-        <th>DISPONIBLE (Bls)</th>
-      </tr>
-      <tr>
-        <th>Primu</th>
-        <th>Primu</th>
-        <th>Primu</th>
-      </tr>
-    </thead>
-    <tbody></tbody>
-    <tfoot>
-      <tr class="totales">
-        <td colspan="3">Total</td>
-        <td id="totalOfertaPrimu"></td>
-        <td id="totalVentasPrimu"></td>
-        <td id="totalDispPrimu"></td>
-      </tr>
-    </tfoot>
-  </table>
+  <!-- Header -->
+  <div style="display: flex; align-items: center; justify-content: space-between; gap: 24px; background: #2E3B27; padding: 18px 48px;">
+    <div style="display: flex; align-items: center; gap: 14px;">
+      <svg width="34" height="34" viewBox="0 0 34 34" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <path d="M17 2C10 7 7 13 7 19C7 25.6 11.5 30 17 30C22.5 30 27 25.6 27 19C27 13 24 7 17 2Z" fill="#8FB02E"/>
+        <path d="M17 2C13 7.5 10.5 13 10.5 18C10.5 23.8 13.3 28 17 29.6C15.4 27 14.4 23 14.4 18.5C14.4 12.8 15.5 7.2 17 2Z" fill="#37472F"/>
+      </svg>
+      <div style="display: flex; align-items: baseline; gap: 8px;">
+        <span style="font-family: 'Newsreader', serif; font-weight: 600; font-size: 21px; color: #FFFFFF;">DS<span style="font-weight: 500; color: #C9D6C0;">hnos</span></span>
+        <span style="width: 1px; height: 16px; background: rgba(255,255,255,0.25); display: inline-block;"></span>
+        <span style="font-size: 13px; color: #C9D6C0; letter-spacing: 0.4px;">Panel de Ventas</span>
+      </div>
+    </div>
+    <button onclick="logout()" style="display: flex; align-items: center; gap: 8px; background: transparent; border: 1px solid rgba(255,255,255,0.3); color: #EFEAD9; font-family: 'Manrope', sans-serif; font-size: 13px; font-weight: 600; padding: 9px 16px; border-radius: 8px; cursor: pointer;">
+      Salir
+      <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M9 21H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h4"/><polyline points="16 17 21 12 16 7"/><line x1="21" y1="12" x2="9" y2="12"/></svg>
+    </button>
+  </div>
 
-  <canvas id="graficoTotales" width="400" height="200"></canvas>
+  <!-- Title -->
+  <div style="padding: 40px 48px 28px 48px;">
+    <div style="font-size: 12px; font-weight: 700; letter-spacing: 1.6px; color: #8A9280; text-transform: uppercase; margin-bottom: 10px;">Informe interno</div>
+    <div style="display: flex; align-items: flex-end; justify-content: space-between; flex-wrap: wrap; gap: 16px;">
+      <div>
+        <h1 style="font-family: 'Newsreader', serif; font-weight: 600; font-size: 40px; line-height: 1.1; margin: 0 0 10px 0; color: #263021;">
+          Panel de <span style="font-style: italic; color: #37472F;">ventas</span>
+        </h1>
+        <div style="font-size: 15px; color: #6B7362;">Campaña de Soja 2026 &middot; <span id="kpiCount">-- variedades activas</span></div>
+      </div>
+      <div style="display: flex; align-items: center; gap: 8px; background: #FFFFFF; border: 1px solid rgba(43,57,36,0.12); border-radius: 100px; padding: 8px 16px 8px 12px;">
+        <span class="pulse" style="width: 8px; height: 8px; border-radius: 50%; background: #A9C93E; display: inline-block;"></span>
+        <span style="font-size: 13px; color: #6B7362;">Datos generados autom&aacute;ticamente desde Excel</span>
+      </div>
+    </div>
+  </div>
+
+  <div id="estado">Cargando datos...</div>
+
+  <div id="contenido" style="display: none;">
+
+    <!-- KPI cards -->
+    <div style="padding: 0 48px; display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 20px;">
+      <div class="kpiCard">
+        <div class="kpiIcon" style="background: #EFEAD9;">
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#37472F" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 8a2 2 0 0 0-1-1.73l-7-4a2 2 0 0 0-2 0l-7 4A2 2 0 0 0 3 8v8a2 2 0 0 0 1 1.73l7 4a2 2 0 0 0 2 0l7-4A2 2 0 0 0 21 16Z"/><path d="M3.3 7 12 12l8.7-5"/><path d="M12 22V12"/></svg>
+        </div>
+        <div class="kpiLabel">OFERTA TOTAL</div>
+        <div class="kpiValue tabular"><span id="kpiOferta">0</span><span class="kpiUnit"> Bls</span></div>
+        <div class="kpiSub" id="kpiOfertaSub">&nbsp;</div>
+      </div>
+      <div class="kpiCard">
+        <div class="kpiIcon" style="background: #F0F4E4;">
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#6B8F2E" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M23 6 13.5 15.5 8.5 10.5 1 18"/><path d="M17 6h6v6"/></svg>
+        </div>
+        <div class="kpiLabel">VENTA TOTAL</div>
+        <div class="kpiValue tabular"><span id="kpiVenta">0</span><span class="kpiUnit"> Bls</span></div>
+        <div class="kpiSub" id="kpiVentaSub" style="color: #6B8F2E; font-weight: 600;">&nbsp;</div>
+      </div>
+      <div class="kpiCard">
+        <div class="kpiIcon" style="background: #EFEAD9;">
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#37472F" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="3" width="18" height="18" rx="3"/><path d="M3 9h18"/><path d="M9 21V9"/></svg>
+        </div>
+        <div class="kpiLabel">DISPONIBLE</div>
+        <div class="kpiValue tabular"><span id="kpiDisp">0</span><span class="kpiUnit"> Bls</span></div>
+        <div class="kpiSub" id="kpiDispSub">&nbsp;</div>
+      </div>
+    </div>
+
+    <!-- Table card -->
+    <div class="card" style="margin: 24px 48px 0 48px; padding: 8px 0; overflow: hidden;">
+      <div style="padding: 20px 28px 16px 28px;">
+        <div style="font-size: 17px; font-weight: 700; color: #263021;">Detalle por variedad</div>
+      </div>
+      <table>
+        <thead>
+          <tr style="background: #37472F;">
+            <th style="padding: 14px 28px; font-size: 11px; font-weight: 700; letter-spacing: 0.6px; color: #FFFFFF; text-transform: uppercase;">Semillero</th>
+            <th style="padding: 14px 12px; font-size: 11px; font-weight: 700; letter-spacing: 0.6px; color: #FFFFFF; text-transform: uppercase;">Variedad</th>
+            <th class="tabular" style="padding: 14px 12px; font-size: 11px; font-weight: 700; letter-spacing: 0.6px; color: #FFFFFF; text-transform: uppercase; text-align: right;">Oferta</th>
+            <th class="tabular" style="padding: 14px 12px; font-size: 11px; font-weight: 700; letter-spacing: 0.6px; color: #FFFFFF; text-transform: uppercase; text-align: right;">Venta</th>
+            <th class="tabular" style="padding: 14px 12px; font-size: 11px; font-weight: 700; letter-spacing: 0.6px; color: #FFFFFF; text-transform: uppercase; text-align: right;">Disponible</th>
+            <th style="padding: 14px 28px; font-size: 11px; font-weight: 700; letter-spacing: 0.6px; color: #FFFFFF; text-transform: uppercase; width: 170px;">% Vendido</th>
+          </tr>
+        </thead>
+        <tbody id="tablaVentasBody"></tbody>
+        <tfoot>
+          <tr style="border-top: 2px solid rgba(43,57,36,0.16); background: #F6F3E8;">
+            <td colspan="2" style="padding: 16px 28px; font-size: 13px; font-weight: 800; color: #263021; text-transform: uppercase; letter-spacing: 0.4px;">Total</td>
+            <td class="tabular" style="padding: 16px 12px; font-size: 15px; font-weight: 800; text-align: right; color: #263021;" id="totalOferta">0</td>
+            <td class="tabular" style="padding: 16px 12px; font-size: 15px; font-weight: 800; text-align: right; color: #263021;" id="totalVenta">0</td>
+            <td class="tabular" style="padding: 16px 12px; font-size: 15px; font-weight: 800; text-align: right; color: #263021;" id="totalDisp">0</td>
+            <td style="padding: 16px 28px; font-size: 13px; font-weight: 800; text-align: right; color: #6B8F2E;" id="totalPct">0%</td>
+          </tr>
+        </tfoot>
+      </table>
+    </div>
+
+    <!-- Chart card -->
+    <div class="card" style="margin: 20px 48px 0 48px; padding: 28px 32px 20px 32px;">
+      <div style="margin-bottom: 22px;">
+        <div style="font-size: 17px; font-weight: 700; color: #263021;">Ventas por variedad</div>
+        <div style="font-size: 13px; color: #8A9280; margin-top: 2px;">Bolsas vendidas</div>
+      </div>
+      <div id="chartBars" style="display: flex; flex-direction: column; gap: 12px;"></div>
+    </div>
+
+  </div>
+
+  <!-- Footer -->
+  <div style="margin-top: 40px; background: #2E3B27; padding: 28px 48px; display: flex; align-items: center; justify-content: space-between; flex-wrap: wrap; gap: 12px;">
+    <div style="font-family: 'Newsreader', serif; font-style: italic; font-size: 15px; color: #EFEAD9;">DS hnos &middot; Hagamos que <span style="font-weight: 600;">crezca</span></div>
+    <div style="font-size: 12px; color: #8A9280;">Datos generados autom&aacute;ticamente desde ventas.xlsx</div>
+  </div>
 
   <script>
     function logout() {
@@ -67,62 +179,133 @@
       window.location.href = "login.html";
     }
 
-    function mostrarValor(v) {
-      if (typeof v === "number" && !isNaN(v)) return Math.round(v);
-      if (typeof v === "string") return v;
-      return "";
+    function fmt(n) {
+      return Math.round(n || 0).toLocaleString('es-AR');
+    }
+
+    // Sequential shade ramp (dark green -> light) used to rank chart bars by size
+    var SHADE_STOPS = ['#2B3924', '#37472F', '#445939', '#4C6440', '#5A7350', '#62815A', '#93AE87', '#C9D6C0'];
+    function shadeForRank(i, total) {
+      var idx = Math.min(SHADE_STOPS.length - 1, Math.floor((i / Math.max(1, total)) * SHADE_STOPS.length));
+      return SHADE_STOPS[idx];
+    }
+    function pctColor(pct) {
+      if (pct <= 0) return '#D3DCC9';
+      if (pct < 15) return '#C9863F';
+      return '#6B8F2E';
     }
 
     fetch('/api/ventas')
-      .then(res => res.json())
-      .then(data => {
-        console.log("Datos recibidos:", data); // 👈 debug
+      .then(function (res) { return res.json(); })
+      .then(function (data) {
+        if (!Array.isArray(data) || data.length === 0) {
+          document.getElementById('estado').textContent = 'No hay datos de ventas disponibles.';
+          return;
+        }
+        document.getElementById('estado').style.display = 'none';
+        document.getElementById('contenido').style.display = 'block';
 
-        const tbody = document.querySelector('#tablaVentas tbody');
+        var totOferta = 0, totVenta = 0, totDisp = 0;
+        data.forEach(function (item) {
+          totOferta += (item.OFERTA && item.OFERTA.Primu) || 0;
+          totVenta += (item.VENTA && item.VENTA.Primu) || 0;
+          totDisp += (item.DISPONIBLE && item.DISPONIBLE.Primu) || 0;
+        });
+        var pctVenta = totOferta > 0 ? Math.round((totVenta / totOferta) * 100) : 0;
+        var pctDisp = totOferta > 0 ? Math.round((totDisp / totOferta) * 100) : 0;
 
-        let totOfertaPrimu=0, totVentasPrimu=0, totDispPrimu=0;
+        document.getElementById('kpiOferta').textContent = fmt(totOferta);
+        document.getElementById('kpiVenta').textContent = fmt(totVenta);
+        document.getElementById('kpiDisp').textContent = fmt(totDisp);
+        document.getElementById('kpiOfertaSub').textContent = 'repartidas en ' + data.length + ' variedades';
+        document.getElementById('kpiVentaSub').textContent = pctVenta + '% de la oferta vendida';
+        document.getElementById('kpiDispSub').textContent = pctDisp + '% de la oferta aún disponible';
+        document.getElementById('kpiCount').textContent = data.length + ' variedades activas';
 
-        data.forEach(item => {
-          const agotada = item.DISPONIBLE.Primu === 0; // 👈 marca agotadas
+        // Table
+        var tbody = document.getElementById('tablaVentasBody');
+        data.forEach(function (item) {
+          var oferta = (item.OFERTA && item.OFERTA.Primu) || 0;
+          var venta = (item.VENTA && item.VENTA.Primu) || 0;
+          var disp = (item.DISPONIBLE && item.DISPONIBLE.Primu) || 0;
+          var pct = oferta > 0 ? Math.min(100, Math.round((venta / oferta) * 100)) : 0;
 
-          const row = `
-            <tr class="${agotada ? 'agotada' : ''}">
-              <td>${item.Semillero || ''}</td>
-              <td>${item.Varied || ''}</td>
-              <td>${item.Variedad}</td>
-              <td>${mostrarValor(item.OFERTA.Primu)}</td>
-              <td>${mostrarValor(item.VENTA.Primu)}</td>
-              <td>${mostrarValor(item.DISPONIBLE.Primu)}</td>
-            </tr>
-          `;
-          tbody.innerHTML += row;
+          var tr = document.createElement('tr');
 
-          totOfertaPrimu += item.OFERTA.Primu    || 0;
-          totVentasPrimu += item.VENTA.Primu     || 0;
-          totDispPrimu   += item.DISPONIBLE.Primu || 0;
+          var tdSem = document.createElement('td');
+          tdSem.style.padding = '14px 28px';
+          var badge = document.createElement('span');
+          badge.className = 'badge';
+          badge.textContent = item.Semillero || '';
+          tdSem.appendChild(badge);
+
+          var tdVar = document.createElement('td');
+          tdVar.style.cssText = 'padding: 14px 12px; font-size: 14px; font-weight: 600; color: #263021;';
+          tdVar.textContent = item.Variedad || '';
+
+          var tdOferta = document.createElement('td');
+          tdOferta.className = 'tabular';
+          tdOferta.style.cssText = 'padding: 14px 12px; font-size: 14px; text-align: right; color: #2A3324;';
+          tdOferta.textContent = fmt(oferta);
+
+          var tdVenta = document.createElement('td');
+          tdVenta.className = 'tabular';
+          tdVenta.style.cssText = 'padding: 14px 12px; font-size: 14px; text-align: right; font-weight: 700; color: #263021;';
+          tdVenta.textContent = fmt(venta);
+
+          var tdDisp = document.createElement('td');
+          tdDisp.className = 'tabular';
+          tdDisp.style.cssText = 'padding: 14px 12px; font-size: 14px; text-align: right; color: #2A3324;';
+          tdDisp.textContent = fmt(disp);
+
+          var tdPct = document.createElement('td');
+          tdPct.style.padding = '14px 28px';
+          tdPct.innerHTML =
+            '<div style="display:flex; align-items:center; gap:10px;">' +
+              '<div class="pctTrack"><div class="pctFill" style="width:' + Math.max(1.5, pct) + '%; background:' + pctColor(pct) + ';"></div></div>' +
+              '<span class="tabular pctLabel">' + pct + '%</span>' +
+            '</div>';
+
+          tr.appendChild(tdSem);
+          tr.appendChild(tdVar);
+          tr.appendChild(tdOferta);
+          tr.appendChild(tdVenta);
+          tr.appendChild(tdDisp);
+          tr.appendChild(tdPct);
+          tbody.appendChild(tr);
         });
 
-        document.getElementById('totalOfertaPrimu').innerText = Math.round(totOfertaPrimu);
-        document.getElementById('totalVentasPrimu').innerText = Math.round(totVentasPrimu);
-        document.getElementById('totalDispPrimu').innerText   = Math.round(totDispPrimu);
+        document.getElementById('totalOferta').textContent = fmt(totOferta);
+        document.getElementById('totalVenta').textContent = fmt(totVenta);
+        document.getElementById('totalDisp').textContent = fmt(totDisp);
+        document.getElementById('totalPct').textContent = pctVenta + '%';
 
-        const ctx = document.getElementById('graficoTotales').getContext('2d');
-        new Chart(ctx, {
-          type: 'bar',
-          data: {
-            labels: ['Oferta Total', 'Ventas Total', 'Disponible Total'],
-            datasets: [{
-              label: 'Totales',
-              data: [
-                Math.round(totOfertaPrimu),
-                Math.round(totVentasPrimu),
-                Math.round(totDispPrimu)
-              ],
-              backgroundColor: ['#4caf50','#2196f3','#ff9800']
-            }]
-          }
+        // Chart: ranked by venta desc
+        var sorted = data.slice().sort(function (a, b) {
+          var va = (a.VENTA && a.VENTA.Primu) || 0;
+          var vb = (b.VENTA && b.VENTA.Primu) || 0;
+          return vb - va;
         });
+        var maxVenta = Math.max.apply(null, sorted.map(function (d) { return (d.VENTA && d.VENTA.Primu) || 0; }).concat([1]));
+        var chartWrap = document.getElementById('chartBars');
+        sorted.forEach(function (item, i) {
+          var venta = (item.VENTA && item.VENTA.Primu) || 0;
+          var widthPct = Math.max(1.5, (venta / maxVenta) * 100);
+          var shade = shadeForRank(i, sorted.length);
+          var row = document.createElement('div');
+          row.className = 'chartRow';
+          row.innerHTML =
+            '<div class="chartLabel" style="color:' + (venta === 0 ? '#8A9280' : '#2A3324') + ';">' + (item.Variedad || '') + '</div>' +
+            '<div class="chartTrack"><div class="chartFill" style="width:' + widthPct + '%; background:' + shade + ';"></div></div>' +
+            '<div class="chartValue tabular" style="color:' + (venta === 0 ? '#B7BFAC' : '#263021') + ';">' + fmt(venta) + '</div>';
+          chartWrap.appendChild(row);
+        });
+      })
+      .catch(function (err) {
+        console.error('Error cargando /api/ventas:', err);
+        document.getElementById('estado').textContent = 'No se pudieron cargar los datos de ventas.';
       });
   </script>
+
 </body>
 </html>
