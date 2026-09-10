@@ -35,10 +35,10 @@
       "Primu": 7394.25
     },
     "VENTA": {
-      "Primu": 6800
+      "Primu": 6890
     },
     "DISPONIBLE": {
-      "Primu": 594.25
+      "Primu": 504.25
     }
   },
   {
@@ -46,13 +46,13 @@
     "Varied": "DM 38E26 SE",
     "Variedad": "DM38E26 SE",
     "OFERTA": {
-      "Primu": 11333.075
+      "Primu": 9806.2375
     },
     "VENTA": {
       "Primu": 4335
     },
     "DISPONIBLE": {
-      "Primu": 6998.075000000001
+      "Primu": 5471.237499999999
     }
   },
   {
@@ -91,10 +91,10 @@
       "Primu": 42241.650000000016
     },
     "VENTA": {
-      "Primu": 5507
+      "Primu": 6227
     },
     "DISPONIBLE": {
-      "Primu": 36734.650000000016
+      "Primu": 36014.650000000016
     }
   },
   {
@@ -133,10 +133,10 @@
       "Primu": 1914.65
     },
     "VENTA": {
-      "Primu": 0
+      "Primu": 1836.875
     },
     "DISPONIBLE": {
-      "Primu": 1914.65
+      "Primu": 77.77500000000009
     }
   }
 ]
