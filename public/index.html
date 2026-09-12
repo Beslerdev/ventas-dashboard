@@ -19,7 +19,7 @@
       -webkit-font-smoothing: antialiased;
     }
     .tabular { font-variant-numeric: tabular-nums; }
-    table { border-collapse: collapse; width: 100%; }
+    table { border-collapse: collapse; width: 100%; table-layout: fixed; }
     th, td { text-align: left; }
     tbody tr { border-bottom: 1px solid rgba(43,57,36,0.07); }
     tbody tr:last-child { border-bottom: none; }
@@ -135,22 +135,22 @@
       <table>
         <thead>
           <tr style="background: #37472F;">
-            <th style="padding: 14px 28px; font-size: 11px; font-weight: 700; letter-spacing: 0.6px; color: #FFFFFF; text-transform: uppercase;">Semillero</th>
-            <th style="padding: 14px 12px; font-size: 11px; font-weight: 700; letter-spacing: 0.6px; color: #FFFFFF; text-transform: uppercase;">Variedad</th>
-            <th class="tabular" style="padding: 14px 12px; font-size: 11px; font-weight: 700; letter-spacing: 0.6px; color: #FFFFFF; text-transform: uppercase; text-align: right;">Oferta</th>
-            <th class="tabular" style="padding: 14px 12px; font-size: 11px; font-weight: 700; letter-spacing: 0.6px; color: #FFFFFF; text-transform: uppercase; text-align: right;">Venta</th>
-            <th class="tabular" style="padding: 14px 12px; font-size: 11px; font-weight: 700; letter-spacing: 0.6px; color: #FFFFFF; text-transform: uppercase; text-align: right;">Disponible</th>
-            <th style="padding: 14px 28px; font-size: 11px; font-weight: 700; letter-spacing: 0.6px; color: #FFFFFF; text-transform: uppercase; width: 170px;">% Vendido</th>
+            <th style="width: 12%; padding: 12px 12px 12px 20px; font-size: 11px; font-weight: 700; letter-spacing: 0.6px; color: #FFFFFF; text-transform: uppercase;">Semillero</th>
+            <th style="width: 27%; padding: 12px 10px; font-size: 11px; font-weight: 700; letter-spacing: 0.6px; color: #FFFFFF; text-transform: uppercase;">Variedad</th>
+            <th class="tabular" style="width: 13%; padding: 12px 10px; font-size: 11px; font-weight: 700; letter-spacing: 0.6px; color: #FFFFFF; text-transform: uppercase; text-align: right;">Oferta</th>
+            <th class="tabular" style="width: 13%; padding: 12px 10px; font-size: 11px; font-weight: 700; letter-spacing: 0.6px; color: #FFFFFF; text-transform: uppercase; text-align: right;">Venta</th>
+            <th class="tabular" style="width: 13%; padding: 12px 10px; font-size: 11px; font-weight: 700; letter-spacing: 0.6px; color: #FFFFFF; text-transform: uppercase; text-align: right;">Disponible</th>
+            <th style="width: 22%; padding: 12px 20px; font-size: 11px; font-weight: 700; letter-spacing: 0.6px; color: #FFFFFF; text-transform: uppercase;">% Vendido</th>
           </tr>
         </thead>
         <tbody id="tablaVentasBody"></tbody>
         <tfoot>
           <tr style="border-top: 2px solid rgba(43,57,36,0.16); background: #F6F3E8;">
-            <td colspan="2" style="padding: 16px 28px; font-size: 13px; font-weight: 800; color: #263021; text-transform: uppercase; letter-spacing: 0.4px;">Total</td>
-            <td class="tabular" style="padding: 16px 12px; font-size: 15px; font-weight: 800; text-align: right; color: #263021;" id="totalOferta">0</td>
-            <td class="tabular" style="padding: 16px 12px; font-size: 15px; font-weight: 800; text-align: right; color: #263021;" id="totalVenta">0</td>
-            <td class="tabular" style="padding: 16px 12px; font-size: 15px; font-weight: 800; text-align: right; color: #263021;" id="totalDisp">0</td>
-            <td style="padding: 16px 28px; font-size: 13px; font-weight: 800; text-align: right; color: #6B8F2E;" id="totalPct">0%</td>
+            <td colspan="2" style="padding: 16px 20px; font-size: 13px; font-weight: 800; color: #263021; text-transform: uppercase; letter-spacing: 0.4px;">Total</td>
+            <td class="tabular" style="padding: 16px 10px; font-size: 15px; font-weight: 800; text-align: right; color: #263021;" id="totalOferta">0</td>
+            <td class="tabular" style="padding: 16px 10px; font-size: 15px; font-weight: 800; text-align: right; color: #263021;" id="totalVenta">0</td>
+            <td class="tabular" style="padding: 16px 10px; font-size: 15px; font-weight: 800; text-align: right; color: #263021;" id="totalDisp">0</td>
+            <td style="padding: 16px 20px; font-size: 13px; font-weight: 800; text-align: right; color: #6B8F2E;" id="totalPct">0%</td>
           </tr>
         </tfoot>
       </table>
@@ -233,33 +233,33 @@
           var tr = document.createElement('tr');
 
           var tdSem = document.createElement('td');
-          tdSem.style.padding = '14px 28px';
+          tdSem.style.padding = '12px 12px 12px 20px';
           var badge = document.createElement('span');
           badge.className = 'badge';
           badge.textContent = item.Semillero || '';
           tdSem.appendChild(badge);
 
           var tdVar = document.createElement('td');
-          tdVar.style.cssText = 'padding: 14px 12px; font-size: 14px; font-weight: 600; color: #263021;';
+          tdVar.style.cssText = 'padding: 12px 10px; font-size: 14px; font-weight: 600; color: #263021;';
           tdVar.textContent = item.Variedad || '';
 
           var tdOferta = document.createElement('td');
           tdOferta.className = 'tabular';
-          tdOferta.style.cssText = 'padding: 14px 12px; font-size: 14px; text-align: right; color: #2A3324;';
+          tdOferta.style.cssText = 'padding: 12px 10px; font-size: 14px; text-align: right; color: #2A3324;';
           tdOferta.textContent = fmt(oferta);
 
           var tdVenta = document.createElement('td');
           tdVenta.className = 'tabular';
-          tdVenta.style.cssText = 'padding: 14px 12px; font-size: 14px; text-align: right; font-weight: 700; color: #263021;';
+          tdVenta.style.cssText = 'padding: 12px 10px; font-size: 14px; text-align: right; font-weight: 700; color: #263021;';
           tdVenta.textContent = fmt(venta);
 
           var tdDisp = document.createElement('td');
           tdDisp.className = 'tabular';
-          tdDisp.style.cssText = 'padding: 14px 12px; font-size: 14px; text-align: right; color: #2A3324;';
+          tdDisp.style.cssText = 'padding: 12px 10px; font-size: 14px; text-align: right; color: #2A3324;';
           tdDisp.textContent = fmt(disp);
 
           var tdPct = document.createElement('td');
-          tdPct.style.padding = '14px 28px';
+          tdPct.style.padding = '12px 20px';
           tdPct.innerHTML =
             '<div style="display:flex; align-items:center; gap:10px;">' +
               '<div class="pctTrack"><div class="pctFill" style="width:' + Math.max(1.5, pct) + '%; background:' + pctColor(pct) + ';"></div></div>' +
