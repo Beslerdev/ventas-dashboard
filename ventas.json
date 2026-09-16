@@ -18,13 +18,13 @@
     "Varied": "DM 25E23 SE",
     "Variedad": "DM25E23 SE",
     "OFERTA": {
-      "Primu": 17858.550000000003
+      "Primu": 17838.550000000003
     },
     "VENTA": {
       "Primu": 17115
     },
     "DISPONIBLE": {
-      "Primu": 743.5500000000029
+      "Primu": 723.5500000000029
     }
   },
   {
@@ -60,13 +60,13 @@
     "Varied": "DM 40E25 SE",
     "Variedad": "DM40E25 SE",
     "OFERTA": {
-      "Primu": 33223.77499999999
+      "Primu": 28485.024999999998
     },
     "VENTA": {
       "Primu": 18101
     },
     "DISPONIBLE": {
-      "Primu": 15122.774999999987
+      "Primu": 10384.024999999998
     }
   },
   {
@@ -133,10 +133,10 @@
       "Primu": 1914.65
     },
     "VENTA": {
-      "Primu": 1916.875
+      "Primu": 1896.875
     },
     "DISPONIBLE": {
-      "Primu": -2.224999999999909
+      "Primu": 17.77500000000009
     }
   }
 ]
